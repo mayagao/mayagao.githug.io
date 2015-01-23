@@ -1,0 +1,161 @@
+/* line 5, ../sass/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 14, ../sass/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 17, ../sass/style.scss */
+body {
+  line-height: 1;
+}
+
+/* line 20, ../sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 23, ../sass/style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 27, ../sass/style.scss */
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 33, ../sass/style.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 38, ../sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 47, ../sass/style.scss */
+html, body {
+  font-family: "effra";
+}
+
+/* line 51, ../sass/style.scss */
+a {
+  color: gray;
+  text-decoration: none;
+}
+/* line 54, ../sass/style.scss */
+a:hover {
+  color: black;
+}
+
+/* line 60, ../sass/style.scss */
+.top-black {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 66, ../sass/style.scss */
+.inner {
+  margin: 10px auto;
+  width: 85%;
+}
+
+/* line 72, ../sass/style.scss */
+.intro {
+  float: left;
+  width: 20%;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  color: #b3b3b3;
+}
+/* line 78, ../sass/style.scss */
+.intro .headshot img {
+  height: 5.7em;
+  margin-left: -0.7em;
+}
+/* line 83, ../sass/style.scss */
+.intro h3 {
+  font-size: 1.4em;
+  line-height: 2.5em;
+  font-weight: bold;
+}
+/* line 89, ../sass/style.scss */
+.intro h4 {
+  font-weight: bold;
+  line-height: 1.7em;
+  margin-top: 1em;
+}
+
+/* line 96, ../sass/style.scss */
+.content {
+  float: right;
+  margin: 1em auto;
+  width: 70%;
+  color: #b3b3b3;
+}
+/* line 101, ../sass/style.scss */
+.content h1 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+/* line 106, ../sass/style.scss */
+.content h3 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+/* line 113, ../sass/style.scss */
+.content h4 {
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
+/* line 119, ../sass/style.scss */
+.content .works-thumbnail {
+  margin-bottom: 2em;
+}
+/* line 121, ../sass/style.scss */
+.content .works-thumbnail #first {
+  background: #2b2b2b;
+}
+/* line 124, ../sass/style.scss */
+.content .works-thumbnail #second {
+  background: #eaeaea;
+}
+/* line 127, ../sass/style.scss */
+.content .works-thumbnail #third {
+  background: #352b44;
+}
+/* line 130, ../sass/style.scss */
+.content .works-thumbnail #fourth {
+  background: #9f7354;
+}
+/* line 133, ../sass/style.scss */
+.content .works-thumbnail #fifth {
+  background: #63517f;
+}
+/* line 137, ../sass/style.scss */
+.content .work {
+  padding: 1em 0em 1em 0em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+/* line 140, ../sass/style.scss */
+.content .work img {
+  margin: -2px auto;
+  height: 9em;
+}
