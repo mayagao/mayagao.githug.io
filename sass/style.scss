@@ -99,8 +99,9 @@ html, body {
     width: 70%;
     color: lighten(gray, 20%);
     h1 {
-        font-size: 1.1em;
+        font-size: 0.9em;
         line-height: 1.5em;
+         font-weight: bold;
     }
 
     h3 {
@@ -111,8 +112,9 @@ html, body {
     }
 
     h4 {
-        font-size: 0.7em;
+        font-size: 0.8em;
         line-height: 1.5em;
+        letter-spacing: 0.02em;
 
     }
 
@@ -122,7 +124,7 @@ html, body {
         background: #2b2b2b;
         }
         #second {
-        background: lighten(#2b2b2b,75%);
+        background: #288ad6;
         }
         #third {
         background: #352b44;
