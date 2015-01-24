@@ -30,6 +30,7 @@
     @include breakpoint(mobileonly){
         width: 100%;
         float: none;
+        font-size: 1.2em;
        
         .work-links {
             display: inline-flex;
@@ -37,9 +38,12 @@
                 display: none;
             }
             h5 {
-                margin-right: 1.2em;
-                font-size: 1.2em;
+                margin-right: 0.7em;
+                font-size: 1em;
             }
+        }
+        .headshot img {
+            display: none;
         }
       
     }
@@ -92,9 +96,13 @@
     }
 
     p {
-        font-size: .8em;
+        font-size: .9em;
         color: lighten(gray, 10%);
         letter-spacing: 0.02em;
+         @include breakpoint(mobileonly){
+            font-size: 1.1em;
+
+         }
     }
 
     .my-role {

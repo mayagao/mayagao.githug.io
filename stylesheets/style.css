@@ -136,83 +136,94 @@ BREAKPOINTS
   .intro {
     width: 100%;
     float: none;
+    font-size: 1.2em;
   }
-  /* line 34, ../sass/style.scss */
+  /* line 35, ../sass/style.scss */
   .intro .work-links {
     display: inline-flex;
   }
-  /* line 36, ../sass/style.scss */
+  /* line 37, ../sass/style.scss */
   .intro .work-links .w-links {
     display: none;
   }
-  /* line 39, ../sass/style.scss */
+  /* line 40, ../sass/style.scss */
   .intro .work-links h5 {
-    margin-right: 1.2em;
-    font-size: 1.2em;
+    margin-right: 0.7em;
+    font-size: 1em;
+  }
+  /* line 45, ../sass/style.scss */
+  .intro .headshot img {
+    display: none;
   }
 }
 
-/* line 49, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .content {
   float: right;
   margin: 1em auto;
   width: 70%;
   color: #b3b3b3;
 }
-/* line 55, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .content .works-thumbnail {
   margin-bottom: 2em;
 }
-/* line 57, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .content .works-thumbnail #first {
   background: #2b2b2b;
 }
-/* line 60, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .content .works-thumbnail #second {
   background: #288ad6;
 }
-/* line 63, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .content .works-thumbnail #third {
   background: #352b44;
 }
-/* line 66, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .content .works-thumbnail #fourth {
   background: #9f7354;
 }
-/* line 69, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .content .works-thumbnail #fifth {
   background: #63517f;
 }
-/* line 72, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 .content .works-thumbnail h4 {
   margin-top: 0.4em;
 }
-/* line 77, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .content .work {
   padding: 1em 0em 1em 0em;
   text-align: center;
   margin-bottom: 0.5em;
 }
-/* line 80, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .content .work img {
   margin: -2px auto;
   height: 9em;
 }
-/* line 87, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .content h2 {
   color: gray;
 }
-/* line 90, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .content h4 {
   font-size: .9em;
 }
-/* line 94, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .content p {
-  font-size: .8em;
+  font-size: .9em;
   color: #9a9a9a;
   letter-spacing: 0.02em;
 }
-/* line 100, ../sass/style.scss */
+@media (max-width: 37.5em) {
+  /* line 98, ../sass/style.scss */
+  .content p {
+    font-size: 1.1em;
+  }
+}
+/* line 108, ../sass/style.scss */
 .content .my-role {
   margin: 2em 0em 0.4em 0em;
   display: inline-flex;
@@ -220,38 +231,38 @@ BREAKPOINTS
   font-weight: bold;
   letter-spacing: 0.02em;
 }
-/* line 106, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .content .my-role .ux-design, .content .my-role .front-end, .content .my-role .ui-design, .content .my-role .branding {
   height: 12px;
   width: 12px;
   border-radius: 6px;
   background-color: #22a7f0;
 }
-/* line 112, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content .my-role .front-end {
   background-color: #4ecdc4;
 }
-/* line 115, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .content .my-role .ui-design {
   background-color: #f64747;
 }
-/* line 118, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .content .my-role .branding {
   background-color: #f89406;
 }
 @media (max-width: 37.5em) {
-  /* line 49, ../sass/style.scss */
+  /* line 53, ../sass/style.scss */
   .content {
     width: 100%;
     float: none;
   }
 }
 
-/* line 131, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .article img {
   width: 100%;
 }
-/* line 134, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .article h5 {
   line-height: 1.6em;
 }
