@@ -1,60 +1,6 @@
-// http://meyerweb.com/eric/tools/css/reset/
-// v2.0 | 20110126
-// License: none (public domain)
-@mixin meyer-reset {
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-}
-// HTML5 display-role reset for older browsers
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-display: block;
-}
-body {
-line-height: 1;
-}
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote {
-&:before, &:after {
-content: "";
-content: none;
-}
-}
-q {
-&:before, &:after {
-content: "";
-content: none;
-}
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
-}
 
-
-@include meyer-reset;
-
-html, body {
-    font-family: "effra";
-}
-
-  a {
-        color: gray;
-        text-decoration: none;
-        &:hover {
-            color: black;
-        }
-    }
+@import "base/reset";
+@import "base/typography";
 
 
 .top-black {
@@ -72,24 +18,10 @@ html, body {
 .intro {
     float: left;
     width: 20%;
-    font-size: 0.9em;
-    line-height: 1.4em;
     color: lighten(gray, 20%);
     .headshot img{
         height: 5.7em;
         margin-left: -0.7em;
-    }
-  
-    h3 {
-        font-size: 1.4em;
-        line-height: 2.5em;
-        font-weight: bold;
-    }
-
-    h4 {
-        font-weight: bold;
-        line-height: 1.7em;
-        margin-top: 1em;
     }
 }
 
@@ -98,25 +30,7 @@ html, body {
     margin: 1em auto;
     width: 70%;
     color: lighten(gray, 20%);
-    h1 {
-        font-size: 0.9em;
-        line-height: 1.5em;
-         font-weight: bold;
-    }
-
-    h3 {
-        font-size: 1em;
-        line-height: 1.5em;
-        font-weight: bold;
-
-    }
-
-    h4 {
-        font-size: 0.8em;
-        line-height: 1.5em;
-        letter-spacing: 0.02em;
-
-    }
+    
 
     .works-thumbnail {
         margin-bottom: 2em;
@@ -135,6 +49,9 @@ html, body {
         #fifth {
         background: lighten(#352b44,19%);
         }
+        h4 {
+            margin-top: 0.4em;
+        }
     }
     .work {
         padding: 1em 0em 1em 0em;
@@ -146,6 +63,52 @@ html, body {
         margin-bottom: 0.5em;
 
     }
+    h2 {
+        color: gray;
+    }
+    h4 {
+        font-size: .9em;
+    }
+
+    p {
+        font-size: .8em;
+        color: lighten(gray, 10%);
+        letter-spacing: 0.02em;
+    }
+
+    .my-role {
+        margin: 2em 0em 0.4em 0em;
+        display: inline-flex;
+        font-size: .7em;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        .ux-design, .front-end, .ui-design, .branding{
+            height: 12px;
+            width: 12px;
+            border-radius: 6px;
+            background-color: rgba(34, 167, 240,1);
+        }
+        .front-end {
+            background-color: rgba(78,205,196,1);
+        }
+        .ui-design {
+            background-color: rgba(246, 71, 71,1);
+        }
+        .branding {
+            background-color: rgba(248, 148, 6,1);
+        }
+    }
 
 
+}
+
+
+.article {
+    img {
+        width: 100%;
+    }
+    h5 {
+      
+        line-height: 1.6em;
+    }
 }

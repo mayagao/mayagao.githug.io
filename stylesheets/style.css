@@ -1,4 +1,4 @@
-/* line 5, ../sass/style.scss */
+/* line 5, ../sass/base/reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -8,60 +8,101 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 14, ../sass/base/reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 17, ../sass/base/reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 20, ../sass/base/reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 23, ../sass/base/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 27, ../sass/base/reset.scss */
 blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 33, ../sass/base/reset.scss */
 q:before, q:after {
   content: "";
   content: none;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 38, ../sass/base/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 2, ../sass/base/typography.scss */
 html, body {
   font-family: "effra";
 }
 
-/* line 51, ../sass/style.scss */
+/* line 6, ../sass/base/typography.scss */
 a {
   color: gray;
   text-decoration: none;
 }
-/* line 54, ../sass/style.scss */
+/* line 9, ../sass/base/typography.scss */
 a:hover {
   color: black;
 }
 
-/* line 60, ../sass/style.scss */
+/* line 14, ../sass/base/typography.scss */
+h1 {
+  font-size: 1.2em;
+  line-height: 2.5em;
+  font-weight: bold;
+}
+
+/* line 19, ../sass/base/typography.scss */
+h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* line 23, ../sass/base/typography.scss */
+h5 {
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+/* line 31, ../sass/base/typography.scss */
+h3 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+/* line 38, ../sass/base/typography.scss */
+h4 {
+  font-size: 0.8em;
+  line-height: 0.5em;
+  letter-spacing: 0.02em;
+}
+
+/* line 44, ../sass/base/typography.scss */
+p {
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+/* line 6, ../sass/style.scss */
 .top-black {
   background-color: black;
   height: 4px;
@@ -69,95 +110,117 @@ a:hover {
   margin: 0;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 .inner {
   margin: 10px auto;
   width: 85%;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 .intro {
   float: left;
   width: 20%;
-  font-size: 0.9em;
-  line-height: 1.4em;
   color: #b3b3b3;
 }
-/* line 78, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .intro .headshot img {
   height: 5.7em;
   margin-left: -0.7em;
 }
-/* line 83, ../sass/style.scss */
-.intro h3 {
-  font-size: 1.4em;
-  line-height: 2.5em;
-  font-weight: bold;
-}
-/* line 89, ../sass/style.scss */
-.intro h4 {
-  font-weight: bold;
-  line-height: 1.7em;
-  margin-top: 1em;
-}
 
-/* line 96, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 .content {
   float: right;
   margin: 1em auto;
   width: 70%;
   color: #b3b3b3;
 }
-/* line 101, ../sass/style.scss */
-.content h1 {
-  font-size: 0.9em;
-  line-height: 1.5em;
-  font-weight: bold;
-}
-/* line 107, ../sass/style.scss */
-.content h3 {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-weight: bold;
-}
-/* line 114, ../sass/style.scss */
-.content h4 {
-  font-size: 0.8em;
-  line-height: 1.5em;
-  letter-spacing: 0.02em;
-}
-/* line 121, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 .content .works-thumbnail {
   margin-bottom: 2em;
 }
-/* line 123, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 .content .works-thumbnail #first {
   background: #2b2b2b;
 }
-/* line 126, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .content .works-thumbnail #second {
   background: #288ad6;
 }
-/* line 129, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 .content .works-thumbnail #third {
   background: #352b44;
 }
-/* line 132, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .content .works-thumbnail #fourth {
   background: #9f7354;
 }
-/* line 135, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .content .works-thumbnail #fifth {
   background: #63517f;
 }
-/* line 139, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
+.content .works-thumbnail h4 {
+  margin-top: 0.4em;
+}
+/* line 56, ../sass/style.scss */
 .content .work {
   padding: 1em 0em 1em 0em;
   text-align: center;
   margin-bottom: 0.5em;
 }
-/* line 142, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .content .work img {
   margin: -2px auto;
   height: 9em;
+}
+/* line 66, ../sass/style.scss */
+.content h2 {
+  color: gray;
+}
+/* line 69, ../sass/style.scss */
+.content h4 {
+  font-size: .9em;
+}
+/* line 73, ../sass/style.scss */
+.content p {
+  font-size: .8em;
+  color: #9a9a9a;
+  letter-spacing: 0.02em;
+}
+/* line 79, ../sass/style.scss */
+.content .my-role {
+  margin: 2em 0em 0.4em 0em;
+  display: inline-flex;
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+/* line 85, ../sass/style.scss */
+.content .my-role .ux-design, .content .my-role .front-end, .content .my-role .ui-design, .content .my-role .branding {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background-color: #22a7f0;
+}
+/* line 91, ../sass/style.scss */
+.content .my-role .front-end {
+  background-color: #4ecdc4;
+}
+/* line 94, ../sass/style.scss */
+.content .my-role .ui-design {
+  background-color: #f64747;
+}
+/* line 97, ../sass/style.scss */
+.content .my-role .branding {
+  background-color: #f89406;
+}
+
+/* line 107, ../sass/style.scss */
+.article img {
+  width: 100%;
+}
+/* line 110, ../sass/style.scss */
+.article h5 {
+  line-height: 1.6em;
 }
