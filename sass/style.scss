@@ -40,7 +40,7 @@
             }
             h5 {
                 margin-right: 0.7em;
-                font-size: 1em;
+                font-size: 0.8em;
             }
         }
         .headshot img {
@@ -127,10 +127,18 @@
         .branding {
             background-color: rgba(248, 148, 6,1);
         }
+        @include breakpoint(mobileonly){
+            font-size: 1em;
+        }
+
+
     }
  @include breakpoint(mobileonly){
         width: 100%;
         float: none;
+    h5 {
+        font-size: 1.1em;
+        }
     }
 
 }

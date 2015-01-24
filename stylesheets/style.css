@@ -156,7 +156,7 @@ BREAKPOINTS
   /* line 41, ../sass/style.scss */
   .intro .work-links h5 {
     margin-right: 0.7em;
-    font-size: 1em;
+    font-size: 0.8em;
   }
   /* line 46, ../sass/style.scss */
   .intro .headshot img {
@@ -264,18 +264,28 @@ BREAKPOINTS
   background-color: #f89406;
 }
 @media (max-width: 37.5em) {
+  /* line 109, ../sass/style.scss */
+  .content .my-role {
+    font-size: 1em;
+  }
+}
+@media (max-width: 37.5em) {
   /* line 54, ../sass/style.scss */
   .content {
     width: 100%;
     float: none;
   }
+  /* line 139, ../sass/style.scss */
+  .content h5 {
+    font-size: 1.1em;
+  }
 }
 
-/* line 140, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .article img {
   width: 100%;
 }
-/* line 143, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .article h5 {
   line-height: 1.6em;
 }
