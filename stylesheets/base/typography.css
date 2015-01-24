@@ -36,15 +36,15 @@ h5 {
 
 /* line 31, ../../sass/base/typography.scss */
 h3 {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.3em;
   font-weight: bold;
 }
 
 /* line 38, ../../sass/base/typography.scss */
 h4 {
   font-size: 0.8em;
-  line-height: 0.5em;
+  line-height: 1.3em;
   letter-spacing: 0.02em;
 }
 

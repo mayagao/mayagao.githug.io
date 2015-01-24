@@ -1,6 +1,7 @@
 
 @import "base/reset";
 @import "base/typography";
+@import "base/breakpoints";
 
 
 .top-black {
@@ -12,10 +13,12 @@
 .inner {
     margin: 10px auto;
     width: 85%;
+    max-width: 1000px;
 
 }
 
 .intro {
+
     float: left;
     width: 20%;
     color: lighten(gray, 20%);
@@ -23,6 +26,24 @@
         height: 5.7em;
         margin-left: -0.7em;
     }
+
+    @include breakpoint(mobileonly){
+        width: 100%;
+        float: none;
+       
+        .work-links {
+            display: inline-flex;
+             .w-links{
+                display: none;
+            }
+            h5 {
+                margin-right: 1.2em;
+                font-size: 1.2em;
+            }
+        }
+      
+    }
+
 }
 
 .content {
@@ -30,7 +51,6 @@
     margin: 1em auto;
     width: 70%;
     color: lighten(gray, 20%);
-    
 
     .works-thumbnail {
         margin-bottom: 2em;
@@ -52,6 +72,7 @@
         h4 {
             margin-top: 0.4em;
         }
+        
     }
     .work {
         padding: 1em 0em 1em 0em;
@@ -98,7 +119,10 @@
             background-color: rgba(248, 148, 6,1);
         }
     }
-
+ @include breakpoint(mobileonly){
+        width: 100%;
+        float: none;
+    }
 
 }
 
@@ -112,3 +136,5 @@
         line-height: 1.6em;
     }
 }
+
+
