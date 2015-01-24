@@ -1,7 +1,7 @@
 
 @import "base/reset";
 @import "base/typography";
-@import "base/breakpoints";
+@import "base/mixins";
 
 
 .top-black {
@@ -22,6 +22,7 @@
     float: left;
     width: 20%;
     color: lighten(gray, 20%);
+    letter-spacing: 0.01em;
     .headshot img{
         height: 5.7em;
         margin-left: -0.7em;
@@ -33,7 +34,7 @@
         font-size: 1.2em;
        
         .work-links {
-            display: inline-flex;
+            @include flexbox();
              .w-links{
                 display: none;
             }
@@ -107,7 +108,7 @@
 
     .my-role {
         margin: 2em 0em 0.4em 0em;
-        display: inline-flex;
+        @include flexbox();
         font-size: .7em;
         font-weight: bold;
         letter-spacing: 0.02em;

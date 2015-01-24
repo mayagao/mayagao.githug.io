@@ -125,8 +125,9 @@ BREAKPOINTS
   float: left;
   width: 20%;
   color: #b3b3b3;
+  letter-spacing: 0.01em;
 }
-/* line 25, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 .intro .headshot img {
   height: 5.7em;
   margin-left: -0.7em;
@@ -138,131 +139,143 @@ BREAKPOINTS
     float: none;
     font-size: 1.2em;
   }
-  /* line 35, ../sass/style.scss */
+  /* line 36, ../sass/style.scss */
   .intro .work-links {
-    display: inline-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    display: flexbox;
+    display: box;
   }
-  /* line 37, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   .intro .work-links .w-links {
     display: none;
   }
-  /* line 40, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   .intro .work-links h5 {
     margin-right: 0.7em;
     font-size: 1em;
   }
-  /* line 45, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   .intro .headshot img {
     display: none;
   }
 }
 
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .content {
   float: right;
   margin: 1em auto;
   width: 70%;
   color: #b3b3b3;
 }
-/* line 59, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .content .works-thumbnail {
   margin-bottom: 2em;
 }
-/* line 61, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .content .works-thumbnail #first {
   background: #2b2b2b;
 }
-/* line 64, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .content .works-thumbnail #second {
   background: #288ad6;
 }
-/* line 67, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .content .works-thumbnail #third {
   background: #352b44;
 }
-/* line 70, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .content .works-thumbnail #fourth {
   background: #9f7354;
 }
-/* line 73, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .content .works-thumbnail #fifth {
   background: #63517f;
 }
-/* line 76, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .content .works-thumbnail h4 {
   margin-top: 0.4em;
 }
-/* line 81, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .content .work {
   padding: 1em 0em 1em 0em;
   text-align: center;
   margin-bottom: 0.5em;
 }
-/* line 84, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .content .work img {
   margin: -2px auto;
   height: 9em;
 }
-/* line 91, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .content h2 {
   color: gray;
 }
-/* line 94, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .content h4 {
   font-size: .9em;
 }
-/* line 98, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .content p {
   font-size: .9em;
   color: #9a9a9a;
   letter-spacing: 0.02em;
 }
 @media (max-width: 37.5em) {
-  /* line 98, ../sass/style.scss */
+  /* line 99, ../sass/style.scss */
   .content p {
     font-size: 1.1em;
   }
 }
-/* line 108, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .content .my-role {
   margin: 2em 0em 0.4em 0em;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: flexbox;
+  display: box;
   font-size: .7em;
   font-weight: bold;
   letter-spacing: 0.02em;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .content .my-role .ux-design, .content .my-role .front-end, .content .my-role .ui-design, .content .my-role .branding {
   height: 12px;
   width: 12px;
   border-radius: 6px;
   background-color: #22a7f0;
 }
-/* line 120, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .content .my-role .front-end {
   background-color: #4ecdc4;
 }
-/* line 123, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .content .my-role .ui-design {
   background-color: #f64747;
 }
-/* line 126, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .content .my-role .branding {
   background-color: #f89406;
 }
 @media (max-width: 37.5em) {
-  /* line 53, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   .content {
     width: 100%;
     float: none;
   }
 }
 
-/* line 139, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .article img {
   width: 100%;
 }
-/* line 142, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .article h5 {
   line-height: 1.6em;
 }
