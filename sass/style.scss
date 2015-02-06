@@ -98,7 +98,7 @@
 
     p {
         font-size: .9em;
-        color: lighten(gray, 10%);
+        color: lighten(gray, 19%);
         letter-spacing: 0.02em;
          @include breakpoint(mobileonly){
             font-size: 1.1em;
