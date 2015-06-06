@@ -6,15 +6,30 @@ permalink: /misc.html
 category: misc
 image: img/thumbnail/misc.png
 tags: 
+- ui
+- ux
+- branding
 
 ---
-<h5>Logo Design</h5><p>Lonely Planet, Budget</p><br>
 
-<img src="img/misc/logo.png">
+<h5>Itinerary App</h5><p>Lonely Planet</p><br>
+
+<img src="img/misc/post2.jpg"><br><br>
+<img src="img/misc/post1.jpg">
+
+
+<h5>World Cup Guide</h5><p>Lonely Planet, Print</p><br>
+<img src="img/misc/brazil.jpg">
+
+
+<h5>Best in Travel</h5><p>Lonely Planet, Print</p><br>
+<img src="img/misc/bit.jpg">
+
+<h5>Business Development Brochure</h5><p>Lonely Planet, Print</p><br>
+<img src="img/misc/brochure.jpg">
 
 <h5>Toothfairy Character Illustration</h5><p>Toothfairy</p><br>
 <img src="img/misc/tooth.png">	<br><br>
 
-<h5>Conference Web App</h5><p>Lonely Planet</p><br>
-<img src="img/misc/berlin.jpg"><p>
+
 	
