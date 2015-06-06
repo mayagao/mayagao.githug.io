@@ -1,0 +1,20 @@
+---
+layout: page
+title:  "misc "
+subtitle: "Small Projects & Freelance Works"
+permalink: /misc.html
+category: misc
+image: img/thumbnail/misc.png
+tags: 
+
+---
+<h5>Logo Design</h5><p>Lonely Planet, Budget</p><br>
+
+<img src="img/misc/logo.png">
+
+<h5>Toothfairy Character Illustration</h5><p>Toothfairy</p><br>
+<img src="img/misc/tooth.png">	<br><br>
+
+<h5>Conference Web App</h5><p>Lonely Planet</p><br>
+<img src="img/misc/berlin.jpg"><p>
+	

@@ -1,103 +1,19 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
-<head>
+---
+layout: default
+---
 
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Maya Gao</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+<div class="content">
 
-	<!-- Mobile Specific Metas ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=.25, user-scalable=yes">
-	<script src="js/modernizr.js" type="text/javascript"></script> 
-  	<link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="stylesheets/style.css">
-  	<script type="text/javascript" src="//use.typekit.net/qen6mgk.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  	<!--[if IE]>
-      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  	<![endif]-->
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-</head>
-<body>
-	<div class="top-black"> </div>
-<div class="inner">
-	<div class="intro"> <br /> 
-			<div class="headshot"><img src="img/maya.png"></div>
-			<h1><a href="index.html">Maya Gao</a></h1>
-			<p>Interdisciplinary designer and problem solver. Currently building things for travellers at <a href="http://www.lonelyplanet.com/">Lonely Planet</a>. Formerly with the amazing <a href="http://upstatement.com/blog/2014/03/intern-recap-maya-gao/">Upstatement</a>. 2013 <a href="http://newhouse.syr.edu">Newhouse</a> grad. I believe in working hard and staying humble. </p>
-<section class="work-links">
-<h5><a href="index.html">Works</a></h5>
-			<p class="w-links"><a href="content-management.html">Upstatement</a><br>
-				<a href="destination-pages.html">Lonely Planet</a><br>
-			
-			<a href="whoisintome.html">whoisintome</a><br>
-			<a href="cusetogo.html">Cusetogo</a><br>
-			<a href="misc.html">Misc</a><br></p>
-
-			<h5><a href="about.html">About</a></h5>
-			<h5><a href="mailto:maya.gao@lonelyplanet.com?Subject=Hello%20there!" target="_top">Contact</a></h5>	
-	</section>
-	</div>
-
-	<div class="content">
-
-		<h1>Works</h1> </br>
-		
-		<section class="works-thumbnail">
-		<div class="work" id="first"><img src="img/work1.png"></div>
-		<h3><a href="content-management.html">Better User Experience for Content Creators</a>
-		</h3><h4>WordPress Content Management Tools for Upstatement
-		</h4></section>	
-
-		<section class="works-thumbnail">
-		<div class="work" id="second"><img src="img/work2.png"></div>
-		<h3><a href="destination-pages.html">Inspire Adventures</a>
-		</h3><h4>Redesigning Lonely Planet Destination Pages
-		</h4></section>	
-
-		<section class="works-thumbnail">
-		<div class="work" id="third"><img src="img/work3.png"></div>
-		<h3><a href="whoisintome.html">Visualize Friendships</a>
-		</h3><h4>Whoisinto.me Web App(WIP)
-		</h4></section>	
-
-		<section class="works-thumbnail">
-		<div class="work" id="fourth"><img src="img/work4.png"></div>
-		<h3><a href="cusetogo.html">Eat Local, Eat Well</a>
-		</h3><h4>Cusetogo Food Delivery Web App
-		</h4></section>	
-
-		<section class="works-thumbnail">
-		<div class="work" id="fifth"><img src="img/work5.png"></div>
-		<h3><a href="misc.html">Misc</a>
-		</h3><h4>Small Projects & Freelance Work
-		</h4></section>	
-
-	</div>
+  <h1>Works</h1> </br>
 
 
+  {% for post in site.posts %}
+    <section class="works-thumbnail">
+      <div class="work" id="{{ post.category }}"><img src="{{ post.image }}"/></div>
+      <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <h4>{{ post.subtitle }}</h4>
+    </section>  
+  {% endfor %}
 
 
 </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48675207-1', 'mayagao.com');
-  ga('send', 'pageview');
-
-</script>
-	
-</body>
-</html>
