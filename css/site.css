@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Clear Sans Regular';
+  src: url('fonts/ClearSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/ClearSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Clear Sans Regular', sans-serif;
+  line-height: 1.65em;
+  font-size: 18px;
+}
+
