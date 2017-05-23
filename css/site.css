@@ -4,9 +4,18 @@
        url('fonts/ClearSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Clear Sans Light';
+  src: url('fonts/ClearSans-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/ClearSans-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
 body {
   font-family: 'Clear Sans Regular', sans-serif;
-  line-height: 1.65em;
   font-size: 18px;
 }
 
+
+.light {
+  font-family: 'Clear Sans Light', sans-serif;
+}
