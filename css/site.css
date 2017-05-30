@@ -28,6 +28,9 @@ body {
   font-family: 'Clear Sans Light', sans-serif;
 }
 
+.flex-no-shrink {
+  flex-shrink: 0;
+}
 .quote {
   font-family: 'Aleo Italic', serif;
 }
