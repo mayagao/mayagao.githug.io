@@ -21,7 +21,9 @@ body {
   font-size: 18px;
 }
 
-
+.f7 {
+  font-size: 0.7em;
+}
 .light {
   font-family: 'Clear Sans Light', sans-serif;
 }
