@@ -15,6 +15,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=.25, user-scalable=yes">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
   <link rel="stylesheet" href="css/site.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="css/agate.css">
 </head>
 <body>
 
@@ -77,15 +81,42 @@
 <div class="mw9 ph6-l center ph4 pt5">
 
 
-  <div class="flex mb4 pb4">
+  <div class="flex mb3 pb4">
     <div class="w-100 w-80-m w-70-l relative fl">
+       <div class="lh-copy f5  o-80">Mapbox Studio dataset editor provides a simple way to create and modify geospatial data. The editor stores data as GeoJSON files containing a list of features. Each features has coordinates, geometry, and property information. With the editor, users can create different types of features (polygons, points, and lines) with the drawing tool and then add specific properties to identify and manage the features. </div>
+
+
+
+
+    </div>
+    <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
+      <div class="absolute ">
+
+<pre><code class="f7 br2 lh-title  w5 pb3 hljs bg-near-white javascript">"properties": {
+  "NAME": "Takoma",
+  "TYPE": "Station"
+}
+</code></pre>
+ <div class="o-30  f7 lh-copy">Feature properties.</div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="flex mb4 pb4">
+    <div class="w-100 w-80-m w-70-l relative fl">
+
+
         <div class="f3 light mb3">The Challenges</div>
-        <div class="lh-copy f5 mb3 o-80">There are three major design challenges, which I think we've been struggling with from the very beginning. We were able to come up with viable solutions in the released version, but they are still being constantly iterated.</div>
+        <div class="lh-copy f5 mb3 o-80">For the initial dataset editor release we were aming for simplicity and flexibility. The team wanted to create foundation for more complicated features down the line. We identified four main tasks users can perform inside the interface: import, draw, edit, and export. And then we validated if the design can make performing those tasks easier through user testing. There are three main design challenges we were facing: </div>
 
         <ol class="lh-copy pt3 mb-list f5">
-          <li class="pb2"><span class="f5 dib mb1 o-80">Property management</span><br><span class="o-60">The concept of a single dataset with type-specified property fields (columns) does not exist in the API level, where data is stored as multiple single GeoJSON files that don't share connections. </span></li>
-<li class="pb2"><span class="f5 dib mb1">Data overview and filter</span><br><span class="o-60">A UI that can help users sort, filter and find features, as well as overview the entire database, is not that easy to design considering how diverse the data structure can be and how big the data can get. </span></li>
-<li class=""><span class="f5 dib mb1">Bridge the gap between data and style</span><br><span class="o-60">The dataset => tileset => style relationship is somewhat confusing and complicated for normal users.</span> </li>
+          <li class="pb2"><span class="f5 dib mb1 o-80">Shared property fields</span>. <span class="">Feautures inside one dataset usually share the same set of property fields. However we don't store such information in GeoJSON files. </span></li>
+<li class="pb2"><span class="f5 dib mb1">Search</span><span class="">. It was difficult to filter the dataset and find specific features. </span></li>
+<li class=""><span class="f5 dib mb1">Precision</span><span class="">. Spatial data is precise and we want to give users full control when that is needed.</span> </li>
         </ol>
 
     </div>
@@ -97,7 +128,11 @@
     </div>
   </div>
 
+
 </div>
+
+
+
 
 </div>
 <div class="w-100 bg-mb pv3-l ph4-l ph2 pb3 pb0-l">
@@ -105,7 +140,9 @@
    <div style="width: 1164px" class=" self-center center "><span class="o-70 pl1">Dataset Editor Iteration 1</span> <span class="o-40">March, 2016</span></div>
   </div>
   <div class="flex flex-row pb2">
-    <img style="width: 1164px" class="center self-center" src="img/de_iteration_1.png" />
+    <img style="width: 1164px" class="center  dn db-ns self-center" src="img/de_iteration_1.png" />
+    <img style="max-width: 230%" class="center  db dn-ns self-center" src="img/de_iteration_1.png" />
+
   </div>
 </div>
 
@@ -131,7 +168,8 @@
    <div style="width: 1164px" class=" self-center center "><span class="o-70 pl3">Dataset Editor Iteration 2</span> <span class="o-40">June, 2016</span></div>
   </div>
   <div class="flex flex-row pb2">
-    <img style="width: 1164px" class="center self-center" src="img/de_iteration_2.png" />
+    <img style="width: 1164px" class="center db-ns dn self-center" src="img/de_iteration_2.png" />
+     <img style="max-width: 200%" class="center  db dn-ns self-center" src="img/de_iteration_2.png" />
   </div>
 </div>
 
@@ -163,7 +201,8 @@
    <div style="width: 1200px" class=" self-center center mb1"><span class="o-70">Dataset Editor Iteration 3</span> <span class="o-40">August, 2015</span></div>
   </div>
   <div class="flex flex-row pb2">
-    <img style="width: 1200px" class="center self-center" src="img/de_iteration_3.png" />
+    <img style="width: 1200px" class="center db-ns dn self-center" src="img/de_iteration_3.png" />
+    <img style="max-width: 200%" class="center  db dn-ns self-center" src="img/de_iteration_3.png" />
   </div>
 </div>
 
@@ -214,7 +253,7 @@
 
   <div class="w-100 mt5 flex-l flex-none br2 mb3">
 
-    <div style="flex: auto 1 824px"  class="br2 nl3">
+    <div style="flex: auto 1 824px"  class="br2 nl2-ns nl0">
        <img style="width: 824px" class="" src="img/de_view.png" />
     </div>
     <div style="flex: 1 1 240px" class="lh-copy flex pl4-l pl0">
