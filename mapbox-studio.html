@@ -32,7 +32,7 @@
         <div class=" mb3 fl">
           <div class="f6 mt3 o-40">My Role</div>
           <div class="f6 pt1 ">UI design & dev</div>
-          <div class="f6 mt3 o-40">Initial Release</div>
+          <div class="f6 mt3 o-40">Release</div>
           <div class="f6 pt1 ">November, 2015</div>
 
           <div class="f6 mt3 o-40">Team</div>
@@ -86,19 +86,24 @@
           </div>
         </a>
     <div class="lh-copy mb5 f5 o-80">
-      I started working on Mapbox Studio four months before its public launch. A main focus of the initial release was the Mapbox Studio style editor, a professional map design tool. As the first visual designer in the team, I was tasked to create a unified visual language system for Studio's editor and dashboard.
+      I started working on Mapbox Studio four months before its public launch. A main focus of the release was the style editor, a professional map design tool. With Studio users can select a map layer, edit data sources of the layer, and then define certain styling properties such as font-size and opacity. As the first visual designer in the team, I was tasked to create a more cohesive, consistent and friendly visual language for the tool.
     </div>
   </div>
   <div class="flex mb5 pb4">
     <div class="w-100 w-80-m w-70-l relative fl">
         <div class="f3 light mb3">Style Editor</div>
-        <div class="lh-copy f5 mb3 o-80">The style editor is essentially creating JSON files that consists of specific map styling rules. The main goal (and also challenge) of this project is finding ways to display abstract, technical specifications in a visual way that's closer to how designers think about problems. Basically a user can select a layer and then edit data sources and styling certain properties inside the editor.</div>
-        <div class="lh-copy f5 o-80">The sketch below was an iteration I did in early August. From left to right it shows the layer list, layer source editor, data selection popover, filter popover, layer style editor, and property panel. The overall layout already went through several iterations before I joined the team, but the UI still lacks consistency. So I spent lots of time polishing various form elements such as the list views, tabs, and toggles. I worked closely with the Mapbox cartography team and conducted weekly user testings to discover new usability and verify design solutions.</div>
+
+   <!--      <div class="lh-copy f5 mb3 o-80">
+        The style editor is essentially generating a JSON file that consists of specific styling properties for all the map layers. The rules of how to use those properties are defined in the Mapbox Style Specification.</div> -->
+
+        <div class="lh-copy f5 mb3 o-80">Before Mapbox Studio style editor, there wasn't really a digital map design tool availalbe that provide complete design control for things like texture, color and fonts. Retaining flexibility that comes with all those poweful customization options, providing visibility for the important features, while at the same time designing a UI that feels approachable and learnable was definitely a big challenge. </div>
+
+       <!--  <div class="lh-copy f5 o-80">The sketch below was an iteration I did early on. From left to right it shows the layer list, layer source editor, data selection popover, filter popover, layer style editor, and property panel. I spent lots of time polishing and unifying various form elements. I worked closely with the cartography team and conducted weekly user testings to discover new usability and verify design solutions.</div> -->
     </div>
     <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
       <div class="absolute bottom-1">
         <img style="width: 179px" class="pl1 dib" src="img/direct_select.png" />
-        <div class="o-30 mt3 pl3 f7 lh-copy">Powered by the fast, client-side GL renderer, Studio allows users to directly select and edit map layers and view changes instantly.</div>
+        <div class="o-50 mt3 pl3 f7 lh-copy">Powered by the fast, client-side GL renderer, Studio allows users to directly select and edit map layers and view changes instantly.</div>
       </div>
     </div>
   </div>
@@ -108,7 +113,16 @@
 </div>
 <div class="w-100 bg-mb pv3-l p3 pl4-l pl3 pr2">
  <div class="pt4 white f6 flex">
-   <div style="width: 1200px" class=" self-center center nb3-l mb0"><span class="o-70">Style Editor Iteration</span> <span class="o-40">August, 2015</span></div>
+   <div style="width: 1200px" class=" self-center center mb0">
+     <div ><span class="o-70">Style Editor Iteration</span> <span class="o-40">August, 2015</span></div>
+     <div style="z-index: 11111" class="w-100 none f7 db-l dn nb3 o-50 mt3 cf">
+       <div class="w-20 fl">Layer list</div>
+       <div class="w-20 fl">Data source panel</div>
+       <div class="w-20 fl">Data source popover</div>
+       <div class="w-20 fl">Layer editing panel</div>
+       <div class="w-20 fl">Property panel</div>
+     </div>
+   </div>
   </div>
   <div class="flex flex-row pb2">
     <img style="width: 1200px" class="center  db-ns dn self-center" src="img/ms_editor.png" />
@@ -122,7 +136,7 @@
 <div class="bg-near-white w-100 pv4 lh-copy">
   <div class="mw9 cf ph6-l mb4 ph4 center">
     <div class="w-100 w-80-m w-70-l mt4 mb4 lh-copy f5 o-60">
-   I worked closely with the Mapbox cartography team and conducted weekly user testings to discover new usability issues and verify design solutions.
+
 </div>
     <article class="fl pv3 w-100  w-third-ns pr4-ns">
     <img style="width: 280px"  src="img/ms_3.png" />
@@ -132,12 +146,12 @@
     <article class="fl pv3 w-100 w-third-ns ph3-ns">
     <img style="width:  280px"  src="img/ms_1.png" />
       <div class="f5 mt3">Property categories</div>
-      <div class="f6 o-60 mt1">Divided the label layer properties into four different categories to make the panel easier to navigate.</div>
+      <div class="f6 o-60 mt1">Improve clarity by dividing layer properties into four different categories.</div>
     </article>
     <article class="fl pv3 w-100 w-third-ns pl4-ns">
     <img style="width:  280px" src="img/ms_2.png" />
        <div class="f5 mt3">Data selection popover</div>
-      <div class="f6 o-60 mt1">Created visual hierarchy between the parent tilesets and its subsets.</div>
+      <div class="f6 o-60 mt1">Visual hierarchy between the parent data sources and their subset sources.</div>
     </article>
   </div>
 </div>
@@ -146,15 +160,18 @@
 
 <div class="mw9 ph6-l cf center ph4 pt5">
 
-  <div class="flex mb4">
+  <div class="flex mb5">
     <div class="w-100 w-80-m w-70-l relative fl">
         <div class="f3 light mt2 mb3">Property Function</div>
-        <div class="lh-copy f5 o-80">Property functions provides designers a way to adjust and edit values based on different zoom levels. It was difficult to communicate the concept as well as to help users visualize the effects of the function. The three main design challenges: </div>
+        <div class="lh-copy f5 o-80">Property functions provides allows for adjusting values at different <b>zoom stops</b>. There are a few complexities that comes with the property function: </div>
         <ol class="lh-copy pv3 mb-list f5 o-80">
-          <li>It was tough to understand the exactly effects of a property function and know how how values change in between stops. To solve this we introduced a small ramp graph alongside each property value and a large detailed graph inside each value editing popover. </li>
-          <li>Number properties (e.g. widths) use exponential functions which generate outputs by interpolating between stops while enum properties use categorical functions which return the exact stop value. Color properties are also interpolated. We designed three different styles to help users distinguish between these three types. </li>
-          <li>It was easy to invalid property values. To solve this we added smart sorting (stops are always in ascending order with no duplicate) and other validation rules.</li>
+           <li>Functions of number, color and enum properties behave in different ways. </li>
+          <li>For number properties, users can also control how fast the value increase/decreases with zoom through changing the exponential base of the interpolation curve. </li>
+          <li>There are certain validation rules for functions, for example, zoom stops must always be in ascending order with no duplicates. </li>
+
         </ol>
+
+        <div class="lh-copy f5 o-80">To help users better understand how property function works, we introduced detailed ramp graphs, one small graph next to each property entry and another detailed graph inside each function editing popover. We also added automatic sorting and other smart validation rules to prevent people from making mistakes.</div>
     </div>
     <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
       <div class="absolute bottom-0">
@@ -167,7 +184,6 @@
 
 <div class="bg-near-white ">
 <div class="w-100 studio-ui-dive mw9 ph6-l cf center ph4 pt5 pb4 lh-copy">
-   <div class="lh-copy mb4 f5 o-80">Here are some explorations I designed to solve these problems: </div>
 
   <div class="w-100 flex-l flex-none br2 mb3-l mb4">
 
@@ -177,7 +193,7 @@
     <div class="lh-copy mt2-l pl4-l pl0">
       <div>
         <div class="f5 mt0-l mt2">Function graph</div>
-        <div class="o-60 f6 mt1">The large detailed graph in property function popover helps users understand the difference between these three property function types. The small graphs alongside the property values are really detailed in this iteration. I ended simplified them a lot more.</div>
+        <div class="o-60 f6 mt1">The large detailed graphs helps users understand how functions work and how value change at various zoom levels. I ended up simplifying the small graphs a lot more to make them look less clickable.</div>
       </div>
     </div>
   </div>
@@ -190,7 +206,7 @@
     <div class="lh-copy mt2-l pl4-l pl0">
       <div>
         <div class="f5 mt0-l mt2">Editable graph</div>
-        <div class="o-60 f6 mt1">People in user testings often expect to be able to edit the graphs. We did not go with this idea because it was hard to control accuracy. Instead I simplified the small graph to make them look less editable.</div>
+        <div class="o-60 f6 mt1">Design proposal for an editable graph. Deciding whether to build something is always hard. Prototyping helped us discover some accuracy intricacies with this interaction. So we didn't move forward with it.</div>
       </div>
     </div>
   </div>
@@ -202,7 +218,7 @@
     <div class="lh-copy mt2-l pl4-l pl0">
       <div>
         <div class="f5 mt0-l mt2">Position indicator and distinct styles</div>
-        <div class="o-60 f6 mt1">I added this diamond pointer to indicate values at current zoom level.  Distinct small graph styles make it more glanceable which are non-functions and which are functions and the function types.</div>
+        <div class="o-60 f6 mt1">I added a diamond pointer to indicate values at current zoom level. The distinct styles of small graphs help users differentiate between color, enum and number functions at a glance. </div>
       </div>
     </div>
   </div>
@@ -234,7 +250,7 @@
 
     <div class="w-100 w-80-m cf w-70-l relative">
         <div class="f3 light mb3">Dashboard</div>
-        <div class="lh-copy f5 o-80">In addition to map design, Studio also serves as an online platform that connects all the different Mapbox products, including the data upload and processing pipeline and the developer APIs and SDKs. It includes tools and interfaces to help users upload and manage custom data, analyze API usage, and manage account. And since we are introducing a completely new interface with the launch, we added a small amount of onboarding information to help users orient different pages.</div>
+        <div class="lh-copy f5 o-80">In addition to map design, Studio also serves as an online platform that connects all the Mapbox products, from the data upload and processing pipeline to the developer APIs and SDKs. Users can design maps, upload and manage custom data, analyze API usage and manage account, all in one place.</div>
     </div>
 
 
@@ -263,7 +279,7 @@
     <div  style="flex: 1 1 240px" class="lh-copy flex f7 pl4-l pl0">
       <div class="self-end mb4-l">
         <div class="f5 mt4-l mt2">Home page</div>
-        <div class="o-60 f6 mt1">The goal of the home page is to help user find what they are looking for, no matter it's map design, data upload, or developer documentation. </div>
+        <div class="o-60 f6 mt1">The goal of the home page is to help user navigate and find what they are looking for. We identified three most common tasks: design, develop and data visualization and made them easy accessible from the main view. </div>
       </div>
     </div>
   </div>
@@ -278,7 +294,7 @@
     <div style="flex: 1 1 240px" class="lh-copy flex pl4-l pl0">
       <div class="self-end f7 mb4-l">
         <div class=" mt4-l mt2 f5">Listing pages</div>
-        <div class="o-60 mt1 f6">I designed several versions of the style and tileset listing page. The tileset page also includes to data upload status popover. </div>
+        <div class="o-60 mt1 f6">The listing pages consist of a left main view with all styles/tilesets in a user's account, and a right sidebar explaining how to use those resources. There is also a data upload popover showing the status of current upload. </div>
       </div>
     </div>
   </div>
@@ -291,8 +307,8 @@
 
 <div class="w-100 bg-near-white pv5  lh-copy">
   <div class="mw9 cf ph6-l ph4 center">
-    <div class="f3 light mb3">Modals</div>
-    <div class="lh-copy f5 o-80 mb4">Modals is a main UI component of both the Studio editor and the dashboard. Then challenge lies in explaining abstract concepts and displaying large amount of information in a very confined space.</div>
+    <div class="f3 light mb3">Modal</div>
+    <div class="lh-copy f5 o-80 mb4">Modal is another main UI component. The challenge here is explaining abstract concepts and displaying large amount of information in a very confined space.</div>
     <div class="flex-l flex-none">
       <div style="flex: 1 1 501px" class="mr4-l mr0">
 
@@ -300,7 +316,7 @@
              <img style="width: 501px" class="" src="img/ms_modal_create_style.png" />
           </div>
           <div class="f5 mt3">New style modal</div>
-          <div class="o-60 pr5-l pr0 f6 mb4 mt1">There were six styles users can pick as a base for their map design. The goal of this modal is to help making an informed decision about which style to pick based on different needs. </div>
+          <div class="o-60 pr5-l pr0 f6 mb4 mt1">There are six styles users can choose as a base template for their design. The goal of this modal is to help them make an informed decision on which style to pick based on different needs. </div>
       </div>
       <div style="flex: 1 1 397px"  class="ml4-l ml0">
 
@@ -308,7 +324,7 @@
              <img style="width: 397px" class="" src="img/ms_modal_composite.png" />
           </div>
           <div class="f5 mt3">Layer composite modal</div>
-          <div class="o-60 pr5-l pr0 f6 mb4 mt1">Composite means combining various data sources (for use cases like label collision detection). Here I tried to use illustration to explain a abstract concept. </div>
+          <div class="o-60 pr5-l pr0 f6 mb4 mt1">Composite means combining various data sources for use cases like label collision detection. Here I tried to use illustration to explain a abstract concept. </div>
       </div>
 
     </div>
@@ -321,9 +337,14 @@
 
   <div class="flex mb4">
     <div class="w-100 w-80-m w-70-l relative fl">
-        <div class="f3 light mb3">What I have learned</div>
+        <div class="f3 light mb3">What I learned</div>
 <div class="lh-copy mt3 f5 o-80">
-         Coming to the team at a later stage definitely makes the job more challenging since I have far less context about the product and the development history. Luckily, the team at Mapbox values deeply about open communication and they tried to document everything on Github. So a big part of what I do everyday at the beginning was just reading to better understand how certain decisions are made. I really benefited tremendously from the transparent culture there, which allows me to get context that would otherwise not be available. This experience really helped me understand the importance of documentation (and sometimes over-communication) for anything that requires collaboration. Later when I started work on other projects I would also try my best to communicate clearly on tickets why I am making certain design decisions. </div>
+         Coming to the team at a later stage definitely makes the job more daunting since I have less context about the product history. Luckily, the team at Mapbox values deeply about open communication and they documented everything, down to every small UI tweaks, on Github. A big part of what I do at the beginning was just reading through the ticket to better understand how certain decisions are made.</div>
+<div class="lh-copy mt3 f5 o-80">
+          This experience helped me understand the importance of documentation and communication. I tried my best later on to apply the same principles to other projects I worked on: 1) Demonstrate clearly with mockups what I am trying to achieve, 2) Gather constant feedbacks from engineers to build consensus, and 3) Document the reason behind every design decision with clarity.  </div>
+
+          <div class="lh-copy mt3 f5 o-80">
+         Sometimes better communication also means going the extra mile to make a prototype or open a pull request. Using the same tool to design and develop and communicate really helps build empathy between designers and engineers. In a small team and a highly iterative environment, opening a pull request also brings more credibility to the design decisions than static images. It allows me to establish trust and introduce systematic changes merely a few months before the launch. </div>
     </div>
 
 </div>

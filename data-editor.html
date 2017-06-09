@@ -83,10 +83,7 @@
 
   <div class="flex mb3 pb4">
     <div class="w-100 w-80-m w-70-l relative fl">
-       <div class="lh-copy f5  o-80">Mapbox Studio dataset editor provides a simple way to create and modify geospatial data. The editor stores data as GeoJSON files containing a list of features. Each features has coordinates, geometry, and property information. With the editor, users can create different types of features (polygons, points, and lines) with the drawing tool and then add specific properties to identify and manage the features. </div>
-
-
-
+       <div class="lh-copy f5  o-80">Mapbox Studio dataset editor provides a simple way to create and modify geospatial data. The editor stores data as GeoJSON files containing a list of features with coordinates, geometry and property information. Users can draw, import, edit and manage feature. They can also trace features from satellite imagery. Similar to the style editor, we wanted to the tool to be accessible to more than just GIS professionals. Myabe it's a designer who wants to create a data visualization project, or a developer who needs custom data for a store locator app.</div>
 
     </div>
     <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
@@ -97,7 +94,7 @@
   "TYPE": "Station"
 }
 </code></pre>
- <div class="o-30  f7 lh-copy">Feature properties.</div>
+ <div class="o-30  f7 lh-copy">In GeoJSON files, properties helps identify and organize features.</div>
 
       </div>
     </div>
@@ -111,7 +108,7 @@
 
 
         <div class="f3 light mb3">The Challenges</div>
-        <div class="lh-copy f5 mb3 o-80">For the initial dataset editor release we were aming for simplicity and flexibility. The team wanted to create foundation for more complicated features down the line. We identified four main tasks users can perform inside the interface: import, draw, edit, and export. And then we validated if the design can make performing those tasks easier through user testing. There are three main design challenges we were facing: </div>
+        <div class="lh-copy f5 mb3 o-80">The most challenging part of creating something new is definitely prioritizing features, deciding which  initial release we were aming for a balance between simplicity and flexibility, providing a foundation for more complicated features down the line. We identified four main tasks users can perform inside the interface: import, draw, edit, and export. And then we validated if the design can make performing those tasks easier through user testing. There are three main design challenges we were facing: </div>
 
         <ol class="lh-copy pt3 mb-list f5">
           <li class="pb2"><span class="f5 dib mb1 o-80">Shared property fields</span>. <span class="">Feautures inside one dataset usually share the same set of property fields. However we don't store such information in GeoJSON files. </span></li>
