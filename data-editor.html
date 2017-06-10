@@ -83,21 +83,10 @@
 
   <div class="flex mb3 pb4">
     <div class="w-100 w-80-m w-70-l relative fl">
-       <div class="lh-copy f5  o-80">Mapbox Studio dataset editor provides a simple way to create and modify geospatial data. The editor stores data as GeoJSON files containing a list of features with coordinates, geometry and property information. Users can draw, import, edit and manage feature. They can also trace features from satellite imagery. Similar to the style editor, we wanted to the tool to be accessible to more than just GIS professionals. Myabe it's a designer who wants to create a data visualization project, or a developer who needs custom data for a store locator app.</div>
+       <div class="lh-copy f5  o-80">Mapbox Studio dataset editor provides a simple way to create and modify geospatial data. The editor stores data as GeoJSON files containing a list of features with coordinates, geometry and property information. Users can draw, import, edit and manage feature. They can also trace features from satellite imagery. Similar to the style editor, we wanted to the tool to be accessible to not just GIS professionals, but also designers who want to create a data visualizations or developer who needs custom data for their apps.</div>
 
     </div>
-    <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
-      <div class="absolute ">
 
-<pre><code class="f7 br2 lh-title  w5 pb3 hljs bg-near-white javascript">"properties": {
-  "NAME": "Takoma",
-  "TYPE": "Station"
-}
-</code></pre>
- <div class="o-30  f7 lh-copy">In GeoJSON files, properties helps identify and organize features.</div>
-
-      </div>
-    </div>
   </div>
 
 
@@ -108,21 +97,16 @@
 
 
         <div class="f3 light mb3">The Challenges</div>
-        <div class="lh-copy f5 mb3 o-80">The most challenging part of creating something new is definitely prioritizing features, deciding which  initial release we were aming for a balance between simplicity and flexibility, providing a foundation for more complicated features down the line. We identified four main tasks users can perform inside the interface: import, draw, edit, and export. And then we validated if the design can make performing those tasks easier through user testing. There are three main design challenges we were facing: </div>
+        <div class="lh-copy f5 mb3 o-80">The most difficult part of this project is definitely prioritizing features, deciding which to build for the initial release. We wanted to provide a foundation for more complicated features down the line and maintaining a balance between simplicity and flexibility. First we identified four main tasks for the interface: import, draw, edit, and export. Then we validated if the design can make performing those tasks easier through user testing. The main design challenges are: </div>
 
         <ol class="lh-copy pt3 mb-list f5">
           <li class="pb2"><span class="f5 dib mb1 o-80">Shared property fields</span>. <span class="">Feautures inside one dataset usually share the same set of property fields. However we don't store such information in GeoJSON files. </span></li>
 <li class="pb2"><span class="f5 dib mb1">Search</span><span class="">. It was difficult to filter the dataset and find specific features. </span></li>
-<li class=""><span class="f5 dib mb1">Precision</span><span class="">. Spatial data is precise and we want to give users full control when that is needed.</span> </li>
+<li class=""><span class="f5 dib mb1">Precision</span><span class="">. Spatial data is precise and we want to give users full control when it's needed.</span> </li>
         </ol>
 
     </div>
-    <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
-      <div class="absolute bottom-1">
-        <img style="width: 266px" class="pl1 dib" src="img/de_draw.png" />
-        <div class="o-30 mt3  f7 lh-copy">I sketched out some draw interaction ideas and worked with Matthew to add these interactions to mapbox-gl-draw.</div>
-      </div>
-    </div>
+
   </div>
 
 
@@ -149,12 +133,39 @@
 
   <div class="flex mb2">
     <div class="w-100 w-80-m w-70-l relative fl">
-        <div class="f3 light mt2 mb3">Iteration 1</div>
-        <div class="lh-copy f5 mb3 o-80">When I first started on this project, the UI consisted of a left panel with a list of features, and a map. I spent a lot of time trying to solve the same problem Eden was trying to solve before: if we can't have common properties, then we should make it easy to share property fields when selecting multiple features.</div>
+       <div class="f5 mt2 mb2">
+         Iteration 1</div>
+        <div class="f3 light mt2 mb4">
+         Multi-select and Feature List</div>
+        <div class="lh-copy f5 mb3 o-80">In early iterations of the data editor, the UI consisted of a feature list view on the map, and a map view on the right. Since we are showing a list, every feature needs a unique identifier. This introduces a problem because those dataset are stored and saved as GeoJSON files. A concept like "name" does not really exist in GeoJSON. So if we decided to move forward, this will add significant burden to implementation.</div>
 
-<div class="lh-copy f5 o-80">I sat down and did my first user testing with Amy Lee and she had lots of trouble finding/indetifying features. For me it's the most important user testing because at that time I focused solely on multi-select & property sharing while completely overlooked some fundamental flaws with the list design itself. Each feature in the list, for example, needs a unique identifier such as name to make the it work, but the name concept does not exit in GeoJSON. Tom suggested removing the list and multi-select completely and really simplifying the UI. Amy's user testing really convinced me that is the right thing to do. And I'm grateful we did that early on..</div>
+        <div class="lh-copy f5 mb3 o-80">Another problem I tried to tackle here is edit multiple features at the same time. Same as the feature "names", the concept of "shared property fields" also don't exist in GeoJSON. Every feature can have a list of different property fields.</div>
 
+<div class="lh-copy f5 o-80"> So we decided it's time to take a step back and think about if we wanted to adopt a UI that's similar to the GeoJSON structure, or diverge from it more dramatically. During my first user testing, the tester was indeed having lots of trouble finding features. But I noticed that she associated one feature with mutiple properties, such as both location and color, not just one single "name". Moreover, she identifies features through searching them directly on a map in the context of the entire dataset, not through names. Tom MacWright suggested removing the list and multi-select completely and really simplifying the UI to focus on the main tasks: draw, import, and edit. The user testings convinced me that is the right thing to do. And I'm grateful we did that early on.</div>
+    </div>
 
+      <div class="dn mt3 mw6 pl5 db-l w-100 w-20-m items-end w-30-l fl relative">
+      <div class="absolute bottom-1">
+
+<pre><code class="f7 br2 lh-title  w5 hljs bg-near-white javascript">{
+  "type": "Feature",
+  "properties": {
+    "NAME": "Takoma",
+    "TYPE": "Station"
+  },
+  "geometry": {
+    "coordinates": [
+      -77.018178,
+      38.976086
+    ],
+    "type": "Point"
+  },
+  "id": "0ae7fd895624cc8f53d8d7a7e1266d26"
+}
+</code></pre>
+ <div class="o-30  f7 lh-copy">The feature structure inside a GeoJSON file: properties, geometry, type, and ID.</div>
+
+      </div>
     </div>
 
   </div>
@@ -179,10 +190,27 @@
 
   <div class="flex mb2">
     <div class="w-100 w-80-m w-70-l relative fl">
-        <div class="f3 light mt2 mb3">Iteration 2</div>
-        <div class="lh-copy f5 mb3 o-80">The second major iteration was really about simplifying and refocusing. Without the feature list panel, there's a lot more space to directly draw on the map. By removing multi-select for property edit, we can focus on refining single feature edit, which seems simple, but is actually quite hard to do well. I still had lots of concerns and doubts about the design, like how difficult it is to overview data and ensure consistency. We did one user testing with Rodolfo and he struggled a lot making sure all the property fields for all features are the same. Matthew started solving this problem by introducing typehead and then we iterated a lot on the design. In the released version users are able to add all existing property fields to one feature with one click.</div>
+        <div class="f5 mt2 mb2">
+         Iteration 2</div>
+        <div class="f3 light mt2 mb4">
+         Property and Code Editor</div>
+        <div class="lh-copy f5 mb3 o-80">The second major iteration focused on simplifying and refocusing. Without the feature list panel, there's a lot more space to directly draw on the map. By removing multi-select for property edit, we can focus on refining single feature edit. The "name" concept was completely removed in this iteration and instead wen simply used geometry type plus coordinates to represent the feature. Matthew Whittemore introduced typehead to the property field input so users can see all existing fields available inside the dataset when they start typing. I also experimented with the position of the feature editing panel: an achored panel pinned to the left of the editor, or a popover that only shows up when user clicks on the feature on the map. We went forward with the former solution for simlicity and consistency.
+        </div>
+
+        <div class="lh-copy f5 mb3 o-80">A big change we introduced here is the code editor. Users can access it through the <code class="f7">view source</code> tab. This change allows for more precise control over the data, especially when people want to copy-paste coordinates information. The source code there is in GeoJSON format and completely reflected how the data is represented in the API level. This is a good example of how we retain flexibility and show complexity only when it's needed. </div>
 
 
+
+
+        <div class="lh-copy f5 mb3 o-80">Another main focus of this iteration is draw interactions. How can we indicate to users they can start drawing? How do we indicate they can close a shape? What should the interaction be when they want to modify a node of the shape? I sketched out some ideas and worked with Matthew to implement them in the framework the data editor uses for this interaction: mapbox-gl-draw. </div>
+
+    </div>
+
+      <div class="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
+      <div class="absolute bottom-1">
+        <img style="width: 266px" class="pl1 dib" src="img/de_draw.png" />
+        <div class="o-30 mt3  f7 lh-copy">Draw interactions</div>
+      </div>
     </div>
 
   </div>
@@ -207,9 +235,7 @@
 
 <div class="bg-near-white w-100 pv4 lh-copy">
   <div class="mw9 cf ph6-l mb4 ph4 center">
-    <div class="w-100 w-80-m w-70-l mt4 mb4 lh-copy f5 o-60">
-   I worked closely with the Mapbox cartography team and conducted weekly user testings to discover new usability issues and verify design solutions.
-</div>
+
     <article class="fl pv3 w-100  w-third-ns pr4-ns">
     <img style="width: 280px"  src="img/de_topbar.png" />
       <div class="f5 mt3">Different layer states</div>
@@ -236,8 +262,11 @@
   <div class="flex mb2">
     <div class="w-100 w-80-m w-70-l relative fl">
 
-
-<div class="lh-copy f5 o-80">With almost all the basic functionalities in place, we started more aggressively user-testing the tool every week. User testings at this stage, with AJ, Nicki and many others, helped us identify intricate problems such as confusion around values types (number/string). We were able to solve many of the problems through introducing very minimum UI changes.</div>
+<div class="f5 mt2 mb2">
+         Iteration 3</div>
+        <div class="f3 light mt2 mb4">
+         Single Property Editing and Feature Search</div>
+<div class="lh-copy f5 o-80">With almost all the basic functionalities in place, we started more aggressively user-testing the tool every week. User testings at this stage helped us identify intricate problems such as confusion around values types (number/string). We were able to solve many of the problems through introducing very minimum UI changes.</div>
 
 
 
