@@ -1,5 +1,13 @@
+# build output
+dist
+.next
+
+# dependencies
 node_modules
+
+# logs
 *.log
+
 tmp
 legacy/.git
-.eslintcache
+.DS_Store
