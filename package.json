@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "next": "^2.4.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
