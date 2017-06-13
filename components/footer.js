@@ -6,7 +6,7 @@ export default () => (
     <div className="mw-limiter cf ph6-l ph4 ">
       <div className="f5 lh-copy">
       <p className=" o-60">Maya Gao is a product designer and developer working for Mapbox in Washington D.C. Previously she was a designer at Lonely Planet and Upstatement.</p>
-      <Link href="/"><a className="db blue link">Back</a></Link>
+      <Link prefetch href="/"><a className="db blue link">Back</a></Link>
       </div>
     </div>
 </div>)

@@ -26,17 +26,17 @@ const roles = [
 ]
 const featureDetails = [
   {
-    imageSource: 'static/img/ms_3.png',
+    imageSource: '../static/img/ms_3.png',
     title: 'Different layer states',
     description: 'Clear, distinguishable states for nested, selected, and hidden layers.'
   },
   {
-    imageSource: 'static/img/ms_1.png',
+    imageSource: '../static/img/ms_1.png',
     title: 'Property categories',
     description: 'Improve clarity by dividing layer properties into four different categories.'
   },
   {
-    imageSource: 'static/img/ms_2.png',
+    imageSource: '../static/img/ms_2.png',
     title: 'Data selection popover',
     description: 'Visual hierarchy between the parent data sources and their subset sources.'
   }
@@ -44,17 +44,17 @@ const featureDetails = [
 
 const functionDetails = [
   {
-    imageSource: 'static/img/ramp_1.png',
+    imageSource: '../static/img/ramp_1.png',
     title: 'Function graph',
     description: 'The large detailed graphs helps users understand how functions work and how value change at various zoom levels. I ended up simplifying the small graphs a lot more to make them look less clickable.'
   },
   {
-    imageSource: 'static/img/ms_ramp_edit.png',
+    imageSource: '../static/img/ms_ramp_edit.png',
     title: 'Editable graph',
     description: `Design proposal for an editable graph. Deciding whether to build something is always hard. Prototyping helped us discover some accuracy intricacies with this interaction. So we didn't move forward with it.`
   },
   {
-    imageSource: 'static/img/ramp_2.png',
+    imageSource: '../static/img/ramp_2.png',
     title: 'Position indicator and distinct styles',
     description: 'I added a diamond pointer to indicate values at current zoom level. The distinct styles of small graphs help users differentiate between color, enum and number functions at a glance. '
   }
@@ -83,10 +83,10 @@ export default () => (
             </div>
           </div>
           <div className="w-60-l dn db-l w-100 fl nt5 mb3">
-            <img style={{minWidth: 925}} className="" src="static/img/ms_header.png" />
+            <img style={{minWidth: 925}} className="" src="../static/img/ms_header.png" />
           </div>
           <div className="w-60-l db dn-l w-100 fl nb6 nl5 mb4">
-            <img style={{minWidth: 660}} src="static/img/ms_header.png" />
+            <img style={{minWidth: 660}} src="../static/img/ms_header.png" />
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default () => (
     <div className="w-100 w-80-m w-70-l">
       <a href="" className="db mb4 mt4 relative link light-silver hover-moon-gray">
         <div>
-          <img style={{width: 100}} className="o-20" src="static/img/wired.svg" />
+          <img style={{width: 100}} className="o-20" src="../static/img/wired.svg" />
           <div className="quote f4 mt2">A Powerful New Mapmaking Tool Fit for Both Pros and Newbies</div>
         </div>
       </a>
@@ -112,7 +112,7 @@ export default () => (
       </div>
       <div className="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
         <div className="absolute bottom-1">
-          <img style={{width: 179}} className="pl1 dib" src="static/img/direct_select.png" />
+          <img style={{width: 179}} className="pl1 dib" src="../static/img/direct_select.png" />
           <div className="o-50 mt3 pl3 f7 lh-copy">Powered by the fast, client-side GL renderer, Studio allows users to directly select and edit map layers and view changes instantly.</div>
         </div>
       </div>
@@ -133,8 +133,8 @@ export default () => (
      </div>
     </div>
     <div className="flex flex-row pb2">
-      <img style={{width: 1200}} className="center  db-ns dn self-center" src="static/img/ms_editor.png" />
-      <img style={{maxWidth: 230+'%'}} className="center  db dn-ns self-center" src="static/img/ms_editor.png" />
+      <img style={{width: 1200}} className="center  db-ns dn self-center" src="../static/img/ms_editor.png" />
+      <img style={{maxWidth: 230+'%'}} className="center  db dn-ns self-center" src="../static/img/ms_editor.png" />
     </div>
   </div>
 
@@ -167,7 +167,7 @@ export default () => (
       </div>
       <div className="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
         <div className="absolute bottom-0">
-          <img style={{width: 154}} className="pl1 dib" src="static/img/ramp.png" />
+          <img style={{width: 154}} className="pl1 dib" src="../static/img/ramp.png" />
           <div className="o-30 mt2 pl3 f7 mb4">Increase the city label size when zooming in.</div>
         </div>
       </div>
@@ -198,7 +198,7 @@ export default () => (
     </div>
     <div className="w-100 mt5 flex-l flex-none br2 mb3">
       <div style={{flex: 'auto 1 824px'}} className="br2 nl3-l nl0 ">
-         <img style={{width: 824}} className="" src="static/img/slide1.png" />
+         <img style={{width: 824}} className="" src="../static/img/slide1.png" />
       </div>
       <div  style={{flex: '1 1 240px'}} className="lh-copy flex f7 pl4-l pl0">
         <div className="self-end mb4-l">
@@ -209,7 +209,7 @@ export default () => (
     </div>
     <div className="w-100 mt5 flex-l flex-none br2 mb3">
       <div style={{flex: `auto 1 824px`}}  className="br2  nl3-l nl0 ">
-         <img style={{width: 824}} className="" src="static/img/slide2.png" />
+         <img style={{width: 824}} className="" src="../static/img/slide2.png" />
       </div>
       <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
         <div className="self-end f7 mb4-l">
@@ -228,7 +228,7 @@ export default () => (
         <div style={{flex: `1 1 501px`}} className="mr4-l mr0">
 
             <div className=" overflow-y-hidden">
-               <img style={{width: 501}} className="" src="static/img/ms_modal_create_style.png" />
+               <img style={{width: 501}} className="" src="../static/img/ms_modal_create_style.png" />
             </div>
             <div className="f5 mt3">New style modal</div>
             <div className="o-60 pr5-l pr0 f6 mb4 mt1">There are six styles users can choose as a base template for their design. The goal of this modal is to help them make an informed decision on which style to pick based on different needs. </div>
@@ -236,7 +236,7 @@ export default () => (
         <div style={{flex: `1 1 397px`}}  className="ml4-l ml0">
 
             <div className="overflow-y-hidden">
-               <img style={{width: 397}} className="" src="static/img/ms_modal_composite.png" />
+               <img style={{width: 397}} className="" src="../static/img/ms_modal_composite.png" />
             </div>
             <div className="f5 mt3">Layer composite modal</div>
             <div className="o-60 pr5-l pr0 f6 mb4 mt1">Composite means combining various data sources for use cases like label collision detection. Here I tried to use illustration to explain a abstract concept. </div>
@@ -256,7 +256,7 @@ export default () => (
          <div className="lh-copy mt3 f5 o-80">
           This experience helped me understand the importance of documentation and communication. I tried my best later on to apply the same principles to other projects I worked on: 1) Demonstrate clearly with mockups what I am trying to achieve, 2) Gather constant feedbacks from engineers to build consensus, and 3) Document the reason behind every design decision with clarity.  </div>
          <div className="lh-copy mt3 f5 o-80">
-           Sometimes better communication also means going the extra mile to make a prototype or open a pull request. Using the same tool to design and develop and communicate really helps build empathy between designers and engineers. In a small team and a highly iterative environment, opening a pull request also brings more credibility to the design decisions than static images. It allows me to establish trust and introduce systematic changes merely a few months before the launch. </div>
+           Sometimes better communication also means going the extra mile to make a prototype or open a pull request. Using the same tool to design and develop and communicate really helps build empathy between designers and engineers. In a small team and a highly iterative environment, opening a pull request also brings more credibility to the design decisions than ../static images. It allows me to establish trust and introduce systematic changes merely a few months before the launch. </div>
       </div>
     </div>
   </div>
@@ -264,10 +264,10 @@ export default () => (
   <div className="mw9 cf ph6-l ph4 mt4 center">
     <div className="flex-l flex-none ">
       <div  style={{background: `#3887BE`}} className="flex-auto br3 mr2-l mr0 justify-center flex items-center pv5 ph4">
-        <img style={{width: 360}} src="static/img/2.svg" />
+        <img style={{width: 360}} src="../static/img/2.svg" />
       </div>
       <div style={{background: `#56B881`}} className="flex-auto br3 ml2-l ml0 mt3 mt0-l justify-center flex items-center pv5 ph4 ">
-        <img style={{width: 360}} src="static/img/3.svg" />
+        <img style={{width: 360}} src="../static/img/3.svg" />
       </div>
     </div>
      <div className="o-60 f7 mt3">Some illustrations I did for the Studio sign up page. </div>

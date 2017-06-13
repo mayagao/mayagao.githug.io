@@ -22,17 +22,17 @@ const roles = [
 ]
 const featureDetails = [
   {
-    imageSource: 'static/img/de_topbar.png',
+    imageSource: '../static/img/de_topbar.png',
     title: 'Different layer states',
     description: 'Clear, distinguishable states for nested, selected, and hidden layers.'
   },
   {
-    imageSource: 'static/img/de_topbar.png',
+    imageSource: '../static/img/de_topbar.png',
     title: 'Different layer states',
     description: 'Clear, distinguishable states for nested, selected, and hidden layers.'
   },
   {
-    imageSource: 'static/img/de_type.png',
+    imageSource: '../static/img/de_type.png',
     title: 'Property categories',
     description: 'Clear, distinguishable states for nested, selected, and hidden layers.'
   }
@@ -60,10 +60,10 @@ export default () => (
               </div>
             </div>
             <div className="w-60-l dn db-l w-100 fl nt5 mb3">
-              <img style={{minWidth: 925}} className="" src="static/img/de_header.png" />
+              <img style={{minWidth: 925}} className="" src="../static/img/de_header.png" />
             </div>
             <div className="w-60-l db dn-l w-100 fl nb6 nl5 mb4">
-              <img style={{minWidth: 660}} className="" src="static/img/de_header.png" />
+              <img style={{minWidth: 660}} className="" src="../static/img/de_header.png" />
             </div>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default () => (
        <div style={{width: 1164}} className=" self-center center "><span className="o-70 pl1">Dataset Editor Iteration 1</span> <span className="o-40">March, 2016</span></div>
       </div>
       <div className="flex flex-row pb2">
-        <img style={{width: 1164}} className="center  dn db-ns self-center" src="static/img/de_iteration_1.png" />
-        <img style={{maxWidth: 230 + `%`}} className="center  db dn-ns self-center" src="static/img/de_iteration_1.png" />
+        <img style={{width: 1164}} className="center  dn db-ns self-center" src="../static/img/de_iteration_1.png" />
+        <img style={{maxWidth: 230 + `%`}} className="center  db dn-ns self-center" src="../static/img/de_iteration_1.png" />
       </div>
     </div>
 
@@ -139,8 +139,8 @@ export default () => (
        <div style={{width: 1164}} className=" self-center center "><span className="o-70 pl3">Dataset Editor Iteration 2</span> <span className="o-40">June, 2016</span></div>
       </div>
       <div className="flex flex-row pb2">
-        <img style={{width: 1164}} className="center db-ns dn self-center" src="static/img/de_iteration_2.png" />
-         <img style={{maxWidth: 200 + '%'}} className="center  db dn-ns self-center" src="static/img/de_iteration_2.png" />
+        <img style={{width: 1164}} className="center db-ns dn self-center" src="../static/img/de_iteration_2.png" />
+         <img style={{maxWidth: 200 + '%'}} className="center  db dn-ns self-center" src="../static/img/de_iteration_2.png" />
       </div>
     </div>
 
@@ -165,7 +165,7 @@ export default () => (
         </div>
         <div className="dn mw6 pl5 db-l w-20-m items-end w-30-l fl relative">
           <div className="absolute bottom-1">
-            <img style={{width: 266}} className="pl1 dib" src="static/img/de_draw.png" />
+            <img style={{width: 266}} className="pl1 dib" src="../static/img/de_draw.png" />
             <div className="o-30 mt3  f7 lh-copy">Draw interactions</div>
           </div>
         </div>
@@ -177,8 +177,8 @@ export default () => (
        <div style={{width: 1200}} className=" self-center center mb1"><span className="o-70">Dataset Editor Iteration 3</span> <span className="o-40">August, 2015</span></div>
       </div>
       <div className="flex flex-row pb2">
-        <img style={{width: 1200}} className="center db-ns dn self-center" src="static/img/de_iteration_3.png" />
-        <img style={{maxWidth: 200 + 'em'}} className="center  db dn-ns self-center" src="static/img/de_iteration_3.png" />
+        <img style={{width: 1200}} className="center db-ns dn self-center" src="../static/img/de_iteration_3.png" />
+        <img style={{maxWidth: 200 + 'em'}} className="center  db dn-ns self-center" src="../static/img/de_iteration_3.png" />
       </div>
     </div>
 
@@ -209,7 +209,7 @@ export default () => (
       </div>
       <div className="w-100 mt5 flex-l flex-none br2 mb3">
         <div style={{flex: `auto 1 824px`}}  className="br2 nl2-ns nl0">
-          <img style={{width: 824}} className="" src="static/img/de_view.png" />
+          <img style={{width: 824}} className="" src="../static/img/de_view.png" />
         </div>
         <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
           <div className="self-end f7 mb4-l">
@@ -226,13 +226,13 @@ export default () => (
         <div className="flex-l flex-none">
           <div style={{flex: `1 1 500px`}} className="mr4-l mr0 mb4 mb0-l">
               <div className=" overflow-y-hidden">
-                 <img style={{width: 500}} className="" src="static/img/de_modal_export.png" />
+                 <img style={{width: 500}} className="" src="../static/img/de_modal_export.png" />
               </div>
               <div className="f5 mt2-l mt1 pl2">Dataset export modal</div>
           </div>
           <div style={{flex: `1 1 500px`}}  className="ml4-l ml0">
               <div className="overflow-y-hidden">
-                 <img style={{width: 500}} className="" src="static/img/de_modal_new.png" />
+                 <img style={{width: 500}} className="" src="../static/img/de_modal_new.png" />
               </div>
               <div className="f5 mt2-l mt1 pl2">New dataset modal</div>
           </div>
