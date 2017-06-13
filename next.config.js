@@ -2,7 +2,9 @@
 module.exports = {
   exportPathMap: function () {
     return {
-      "/": { page: "/" }
+      "/": { page: "/" },
+      "/mapbox-studio": { page: "/mapbox-studio" },
+      "/data-editor": { page: "/data-editor" }
     }
   },
 }

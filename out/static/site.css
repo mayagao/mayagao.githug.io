@@ -21,6 +21,10 @@ body {
   font-size: 18px;
 }
 
+.mw-limiter{
+    max-width: 82rem;
+}
+
 .f7 {
   font-size: 0.8rem;
 }

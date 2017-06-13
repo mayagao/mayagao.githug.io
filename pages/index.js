@@ -16,7 +16,7 @@ export default () => (
   <div className="f4 mb2">Works</div>
   <Link href="/mapbox-studio"><a className="blue dim link db mt3" >Mapbox Studio</a></Link>
   <div className="f5 o-80 mt0">A point-and-click map design interface.</div>
-  <Link href="/data-editor "><a className="blue dim link db mt3">Dataset Editor</a></Link>
+  <Link href="/data-editor"><a className="blue dim link db mt3">Dataset Editor</a></Link>
   <div className="f5 o-80 mt0">A tool for spatial data editing.</div>
 </div>
 
