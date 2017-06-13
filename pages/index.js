@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default () => (
   <div>
    <Header />
-    <div className="ph4 bt b--navy bw2 pt4 pt5-ns ph5-ns">
+    <div className="ph4 bt b--navy bw2 pv4 pv5-ns ph5-ns">
 <div className="mw7 center">
 <div className="f3 navy ">Maya Gao</div>
 
