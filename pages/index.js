@@ -1,34 +1,58 @@
 import React from 'react'
 import Header from '../components/header'
 import Link from 'next/link'
+import { styles } from '../components/styles'
+const projects = [
+  {
+    themeColor: '#8a88cd',
+    imageSource: 'static/img/home_studio.png',
+    title: 'Mapbox Studio',
+    link: '/mapbox-studio',
+    description: 'A point-and-click map design interface.'
+  },
+  {
+    themeColor: '#6b88a6',
+    imageSource: 'static/img/home_data.png',
+    title: 'Data Editor',
+    link: '/data-editor',
+    description: 'A tool for spatial data editing.'
+  }
+]
 export default () => (
   <div>
-   <Header />
-    <div className="ph4 bt b--navy bw2 pv4 pv5-ns ph5-ns">
-<div className="mw7 center">
-<div className="f3 navy ">Maya Gao</div>
-
-
-<div className="f5 f4 navy lh-copy">
-<p className="mt4">👋 I am a product designer living and working in Washington D.C. Currently I design and build things for Mapbox. I've worked on a wide range of projects here from the Mapbox Studio style editor and data editor, to the documentation system and the mobile navigation SDK. I often switch between UI design, communication design, and front-end development in my day-to-day work. </p><p>Before Mapbox, I was a UI designer at Lonely Planet and a design intern at Upstatement.</p>
-
-<div className="pt3">
-  <div className="f4 mb2">Works</div>
-  <Link prefetch href="/mapbox-studio"><a className="blue dim link db mt3" >Mapbox Studio</a></Link>
-  <div className="f5 o-80 mt0">A point-and-click map design interface.</div>
-  <Link prefetch href="/data-editor"><a className="blue dim link db mt3">Dataset Editor</a></Link>
-  <div className="f5 o-80 mt0">A tool for spatial data editing.</div>
-</div>
-
-
-
-<div className="f6 o-50 mt5"> </div>
-
-<div className="dib"><a className="blue dim link mr2" href="https://dribbble.com/mayagao">Dribbble</a></div>
-<div className="dib"><a className="blue dim link mr2" href="https://github.com/mayagao">Github</a></div>
-<div className="dib"><a className="blue dim link" href="https://www.linkedin.com/in/mayagq">LinkedIn</a></div>
-</div>
-</div></div>
-
-
-  </div>)
+    <Header />
+      <div className={`${styles.limiter} bt b--black bw2 `}>
+        <div className="f4 mt3">Maya Gao</div>
+        <div className="fl w-30-ns w-100">
+          <p className={`mt4 ${styles.txtSbody}`}>
+           I am a product designer living and working in Washington D.C.
+           Currently I design and build things at Mapbox.
+           In my day-to-day work I switch between UI design, prototyping
+           and front-end development.
+           Before Mapbox, I worked at Lonely Planet and Upstatement.
+          </p>
+          <div className="f6 mt3-ns nt1">
+            <div className="db-ns mr2 dib"><a className={`${styles.link}`} href="https://dribbble.com/mayagao">Dribbble</a></div>
+            <div className="db-ns mr2 dib mt2"><a className={`${styles.link}`}  href="https://github.com/mayagao">Github</a></div>
+            <div className="db-ns mr2 dib mt2"><a className={`${styles.link}`}  href="https://www.linkedin.com/in/mayagq">LinkedIn</a></div>
+          </div>
+        </div>
+        <div className="f5 mb5 fl w-70-ns pl5-ns pl0 w-100 mt4 f4 lh-copy">
+          {projects.map((p,i) => (
+            <div key={i} className="mb4">
+              <div
+                style={{ background: `${p.themeColor}` }}
+                className="w-100 center pb2 overflow-hidden br2 ph4-l ph0 pt4-ns pt2 relative">
+                <div style={{ maxWidth: 640 }} className=" center">
+                  <img className="nb5-l nb4 ml4-m ml2 ml0-l"  src={p.imageSource} />
+                </div>
+              </div>
+              <div>
+                <Link prefetch href={p.link}><a className={`${styles.link} f5 mt2 db`} >{p.title}</a></Link>
+                <div className={`${styles.txtSbody}`}>{p.description}</div>
+              </div>
+            </div>))}
+        </div>
+      </div>
+    </div>
+  )
