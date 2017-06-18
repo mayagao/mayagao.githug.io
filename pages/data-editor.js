@@ -32,8 +32,8 @@ const headerInfo = {
        <div className="w-60-l dn db-l w-100 fl nt5 mb3">
           <img style={{minWidth: 925}} className="" src="../static/img/de_header.png" />
         </div>
-        <div className="w-60-l db dn-l w-100 fl nb6 nl5 mb4">
-          <img style={{minWidth: 660}} className="" src="../static/img/de_header.png" />
+        <div className="w-60-l db dn-l mt4 w-100 fl nb6 nl5-l nl2 mb4">
+          <img style={{minWidth: 660}} className="" src="../static/img/home_data.png" />
         </div>
     </div>
   )
@@ -42,17 +42,17 @@ const featureDetails = [
   {
     imageSource: '../static/img/de_field.png',
     title: 'Add property',
-    description: 'Preview all fields in the dataset and add all fields with one click.'
+    description: 'Preview existing fields in the dataset and add all fields with one click.'
   },
   {
     imageSource: '../static/img/de_value.png',
     title: 'Add value',
-    description: 'Show all existing values for a field and define number or string type.'
+    description: 'Show existing values for a field and the aiblity to define number or string type.'
   },
   {
     imageSource: '../static/img/de_search.png',
     title: 'Search features',
-    description: 'A quick, visual way to search for features based on field and value.'
+    description: 'A quick to search for features based on field and value in the map context.'
   }
 ]
 export default () => (
@@ -62,12 +62,12 @@ export default () => (
 
     <div className={`${styles.limiter} ${styles.columnContainer}`}>
       <div className={`${styles.leftColumn}`}>
-         <div className={`${styles.txtBody} mb5`}>
+         <div className={`${styles.txtBody} mb4`}>
            Mapbox Studio dataset editor provides a simple way to create and modify geospatial data.
-           The editor stores data as GeoJSON files containing a list of features with coordinates,
+           It stores data as GeoJSON files containing a list of features with coordinates,
            geometry and property information. Users can draw, import, edit and manage feature.
-           They can also trace features from satellite imagery. Similar to the style editor,
-           we wanted to the tool to be accessible to not just GIS professionals,
+           Most traditioanl GIS software has complicated interface and requires specialized training to use.
+           We wanted this tool to be accessible to not just GIS professionals,
            but also designers who want to create a data visualizations or developer who needs custom data for their apps.
          </div>
           <div className={`${styles.txtH2}`}>The Challenges</div>
@@ -75,21 +75,19 @@ export default () => (
             The most difficult part of this project is definitely prioritizing features,
             deciding which to build for the initial release.
             We wanted to provide a foundation for more complicated features down the line and maintaining a balance between simplicity and flexibility.
-            First we identified four main tasks for the interface: import, draw, edit,
-            and export. Then we validated if the design can make performing those tasks easier through user testing.
-            The main design challenges are:
+            A few main design challenges we've identified early on:
           </div>
           <ol className={`${styles.txtBody} mb-list mt4`}>
-            <li className="pb2"><span className="f5 dib mb1">Shared property fields</span>. <span className="">Feautures inside one dataset usually share the same set of property fields. However we don't store such information in GeoJSON files. </span></li>
-            <li className="pb2"><span className="f5 dib mb1">Search</span><span className="">. It was difficult to filter the dataset and find specific features. </span></li>
-            <li className=""><span className="f5 dib mb1">Precision</span><span className="">. Spatial data is precise and we want to give users full control when it's needed.</span> </li>
+            <li className="pb2"><span className="f5 dib ">Shared property fields</span>. <span className="">Feautures inside one dataset usually share the same set of property fields. However we don't store such information in GeoJSON files. </span></li>
+            <li className="pb2"><span className="f5 dib ">Search</span><span className="">. It was difficult to filter the dataset and find specific features. </span></li>
+            <li className=""><span className="f5 dib ">Precision</span><span className="">. Spatial data is precise and we want to give users full control when it's needed.</span> </li>
           </ol>
       </div>
     </div>
 
     <div className="w-100 bg-mb pv3-l white ph4-l ph2 pb3 pb0-l">
       <div className="pt4 tc mb4 f6">
-        <span className="o-70 pl1">Dataset Editor Iteration 1</span> <span className="o-40">March, 2016</span>
+        <span className="o-70 pl1">Dataset Editor Iteration 1</span>
       </div>
       <div className="flex-ns mw8 center flex-none pb4">
         <div style={{flex: '1 1 440px'}} className="mr3-ns mr0">
@@ -113,26 +111,30 @@ export default () => (
           </div>
           <div className={`${styles.txtBody} mb3`}>
             In early iterations of the data editor,
-            the UI consisted of a feature list view on the map, and a map view on the right.
-            Since we are showing a list, every feature needs a unique identifier.
-            This introduces a problem because those dataset are stored and saved as GeoJSON files.
-            A concept like "name" does not really exist in GeoJSON.
-            So if we decided to move forward, this will add significant burden to implementation.
+            the UI consisted of a feature list on the left, and a map view on the right.
+            In the list every feature needs a unique identifier.
+            This introduces a problem because a concept like "name" does not really exist in GeoJSON.
+            Creating such a concept adds significant implementation burden.
           </div>
           <div className={`${styles.txtBody} mb3`}>
-            Another problem I tried to tackle here is edit multiple features at the same time.
-            Same as the feature "names", the concept of "shared property fields" also don't exist in GeoJSON.
+            Another problem I tried to tackle here is editing the fields of multiple features at the same time.
+            Same as names, the concept of "shared property fields" also don't exist in GeoJSON.
             Every feature can have a list of different property fields.
           </div>
           <div className={`${styles.txtBody} mb3`}>
-            So we decided it's time to take a step back and think about if we wanted to adopt a UI that's similar to the GeoJSON structure, or diverge from it more dramatically. During my first user testing, the tester was indeed having lots of trouble finding features. But I noticed that she associated one feature with mutiple properties, such as both location and color, not just one single "name". Moreover, she identifies features through searching them directly on a map in the context of the entire dataset, not through names. Tom MacWright suggested removing the list and multi-select completely and really simplifying the UI to focus on the main tasks: draw, import, and edit. The user testings convinced me that is the right thing to do. And I'm grateful we did that early on.</div>
+            The question is if we want to adopt a UI that's similar to the GeoJSON structure,
+            or diverge from it more dramatically. We took a step back and did a few user testings.
+            We discovered that those names don't really help people find features.
+            They usually associate one feature with multiple properties and sometimes laso it's location on the map.
+            Tom suggested removing the list design and simplifying the UI to focus on the main tasks: draw, import, and edit.
+          </div>
         </div>
 
     </div>
 
     <div className="w-100 bg-mb pv3-l white ph4-l ph2 pb3 pb0-l">
       <div className="pt4 tc mb4 f6">
-        <span className="o-70 pl1">Dataset Editor Iteration 2</span> <span className="o-40">May, 2016</span>
+        <span className="o-70 pl1">Dataset Editor Iteration 2</span>
       </div>
       <div className="flex-ns mw8 center flex-none pb4">
         <div style={{flex: '1 1 533px'}} className="mr5-ns mr0">
@@ -154,27 +156,23 @@ export default () => (
          Property and Code Editor</div>
         <div className={`${styles.txtBody} mb3`}>
           The second major iteration focused on simplifying and refocusing. Without the feature list panel,
-          there's a lot more space to directly draw on the map. By removing multi-select for property edit,
+          there's a lot more space to directly draw on the map. By removing multi-select,
           we can focus on refining single feature edit. The "name" concept was completely removed in this iteration.
           Instead wen simply used geometry type plus coordinates to represent the feature.
-          Matthew Whittemore introduced typehead to the property field input so users can see all existing fields available inside the dataset when they start typing.
-          I also experimented with the position of the feature editing panel: an achored panel pinned to the left of the editor,
-          or a popover that only shows up when user clicks on the feature on the map. We went forward with the former solution for simlicity and consistency.
         </div>
         <div className={`${styles.txtBody} mb3`}>
           A big change we introduced here is the code editor.
           Users can access it through the <code className="f7">view source</code> tab.
-          This change allows for more precise control over the data,
-          especially when people want to copy-paste coordinates information.
-          The source code there is in GeoJSON format and completely reflected how the data is represented in the API level.
-          This is a good example of how we retain flexibility and show complexity only when it's needed.
+          This allows for more precise control over the data,
+          especially when people want to copy-paste coordinates.
+          The design also reflects how the data is represented in the API level.
+          It is a good example of how we retain flexibility and show complexity only when it's needed.
         </div>
         <div className={`${styles.txtBody} mb3`}>
           Another main focus of this iteration is draw interactions.
-          How can we indicate to users they can start drawing?
-          How do we indicate they can close a shape?
-          What should the interaction be when they want to modify a node of the shape?
-          I sketched out some ideas and worked with Matthew to implement them in the framework the data editor uses for this interaction: mapbox-gl-draw.
+          How to start drawing, modify a node of the shape or close a shape?
+          I sketched out some ideas and worked with Matthew to implement them in mapbox-gl-draw,
+          the framework the editor uses for this interaction.
         </div>
       </div>
       <div className={`${styles.rightColumn}`}>
@@ -219,13 +217,17 @@ export default () => (
              Iteration 3
           </div>
           <div className={`${styles.txtH2}`}>
-            Single Property Editing and Feature Search
+            Property Editing and Feature Search
           </div>
-          <div className={`${styles.txtBody}`}>
+          <div className={`${styles.txtBody} mb3`}>
             With almost all the basic functionalities in place,
             we started more aggressively user-testing the tool every week.
-            User testings at this stage helped us identify intricate problems such as confusion around values types
-            (number/string). We were able to solve many of the problems through introducing very minimum UI changes.
+            User testings at this stage helped us identify intricate problems and solve them through minimum UI changes.
+          </div>
+          <div className={`${styles.txtBody}`}>
+            The property values can be a number or string type. This differentiation is important when creating filters for visualization.
+            I added a type toggle next to values that contains number characters only to solve the problem.
+            We also added to a grid of small location preview images to the search UI to help users find features more quickly.
           </div>
         </div>
 
@@ -235,8 +237,9 @@ export default () => (
         </div>
         <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
           <div className="self-end f7 mb4-l">
-            <div className={`${styles.txtH3}`}>Listing pages</div>
-            <div className={`${styles.txtSbody}`}>I designed several versions of the style and tileset listing page. The tileset page also includes to data upload status popover. </div>
+            <div className={`${styles.txtH3}`}>Dataset view page</div>
+            <div className={`${styles.txtSbody}`}>
+            An overview of the dataset and a starting point for further actions like visualization or development.</div>
           </div>
         </div>
       </div>
@@ -244,19 +247,24 @@ export default () => (
 
     <div className="w-100 bg-near-white pv3 lh-copy">
       <div className={`${styles.limiter}`}>
-        <div className={`${styles.txtH2}`}>Modals</div>
-        <div className="flex-l flex-none">
+        <div className="flex-l flex-none items-end">
           <div style={{flex: `1 1 500px`}} className="mr4-l mr0 mb4 mb0-l">
               <div className=" overflow-y-hidden">
-                 <img style={{width: 500}} className="shadow" src="../static/img/de_modal_export.png" />
+                 <img style={{width: 500}} className="shadow" src="../static/img/de_modal_new.png" />
               </div>
-              <div className={`${styles.txtH3}`}>Dataset export modal</div>
+              <div className={`${styles.txtH3} mt2`}>New dataset</div>
+              <div className={`${styles.txtSbody}`}>
+                Create a blank dataset or import from other sources.
+              </div>
           </div>
           <div style={{flex: `1 1 500px`}}  className="ml4-l ml0">
               <div className="overflow-y-hidden">
-                 <img style={{width: 500}} className="shadow" src="../static/img/de_modal_new.png" />
+                 <img style={{width: 500}} className="shadow" src="../static/img/de_modal_export.png" />
               </div>
-              <div className={`${styles.txtH3}`}>New dataset modal</div>
+              <div className={`${styles.txtH3} mt2`}>Dataset export</div>
+              <div className={`${styles.txtSbody}`}>
+                Export to a new tileset or overwrite.
+              </div>
           </div>
         </div>
       </div>
@@ -264,14 +272,18 @@ export default () => (
 
     <div className={`${styles.limiter}`}>
       <div className={`${styles.leftColumn}`}>
-        <div className={`${styles.txtH2} mt3`}>What I have learned</div>
+        <div className={`${styles.txtH2} mt3`}>What I learned</div>
         <div className={`${styles.txtBody} mb3`}>
-          Test early and often. Sometimes the problems are so small and detailed,
-          I would never have believed they existed if I didn't sit in room with another person and watch them struggling with it.
-          User testing prevents me from relying too much on what have been done in the past and instead helps me focus on design practical systems that support interactions.
+          Test early and often. Sometimes the problems are so intricate
+          I would never have believed their existance if I didn't watch another person struggling with it.
+          User testing prevents us from relying too much on what have been done in the past.
+          It helps us focus on designing practical systems that support interactions.
         </div>
         <div className={`${styles.txtBody}`}>
-          Gain perspectives from disagreements. I often became angry when I can't get other people to like my work or agree with my proposals and I got frustrated with those human interactions. But design is really a team team effort, especially for a complicated product with many moving parts. Arguments can often bring in new perspectives. I don't need to agree with all of them but I have to understand them. It's less about winning all the battles, and more about realizing that I can not produce the best work without the people around me.
+          Design is really a team team effort, especially for a complicated product with many moving parts.
+          In the past I often became frustrated when I could not get other people to like my work. But arguments can often bring in new perspectives.
+          I don't need to agree with all of them but I have to understand them.
+          It's less about winning all the battles, and more about realizing that I can not produce the best work without the people around me.
         </div>
       </div>
     </div>
