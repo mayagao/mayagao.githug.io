@@ -1,12 +1,16 @@
 # build output
 dist
 .next
+out/
 
 # dependencies
 node_modules
 
 # logs
 *.log
+
+# images
+static/img/raw
 
 tmp
 legacy/.git
