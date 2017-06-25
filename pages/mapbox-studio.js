@@ -121,7 +121,7 @@ export default () => (
       </div>
   </div>
 
-  <div className="w-100 mt4 bg-mb pv3-l p3 pl4-l pl3 pr2 ">
+  <div className="w-100 mt4 bg-mb pv3-l p3 pl4-l pl3 pr2 overflow-hiddden">
    <div className="pt4 white f6 flex">
      <div style={{width: 1200}} className=" self-center center mb0">
        <div ><span className="o-70">Style Editor Iteration</span></div>

@@ -19,19 +19,19 @@ const projects = [
   }
 ]
 export default () => (
-  <div>
+  <div className="bt b--black bw2 ">
     <Header />
-      <div className={`${styles.limiter} bt b--black bw2 `}>
+      <div className={`${styles.limiter}`}>
         <div className="f4 mt3">Maya Gao</div>
         <div className="fl w-30-ns w-100">
-          <p className={`mt4 ${styles.txtSbody}`}>
+          <p className={`mt4 ${styles.txtBody}`}>
            I am a product designer living and working in Washington D.C.
            Currently I design and build things at Mapbox.
            In my day-to-day work I switch between UI design, prototyping
            and front-end development.
            Before Mapbox, I worked at Lonely Planet and Upstatement.
           </p>
-          <div className="f6 mt3-ns nt1">
+          <div className="f5 mt3-ns nt1">
             <div className="db-ns mr2 dib"><a className={`${styles.link}`} href="https://dribbble.com/mayagao">Dribbble</a></div>
             <div className="db-ns mr2 dib mt2"><a className={`${styles.link}`}  href="https://github.com/mayagao">Github</a></div>
             <div className="db-ns mr2 dib mt2"><a className={`${styles.link}`}  href="https://www.linkedin.com/in/mayagq">LinkedIn</a></div>
@@ -49,7 +49,7 @@ export default () => (
               </div>
               <div>
                 <Link prefetch href={p.link}><a className={`${styles.link} f5 mt2 db`} >{p.title}</a></Link>
-                <div className={`${styles.txtSbody}`}>{p.description}</div>
+                <div className={`${styles.txtBody}`}>{p.description}</div>
               </div>
             </div>))}
         </div>

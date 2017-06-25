@@ -8,7 +8,7 @@ const styles = {
   rightColumnContent: 'absolute-ns relative mt3 mt0-ns bottom-0',
   // typography
   txtH1:'f1 headline mb2',
-  txtH2: 'f2 headline o-80 mb3',
+  txtH2: 'f3 o-70 mb3',
   txtH3: 'f5 mb1',
   txtBody: 'lh-copy f5 o-70',
   txtSbody: 'lh-copy f6 f5 o-70',

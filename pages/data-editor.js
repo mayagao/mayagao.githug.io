@@ -92,11 +92,11 @@ export default () => (
       <div className="flex-ns mw8 center flex-none pb4">
         <div style={{flex: '1 1 440px'}} className="mr3-ns mr0">
           <img className="" src="../static/img/de1_left.png" />
-          <div className="pv2 fl relative f6 o-70">Feature list and property panel</div>
+          <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Feature list and property panel</div>
         </div>
         <div style={{flex: '1 1 542px'}} className="">
          <img className="" src="../static/img/de1_right.png" />
-         <div className="pv2 fl relative f6 o-70">Geometry panel and multi-select</div>
+         <div className="pv2 tl relative f6 o-70 mb0-ns">Geometry panel and multi-select</div>
         </div>
       </div>
     </div>
@@ -139,11 +139,11 @@ export default () => (
       <div className="flex-ns mw8 center flex-none pb4">
         <div style={{flex: '1 1 533px'}} className="mr5-ns mr0">
           <img className="" src="../static/img/de2_left.png" />
-          <div className="pv2 fl relative f6 o-70 mb4 mb0-ns">Property panel and code panel</div>
+          <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Property panel and code panel</div>
         </div>
         <div style={{flex: '1 1 359px'}} className="">
          <img className="" src="../static/img/de2_right.png" />
-         <div className="pv2 fl relative f6 o-70">A layout variation: display editor inside a popover.</div>
+         <div className="pv2 tl relative f6 o-70 mb0-ns">A layout variation: display editor inside a popover.</div>
         </div>
       </div>
     </div>
@@ -190,11 +190,11 @@ export default () => (
       <div className="flex-ns mw8 center flex-none pb4">
         <div style={{flex: '1 1 500px'}} className="mr4-ns mr0">
           <img className="" src="../static/img/de3_left.png" />
-          <div className="pv3 fl relative f6 o-70 mb4 mb0-ns">Property panel</div>
+          <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Property panel</div>
         </div>
         <div style={{flex: '1 1 335px'}} className="">
          <img className="" src="../static/img/de3_right.png" />
-         <div className="pv3 fl relative f6 o-70">Location and feature search.</div>
+         <div className="pv2 tl relative f6 o-70 mb0-ns">Location and feature search.</div>
         </div>
       </div>
     </div>
@@ -232,11 +232,11 @@ export default () => (
         </div>
 
       <div className="w-100 mt5 flex-l flex-none br2 mb4">
-        <div style={{flex: `auto 1 824px`}}  className="br2 shadow nl0">
-          <img style={{width: 824}} className="" src="../static/img/de_view.png" />
+        <div style={{flex: `auto 1 824px`}}  className="">
+          <img style={{width: 824}} className="br2 shadow nl0" src="../static/img/de_view.png" />
         </div>
         <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
-          <div className="self-end f7 mb4-l">
+          <div className="self-end f7 mb4-l mt3 mt0-l">
             <div className={`${styles.txtH3}`}>Dataset view page</div>
             <div className={`${styles.txtSbody}`}>
             An overview of the dataset and a starting point for further actions like visualization or development.</div>
