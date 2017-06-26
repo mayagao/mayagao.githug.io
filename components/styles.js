@@ -10,8 +10,8 @@ const styles = {
   txtH1:'f1 headline mb2',
   txtH2: 'f3 o-70 mb3',
   txtH3: 'f5 mb1',
-  txtBody: 'lh-copy f5 o-70',
-  txtSbody: 'lh-copy f6 f5 o-70',
+  txtBody: 'lh-copy f5 o-60',
+  txtSbody: 'lh-copy f6 f5 o-60',
   txtNote: 'o-50 mt3 pl1 f7 lh-copy',
   //
   quote: 'quote b--black-30 lh-copy pl3 bl f4 o-60 mt4 mb4'
