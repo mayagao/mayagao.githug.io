@@ -174,65 +174,52 @@ export default () => (
     </div>
 
 
-    <div className={`${styles.limiter} mt4`}>
+
+
+
+
+
+      <div className="overflow-hidden lh-title">
+
+    <div className={`${styles.limiter}`}>
+
+
+
+
       <div className={`${styles.txtH2} f4 mt4 tc`}>
         Customizable interface
       </div>
       <div className={`${styles.txtBody} tc mb5`}>
         How the navigation SDK can be integrated and used in different applications.
       </div>
-        <div className="flex-ns mt4 center flex-none pb4">
-          <div style={{flex: '1 1 50%'}} className="">
-            <img className="" src="../static/img/ns1.png" />
-          </div>
-          <div style={{flex: '1 1 50%'}} className=" nr4 items-center flex ph5-l ph2-m">
-           <div className="">
-            <div className="dib h1 w1 br-pill br5 bg-blue mb3" />
-            <div style={{background: '#3174C4'}} className="ml2 mb3 dib h1 w1 br-pill br5" />
-            <div style={{background: '#E5E9EF'}} className="ml2 mb3 dib h1 w1 br-pill br5" />
-            <div className={`${styles.txtH2} f4`}>Dataset view page</div>
-            <div className={`${styles.txtBody}`}>
-              An overview of the dataset and a starting point for further actions like visualization or development.</div>
-            </div>
-          </div>
+
+
+
+      <div className="flex-ns mt4 center flex-none pb4">
+
+        <div style={{flex: '1 1 33.33%'}} className="nl6">
+          <img className="" src="../static/img/ns1.png" />
         </div>
 
+         <div style={{flex: '1 1 33.33%'}} className="">
 
-         <div className="flex-ns mt4 center flex-none pb4">
-
-          <div style={{flex: '1 1 50%'}} className=" nr4 items-center flex ph5-l ph2-m">
-           <div>
-            <div style={{background: '#9E5DD8'}} className="dib h1 w1 br-pill br5 bg-blue mb3" />
-            <div style={{background: '#AE6FE7'}} className="ml2 mb3 dib h1 w1 br-pill br5" />
-            <div style={{background: '#D5DAE3'}} className="ml2 mb3 dib h1 w1 br-pill br5" />
-            <div className={`${styles.txtH2} f4`}>Dataset view page</div>
-            <div className={`${styles.txtBody}`}>
-              An overview of the dataset and a starting point for further actions like visualization or development.</div>
-            </div>
-          </div>
-
-           <div style={{flex: '1 1 50%'}} className="">
             <img className="" src="../static/img/ns2.png" />
-          </div>
-        </div>
 
-         <div className="flex-ns mt4 center flex-none pb4">
-          <div style={{flex: '1 1 50%'}} className="">
+          </div>
+
+          <div style={{flex: '1 1 33.33%'}} className="nr6">
             <img className="" src="../static/img/ns3.png" />
           </div>
-          <div style={{flex: '1 1 50%'}} className=" nr4 items-center flex ph5-l ph2-m">
-           <div>
-            <div style={{background: '#56ACE0'}} className="mb3 dib h1 w1 br-pill br5" />
-            <div style={{background: '#B1C1D2'}} className="ml2 mb3 dib h1 w1 br-pill br5" />
-            <div className={`${styles.txtH2} f4`}>Dataset view page</div>
-            <div className={`${styles.txtBody}`}>
-              An overview of the dataset and a starting point for further actions like visualization or development.</div>
-            </div>
-          </div>
-        </div>
+
+      </div>
+
+
+
 
 
     </div>
+
+  </div>
 
 
 
