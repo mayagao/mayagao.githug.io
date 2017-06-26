@@ -64,17 +64,17 @@ export default () => (
       <div className={`${styles.leftColumn}`}>
          <div className={`${styles.txtBody} mb4`}>
            Mapbox Studio dataset editor provides a simple way to create and modify geospatial data.
-           It stores data as GeoJSON files containing a list of features with coordinates,
-           geometry and property information. Users can draw, import, edit and manage feature.
-           Most traditioanl GIS software has complicated interface and requires specialized training to use.
+           It stores data as GeoJSON files. GeoJSONs are essentially a list of features with coordinates,
+           geometry and property information. Users can draw, import, edit and manage features with the editor.
+           Traditioanl GIS software often has complicated interfaces and requires specialized training to use.
            We wanted this tool to be accessible to not just GIS professionals,
-           but also designers who want to create a data visualizations or developer who needs custom data for their apps.
+           but also designers and developers who want to create data visualizations or need custom data for their apps.
          </div>
           <div className={`${styles.txtH2}`}>The Challenges</div>
           <div className={`${styles.txtBody}`}>
             The most difficult part of this project is definitely prioritizing features,
             deciding which to build for the initial release.
-            We wanted to provide a foundation for more complicated features down the line and maintaining a balance between simplicity and flexibility.
+            We wanted to provide a foundation for more complicated features down the line while maintaining a balance between simplicity and flexibility.
             A few main design challenges we've identified early on:
           </div>
           <ol className={`${styles.txtBody} mb-list mt4`}>
@@ -113,20 +113,20 @@ export default () => (
             In early iterations of the data editor,
             the UI consisted of a feature list on the left, and a map view on the right.
             In the list every feature needs a unique identifier.
-            This introduces a problem because a concept like "name" does not really exist in GeoJSON.
+            This introduces a problem because a concept like "name" does not exist in GeoJSON.
             Creating such a concept adds significant implementation burden.
           </div>
           <div className={`${styles.txtBody} mb3`}>
             Another problem I tried to tackle here is editing the fields of multiple features at the same time.
-            Same as names, the concept of "shared property fields" also don't exist in GeoJSON.
+            Similar to "names", the concept of "shared property fields" also don't exist in GeoJSON.
             Every feature can have a list of different property fields.
           </div>
           <div className={`${styles.txtBody} mb3`}>
             The question is if we want to adopt a UI that's similar to the GeoJSON structure,
             or diverge from it more dramatically. We took a step back and did a few user testings.
-            We discovered that those names don't really help people find features.
-            They usually associate one feature with multiple properties and sometimes laso it's location on the map.
-            Tom suggested removing the list design and simplifying the UI to focus on the main tasks: draw, import, and edit.
+            We discovered that "names" don't really help people find what they are looking for.
+            They usually associate one feature with multiple properties and its actual location on the map.
+            Tom suggested removing the list design and simplifying the UI to focus on the main tasks: draw, import and edit.
           </div>
         </div>
 
@@ -155,13 +155,13 @@ export default () => (
         <div className={`${styles.txtH2}`}>
          Property and Code Editor</div>
         <div className={`${styles.txtBody} mb3`}>
-          The second major iteration focused on simplifying and refocusing. Without the feature list panel,
+          The second major iteration is mostly about simplifying. Without the feature list panel,
           there's a lot more space to directly draw on the map. By removing multi-select,
           we can focus on refining single feature edit. The "name" concept was completely removed in this iteration.
-          Instead wen simply used geometry type plus coordinates to represent the feature.
+          Instead we used geometry type plus coordinates to represent the feature.
         </div>
         <div className={`${styles.txtBody} mb3`}>
-          A big change we introduced here is the code editor.
+          A big feature we added here is the code editor.
           Users can access it through the <code className="f7">view source</code> tab.
           This allows for more precise control over the data,
           especially when people want to copy-paste coordinates.
@@ -169,10 +169,10 @@ export default () => (
           It is a good example of how we retain flexibility and show complexity only when it's needed.
         </div>
         <div className={`${styles.txtBody} mb3`}>
-          Another main focus of this iteration is draw interactions.
+          Another main focus of this iteration is the draw interactions.
           How to start drawing, modify a node of the shape or close a shape?
           I sketched out some ideas and worked with Matthew to implement them in mapbox-gl-draw,
-          the framework the editor uses for this interaction.
+          the framework dataset editor uses for this interaction.
         </div>
       </div>
       <div className={`${styles.rightColumn}`}>
@@ -275,15 +275,19 @@ export default () => (
         <div className={`${styles.txtH2} mt3`}>What I learned</div>
         <div className={`${styles.txtBody} mb3`}>
           Test early and often. Sometimes the problems are so intricate
-          I would never have believed their existance if I didn't watch another person struggling with it.
+          it's hard to believe their existance without watching another person struggling with it with my own eyes.
           User testing prevents us from relying too much on what have been done in the past.
           It helps us focus on designing practical systems that support interactions.
         </div>
-        <div className={`${styles.txtBody}`}>
+        <div className={`${styles.txtBody} mb3`}>
           Design is really a team team effort, especially for a complicated product with many moving parts.
           In the past I often became frustrated when I could not get other people to like my work. But arguments can often bring in new perspectives.
           I don't need to agree with all of them but I have to understand them.
           It's less about winning all the battles, and more about realizing that I can not produce the best work without the people around me.
+        </div>
+        <div className={`${styles.txtBody} mb4`}>
+          Mapbox Studio dataset editor is free and in active development. You can learn more about the tool <a className={`${styles.link}`}  href="https://www.mapbox.com/mapbox-studio/">
+          here</a> and start using it today!
         </div>
       </div>
     </div>

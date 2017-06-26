@@ -65,12 +65,12 @@ const functionDetails = [
   {
     imageSource: '../static/img/ramp_1.png',
     title: `Ramp graphs`,
-    description: 'The large detailed graphs helps users understand how functions work and how value change at various zoom levels. I ended up simplifying the small graphs a lot more to make them look less clickable.'
+    description: 'The large detailed graphs helps users understand how functions work and how values change at various zoom levels. I ended up simplifying the small graphs a lot more to make them look less clickable.'
   },
   {
     imageSource: '../static/img/ms_ramp_edit.png',
     title: 'Editable graph',
-    description: `Prototyping helped us discover some accuracy intricacies with this interaction. So we didn't move forward with it.`
+    description: `Prototyping helped us discover some accuracy intricacies with this interaction, which is why we didn't move forward with it.`
   },
   {
     imageSource: '../static/img/ramp_2.png',
@@ -98,6 +98,14 @@ export default () => (
           <div className="quote f4 mt2">A Powerful New Mapmaking Tool Fit for Both Pros and Newbies</div>
         </div>
       </a>
+
+      <a href="https://medium.com/uber-design/crafting-data-driven-maps-b0835b620554" className="db mb4 relative link light-silver hover-moon-gray">
+        <div>
+          <img style={{width: 80}} className="o-20" src="../static/img/uber.svg" />
+          <div className="quote f4 mt2">Mapbox Studio — Best in Class Map Style Editor</div>
+        </div>
+      </a>
+
       <div className={`${styles.txtBody} mb4`}>
         I started working on Mapbox Studio four months before its public launch.
         A main focus of the release was the style editor, a professional map design tool.
@@ -106,11 +114,12 @@ export default () => (
       </div>
       <div className={`${styles.txtH2}`}>Style Editor</div>
       <div className={`${styles.txtBody}`}>
-        The editor provides complete control over how the map looks. Users can select a map layer,
-        edit data sources, and then modify properties such as texture, color and fonts.
+        The editor provides complete design control over how the map looks. Users can select a map layer,
+        edit data sources, and edit properties such as texture, color and fonts.
         Retaining flexibility that comes with all those poweful customization options,
         while at the same time designing a UI that feels approachable and learnable was definitely a big challenge.
       </div>
+
     </div>
 
      <div className={`${styles.rightColumn}`}>
@@ -157,11 +166,9 @@ export default () => (
         <div className={`${styles.txtH2}`}>Property Function</div>
         <div className={`${styles.txtBody} mb3`}>
           Property functions allows for adjusting values at different <b>zoom stops</b>.
-          There are a few complexities that comes with desigining this.
-          Functions of number, color and enum properties behave in different ways.
-          For number properties, users can control how fast the value increase/
-          decreases through changing the exponential base of the curve.
-          Functions need to meet certain requirements to be valid.
+          Functions of number, color and enum properties all behave in different ways.
+          For number properties, users can even control how fast the value increases or
+          decreases. It is a powerful feature but also something that's difficult to design and visualize.
         </div>
         <div className={`${styles.quote}`}>
           Priotization and deciding on what to build is always hard.
@@ -170,11 +177,11 @@ export default () => (
 
         <div className={`${styles.txtBody}`}>
           To help users better understand how property function works,
-          we introduced detailed ramp graphs to indicate precisely how values change with zoom level.
+          we introduced detailed ramp graphs to indicate precisely how values change at different zoom stops.
           We also added automatic sorting and other smart validation rules to prevent people{` `}
-          from making mistakes. We abandoned many seemingly great ideas along the way,
+          from making mistakes. There are many seemingly great ideas that were abandoned along the way,
           such as making an editable graph. Priotization and deciding on what to build is always hard.
-          User testing and prototyping helped us better identify problems and manage implementation scopes.
+          User testing and prototyping in code helped us better identify problems and manage scopes.
         </div>
 
       </div>
@@ -232,7 +239,7 @@ export default () => (
       <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
         <div className="self-end f7 mb4-l">
           <div className={`${styles.txtH3}`}>Listing pages</div>
-          <div className={`${styles.txtSbody} mt2`}>The listing pages consist of a left main view with all styles/tilesets in a user's account, and a right sidebar explaining how to use those resources. The left popover shows status of current data uploads. </div>
+          <div className={`${styles.txtSbody} mt2`}>The listing pages consist of a left main view with all styles/tilesets in a user's account, and a right sidebar explaining how to use those resources. The left popover shows current data uploads status. </div>
         </div>
       </div>
     </div>
@@ -240,7 +247,7 @@ export default () => (
 
   <div className="w-100 bg-near-white pv4 lh-copy">
     <div className={`${styles.limiter}`}>
-      <div className={`${styles.txtBody} mb4`}>Modal is another main UI component. The challenge here is often explaining abstract concepts or displaying large amount of information in a confined space.</div>
+      <div className={`${styles.txtBody} mb4`}>Modal is another main UI component. The challenge here is explaining abstract concepts in a confined space.</div>
       <div className="flex-l flex-none">
         <div style={{flex: `1 1 501px`}} className="mr4-l mb4 mb0-l mr0">
           <div className=" overflow-y-hidden mb2">
@@ -267,8 +274,8 @@ export default () => (
         <div className={`${styles.txtH2}`}>What I learned</div>
         <div className={`${styles.txtBody} mb3`}>
           Coming to the team at a later stage definitely makes the job more challenging since I have less context about the product history.
-          A big part of what I do at the beginning was just reading through the Github ticket to better understand how decisions are made,
-          since everything, down to every small UI tweaks, are documentated on Github.
+          A big part of what I do at the beginning was just reading through the Github ticket to better understand how decisions were made,
+          since everything, down to every small UI tweaks, are documentated.
         </div>
         <div className={`${styles.quote}`}>
           Using the same tool helps build deeper{` `}
@@ -276,18 +283,22 @@ export default () => (
           Prototyping in code brings more credibility to my design decisions.
         </div>
         <div className={`${styles.txtBody} mb3`}>
-          Open communication becomes especially important when collaborating closely with a enginnering team,
-          I've learned to always:
-          1) Demonstrate clearly with mockups and prototypes what I am trying to achieve,
-          2) Gather constant feedbacks from engineers to build consensus,
-          and 3) Document the reason behind every design decision with clarity.
+          Open communication becomes especially important when collaborating closely with a engineering team,
+          I've learned to always demonstrate clearly with mockups and prototypes what I am trying to achieve and also
+          gather constant feedbacks from engineers to build consensus.
+          It's also important to document the reason behind every design decision with clarity.
         </div>
 
-        <div className={`${styles.txtBody}`}>
-          Using the same tool (Github) to design and develop and communicate really helps build deeper{` `}
+        <div className={`${styles.txtBody} mb3`}>
+          Using the same tool (Github) to design, develop and communicate really helps build deeper{` `}
           empathy between designers and engineers. In a highly iterative environment,
           opening a pull request also brings more credibility to the design decisions than static images.
           It allows me to establish trust and introduce systematic changes merely a few months before the launch.
+        </div>
+
+        <div className={`${styles.txtBody}`}>
+          Mapbox Studio is free and in active development. You can learn more about the tool <a className={`${styles.link}`}  href="https://www.mapbox.com/mapbox-studio/">
+          here</a> and start using it today!
         </div>
       </div>
     </div>

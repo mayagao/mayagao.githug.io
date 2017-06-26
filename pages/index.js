@@ -48,10 +48,9 @@ export default () => (
           {projects.map((p,i) => (
             <div key={i} className="mb4">
               <div
-                style={{ background: `${p.themeColor}` }}
-                className="w-100 center pb2 overflow-hidden br2 ph4-l ph0 pt4-ns pt2 relative">
-                <div style={{ maxWidth: 640 }} className=" center">
-                  <img className="nb5-l nb4 ml4-m ml2 ml0-l"  src={p.imageSource} />
+                className="w-100 bg-near-white center pb2 tc overflow-hidden br2 ph4-l ph0 pt4-ns pt2 relative">
+                <div style={{ maxWidth: 640 }} className="ph3">
+                  <img className="nb5-ns nb4"  src={p.imageSource} />
                 </div>
               </div>
               <div>

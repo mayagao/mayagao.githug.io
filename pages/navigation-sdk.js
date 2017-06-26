@@ -154,7 +154,7 @@ export default () => (
           </div>
           <div className={`${styles.txtBody} mw7`}>
             The SDK provides two default UI styles, light and dark, that's suitable for daytime and nighttime driving.
-            I created two sets of designs for iOS and Android to conform to each platform's guidelines.
+            Our amazing cartographer Nat Slaughter designed those two map styles.
           </div>
       <div className="flex-ns mt4 center flex-none pb4">
 
@@ -190,11 +190,11 @@ export default () => (
 
 
       <div className={`${styles.txtH2} f4 mt4 tc`}>
-        Control the experience
+        Example Apps
       </div>
       <div className={`${styles.txtBody} tc mb2 ph5-l ph0`}>
          The SDK allows developers to take control of user’s experience all the way to their final destination.
-         Here are a few scenarios I mocked up to showcase what the in-app navigation flow looks like and how it can be customized for different use cases.
+         Here are a few scenarios to showcase what the in-app navigation flow looks like and how it can be customized for different use cases.
       </div>
 
 
