@@ -12,19 +12,19 @@ const headerInfo = {
   team: [
     {
       name: 'Matthew Whittemore',
-      title: '(enginnering)'
+      title: '(engineering)'
     },
     {
       name: 'Saman Bemel-Benrud',
-      title: '(enginnering)'
+      title: '(engineering)'
     },
     {
       name: 'David Clark',
-      title: '(enginnering)'
+      title: '(engineering)'
     },
     {
       name: 'Tom MacWright',
-      title: '(enginnering)'
+      title: '(engineering)'
     },
   ],
   image: (

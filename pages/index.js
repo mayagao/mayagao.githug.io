@@ -16,6 +16,13 @@ const projects = [
     title: 'Data Editor',
     link: '/data-editor',
     description: 'A tool for spatial data editing.'
+  },
+  {
+    themeColor: '#4884ca',
+    imageSource: 'static/img/home_navigation_sdk.png',
+    title: 'Navigation SDK',
+    link: '/navigation-sdk',
+    description: 'A framework for customizable turn-by-turn navigation.'
   }
 ]
 export default () => (

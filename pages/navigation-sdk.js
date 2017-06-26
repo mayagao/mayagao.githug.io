@@ -11,26 +11,26 @@ const headerInfo = {
   release: 'May, 2017',
   team: [
     {
-      name: 'Matthew Whittemore',
-      title: '(enginnering)'
+      name: 'Nat Slaughter',
+      title: '(cartographer)'
     },
     {
-      name: 'Saman Bemel-Benrud',
-      title: '(enginnering)'
+      name: 'Bobby Sudekum',
+      title: '(iOS engineer)'
     },
     {
-      name: 'David Clark',
-      title: '(enginnering)'
+      name: 'Cameron Mace',
+      title: '(Android engineer)'
     },
     {
-      name: 'Tom MacWright',
-      title: '(enginnering)'
+      name: 'Minh Nguyễn',
+      title: '(iOS engineer)'
     },
   ],
   image: (
     <div>
-       <div className="w-60-l dn db-l w-100 fl nt5 nb6 mb3">
-          <img style={{width: 470}} className="fr" src="../static/img/ns_header.png" />
+       <div className="w-60-l dn db-l w-100 fl nt4 nb6 mb3">
+          <img style={{width: 430}} className="fr" src="../static/img/ns_header.png" />
         </div>
     </div>
   )
@@ -60,21 +60,23 @@ export default () => (
     <div className={`${styles.limiter} ${styles.columnContainer}`}>
       <div className={`${styles.leftColumn}`}>
          <div className={`${styles.txtBody} mb3`}>
-           Mapbox Navigation SDK is a developer product we released earlier this year,
+           Mapbox Navigation SDK is a product we released earlier this year
            available on both iOS and Android. It provides a simple,
            customizable framework for developers to add turn-by-turn navigation to their application.
-           Instead of directing users outside of the app to other third-party map navigation providers,
-           every part of the user expeience can become more cohesive and stay inside one app.
+           For this project, I was tasked to collaborate closely with the cartography,
+           iOS and Android engineer team to create a customizable design system for the SDK.
+
          </div>
+
           <div className={`${styles.txtBody}`}>
-            For this project I was tasked to collaborate closely with the cartography, iOS and Android engineer team to create a customizable design system for the SDK.
-            I also designed a marketing package to showcase what the entire flow of in-app navigation can be integrated into different use cases.
+  In addition to the mobile UI,
+  I also designed a landing page and a marketing package for the sales team to showcase what's possible with the SDK.
           </div>
-          <div className={`${styles.txtH2} f4  mt5`}>
+          <div className={`${styles.txtH2} f4 mt5`}>
             Styleguide
           </div>
           <div className={`${styles.txtBody}`}>
-            A font and color system that provides good contrast and legibility by default, but is also easily customizable.
+            I started from creating a simple, easy-to-customize font and color system for the UI.
           </div>
 
 
@@ -83,11 +85,11 @@ export default () => (
 
     <div className={`${styles.limiter} nt4`}>
 
-      <div className="flex-ns center flex-none pb4">
-        <div style={{flex: '1 1 50%'}} className="mr3-ns mr0">
+      <div className="flex-l center flex-none pb4">
+        <div style={{flex: '1 1 50%'}} className="mr4-l mb5 mb0-l mr0">
           <img className="" src="../static/img/ns_font.png" />
         </div>
-        <div style={{flex: '1 1 50%'}} className="ml3-ns ml0">
+        <div style={{flex: '1 1 50%'}} className="ml4-l ml0">
          <img className="" src="../static/img/ns_color.png" />
 
         </div>
@@ -97,19 +99,19 @@ export default () => (
 
 
    <div className="w-100 bg-near-white pt3">
-    <div className={`${styles.limiter} mt4`}>
+    <div className={`${styles.limiter} pv5-l pv4`}>
 
-      <div className="flex-ns center flex-none pb4">
+      <div className="flex-l center flex-none pb4">
 
         <div style={{flex: '1 1 20%'}} className="mr3">
              <div className={`${styles.txtH2} f4 mt4`}>
             Direction Icons
           </div>
           <div className={`${styles.txtBody}`}>
-            I used bold shapes to make sure icons are legible when displayed at different sizes.
+            I mocked up how icons look at different sizes to make sure they are legible in all the contexts.
           </div>
         </div>
-          <div style={{flex: '1 1 80%'}} className="ml4 nr5">
+          <div style={{flex: '1 1 80%'}} className="ml4-l mt0-l mt4 ml0 nr5-l nr0">
             <img className="" src="../static/img/icons.png" />
           </div>
 
@@ -119,26 +121,26 @@ export default () => (
 </div>
 
 
-     <div className={`${styles.limiter} mt5 mb5`}>
+     <div className={`${styles.limiter} pv5-l pv4`}>
 
-      <div className="flex-ns center flex-none pb4">
+      <div className="flex-l center flex-none pb4 mt3 tc tl-ns">
 
-        <div style={{flex: '1 1 20%'}} className="mr3">
-             <div className={`${styles.txtH2} f4 `}>
+        <div style={{flex: '4 1 30%'}} className="mr3 pb0-l pb4">
+             <div className={`${styles.txtH2} f4 tl`}>
             Interactions
           </div>
-          <div className={`${styles.txtBody} pr4`}>
-            I used Framer to prototype small interactions like sound toggle, menu drawer and route list view.
+          <div className={`${styles.txtBody} pr4-ns pr0 tl`}>
+            Framer prototypes helped better communicate interaction details like sound toggle, menu drawer and route list view.
           </div>
         </div>
-          <div style={{flex: '0 1 247px'}} className="mr3">
-            <img className="br3 ba b--black-10 shadow" src="../static/img/sound.gif" />
+          <div style={{flex: '0 1 200px', borderRadius: '2rem', width: '200px'}} className="dib shadow br-full ba bw1 b--light-gray pt4 ph2 pb4 mr4-ns mr0 mb4 mb0-l">
+            <img className="br1 ba b--black-10 mb3 mt2" src="../static/img/sound.gif" />
           </div>
-          <div style={{flex: '0 1 247px'}} className="mr3 ">
-            <img className="br3 ba b--black-10 shadow" src="../static/img/list.gif" />
+          <div style={{flex: '0 1 200px', borderRadius: '2rem', width: '200px'}} className="dib shadow br4 ba bw1 b--light-gray pt4 ph2 pb4 mr4-ns mr0 mb4 mb0-l">
+            <img className="br1 ba b--black-10 mb3 mt2" src="../static/img/list.gif" />
          </div>
-          <div style={{flex: '0 1 247px'}} className="">
-            <img className="br3 ba b--black-10 shadow" src="../static/img/scroll.gif" />
+          <div style={{flex: '0 1 200px', borderRadius: '2rem', width: '200px'}} className="dib nr4-ns nr0 shadow br4 ba bw1 b--light-gray pt4 ph2 pb4 mb4 mb0-l">
+            <img className="br1 ba b--black-10 mb3 mt2" src="../static/img/scroll.gif" />
           </div>
       </div>
     </div>
@@ -150,22 +152,23 @@ export default () => (
        <div className={`${styles.txtH2} f4 mt4`}>
             Dark and Light Theme
           </div>
-          <div className={`${styles.txtBody}`}>
-            The SDK provides default dark and light style switch that’s suitable for daytime and night time driving.
+          <div className={`${styles.txtBody} mw7`}>
+            The SDK provides two default UI styles, light and dark, that's suitable for daytime and nighttime driving.
+            I created two sets of designs for iOS and Android to conform to each platform's guidelines.
           </div>
       <div className="flex-ns mt4 center flex-none pb4">
 
-        <div style={{flex: '1 1 48%'}} className="nl4">
+        <div style={{flex: '1 1 48%'}} className="nl4-ns nl0">
           <img className="" src="../static/img/ns_light.png" />
         </div>
 
-         <div style={{flex: '1 1 4%'}} className="items-center justify-center flex">
+         <div style={{flex: '1 1 4%'}} className="items-center  justify-center flex">
 
-            <img className="w3" src="../static/img/switch.png" />
+            <img className="w3 dn db-ns" src="../static/img/switch.png" />
 
           </div>
 
-          <div style={{flex: '1 1 48%'}} className=" nr4">
+          <div style={{flex: '1 1 48%'}} className=" nr4-ns nr0">
             <img className="" src="../static/img/ns_dark.png" />
           </div>
 
@@ -187,28 +190,36 @@ export default () => (
 
 
       <div className={`${styles.txtH2} f4 mt4 tc`}>
-        Customizable interface
+        Control the experience
       </div>
-      <div className={`${styles.txtBody} tc mb5`}>
-        How the navigation SDK can be integrated and used in different applications.
+      <div className={`${styles.txtBody} tc mb2 ph5-l ph0`}>
+         The SDK allows developers to take control of user’s experience all the way to their final destination.
+         Here are a few scenarios I mocked up to showcase what the in-app navigation flow looks like and how it can be customized for different use cases.
       </div>
 
 
 
-      <div className="flex-ns mt4 center flex-none pb4">
+      <div className="flex-ns mt4 items-end center flex-none pb2">
 
-        <div style={{flex: '1 1 33.33%'}} className="nl6">
+        <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 nl5-l mb4 fl nl0">
           <img className="" src="../static/img/ns1.png" />
+          <div className={`${styles.txtSbody}  ph4-l ph1`}>
+            Find the neareast restaurant or hotel and get driving directions there.
+          </div>
         </div>
 
-         <div style={{flex: '1 1 33.33%'}} className="">
-
+         <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 mb4 fl">
             <img className="" src="../static/img/ns2.png" />
-
+            <div className={`${styles.txtSbody} ph4-l ph1`}>
+              Get walking directions based on a travel itinery with multiple stops.
+            </div>
           </div>
 
-          <div style={{flex: '1 1 33.33%'}} className="nr6">
+          <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 mb4 fl nr5-l nr0">
             <img className="" src="../static/img/ns3.png" />
+            <div className={`${styles.txtSbody} ph4-l ph1`}>
+              Rerouting based on live traffic and incident reports by other drivers.
+            </div>
           </div>
 
       </div>
