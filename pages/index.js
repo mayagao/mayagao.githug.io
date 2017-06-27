@@ -16,6 +16,13 @@ const projects = [
     title: 'Data Editor',
     link: '/data-editor',
     description: 'A tool for spatial data editing.'
+  },
+  {
+    themeColor: '#4884ca',
+    imageSource: 'static/img/home_navigation_sdk.png',
+    title: 'Navigation SDK',
+    link: '/navigation-sdk',
+    description: 'A framework for customizable turn-by-turn navigation.'
   }
 ]
 export default () => (
@@ -41,10 +48,9 @@ export default () => (
           {projects.map((p,i) => (
             <div key={i} className="mb4">
               <div
-                style={{ background: `${p.themeColor}` }}
-                className="w-100 center pb2 overflow-hidden br2 ph4-l ph0 pt4-ns pt2 relative">
-                <div style={{ maxWidth: 640 }} className=" center">
-                  <img className="nb5-l nb4 ml4-m ml2 ml0-l"  src={p.imageSource} />
+                className="w-100 bg-near-white center pb2 tc overflow-hidden br2 ph4-l ph0 pt4-ns pt2 relative">
+                <div style={{ maxWidth: 640 }} className="ph3">
+                  <img className="nb5-ns nb4"  src={p.imageSource} />
                 </div>
               </div>
               <div>
