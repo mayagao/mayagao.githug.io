@@ -5,7 +5,8 @@ module.exports = {
       "/": { page: "/" },
       "/mapbox-studio": { page: "/mapbox-studio" },
       "/data-editor": { page: "/data-editor" },
-      "/navigation-sdk": { page: "/navigation-sdk" }
+      "/navigation-sdk": { page: "/navigation-sdk" },
+      "/about": { page: "/about" }
     }
   },
 }
