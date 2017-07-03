@@ -9,6 +9,9 @@ class Slideshow extends Component {
       activeIndex: 0
     };
   }
+  static defaultProps = {
+    height: 'h6-l h5 h-auto'
+  }
   onClickNext = () => {
     this.setState({
       activeIndex: (this.state.activeIndex + 1) % 3
@@ -19,8 +22,28 @@ class Slideshow extends Component {
       activeIndex: (this.state.activeIndex - 1) % 3
     })
   }
+  goToFirst = () => {
+    this.setState({
+      activeIndex: 0
+    });
+    clearInterval(this.interval);
+  }
+  goToLast = () =>  {
+    this.setState({
+      activeIndex: 2
+    });
+    clearInterval(this.interval);
+  }
+
+  goToMiddle = () =>  {
+    this.setState({
+      activeIndex: 1
+    });
+    clearInterval(this.interval);
+  }
+
   componentDidMount() {
-    this.interval = setInterval(() => this.onClickNext(), 2000);
+    this.interval = setInterval(() => this.onClickNext(), 5000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
@@ -37,6 +60,9 @@ class Slideshow extends Component {
  .h6-l { height: 19rem; }
 }
 
+@media screen and (min-width: 60em) {
+ .h7-l { height: 32rem; }
+}
         .example-enter {
   opacity: 0.04;
 }
@@ -48,29 +74,35 @@ class Slideshow extends Component {
 `}</style>
       </Head>
         <div className='mb4'>
-        {content.map((c, i) => (
-          <div
-            className={`f6 dib mr3 nl2 pv2 ph3 br-pill ${this.state.activeIndex === i ? 'o-90 bg-white' : 'o-40'}`}>
-              {c.title}
-          </div>))}
+
+          <a
+            onClick={this.goToFirst}
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 0 ? 'o-90 bg-white' : 'o-40'}`}>
+              {content[0].title}
+          </a>
+          <a
+            onClick={this.goToMiddle}
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 1 ? 'o-90 bg-white' : 'o-40'}`}>
+              {content[1].title}
+          </a>
+          <a
+            onClick={this.goToLast}
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 2 ? 'o-90 bg-white' : 'o-40'}`}>
+              {content[2].title}
+          </a>
         </div>
-        <div className='items-center h5 absolute absolute--fill flex'>
-        <a onClick={this.onClickPrev} className='br-100 left-0 nl5 absolute  shadow shadow-1-on-hover pointer fl dib bg-white h2 items-center flex ph2'>
+        <div className='items-center h4 mt5 absolute absolute--fill flex'>
+          <a onClick={this.onClickPrev} className='br-100 left-0 nl5 absolute  shadow shadow-1-on-hover pointer fl dib bg-white h2 items-center flex ph2'>
             <img className='h1 w1 o-50 glow ' src='../../static/icons/prev.svg' />
           </a>
-
           <a onClick={this.onClickNext} className='br-100 right-0 nr5 absolute shadow shadow-1-on-hover pointer fr dib bg-white h2 items-center flex ph2'>
             <img className='h1 w1 o-50 glow ' src='../../static/icons/next.svg' />
           </a>
-
-
         </div>
-        <div className='h6-l h5'>
-        {content.map((c,i) => (
-
-          this.state.activeIndex === i && c.content
-
-          ))}
+        <div className={`${this.props.height}`}>
+          {this.state.activeIndex === 0 && content[0].content}
+          {this.state.activeIndex === 1 && content[1].content}
+          {this.state.activeIndex === 2 && content[2].content}
          </div>
       </div>
     )

@@ -21,7 +21,7 @@ export default () => (
           </a>
         </div>
         <div className="mt3 silver f7">
-          Built with <a href="" className="link blue dim">next</a> and <a href="" className="link blue dim">tachyons</a>
+          Built with  <a href="" className="link blue dim">React</a>, <a href="" className="link blue dim">Next</a>, and <a href="" className="link blue dim">Tachyons</a>, view  <a href="" className="link blue dim">source code</a>
         </div>
 
     </div>
