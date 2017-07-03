@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/header'
 import Menu from '../components/menu'
+import WorkFooter from '../components/work_footer'
 import Link from 'next/link'
 import { styles } from '../components/styles'
 const projects = [
@@ -12,6 +13,16 @@ const projects = [
       </div>),
     title: 'Mapbox Studio',
     link: '/mapbox-studio',
+    description: 'Retaining flexibility that comes with all poweful customization options while designing a UI that feels learnable.'
+  },
+  {
+    themeColor: '#8a88cd',
+    image:
+    (<div className="mt4 ph4 nb4">
+        <img style={{ width: '717px'}} className=""  src="static/img/home_studio.png" />
+      </div>),
+    title: 'Data-driven Styling',
+    link: '/data-driven-styling',
     description: 'Retaining flexibility that comes with all poweful customization options while designing a UI that feels learnable.'
   },
   {
@@ -70,5 +81,6 @@ export default () => (
             </div>))}
         </div>
       </div>
+      <WorkFooter />
     </div>
   )
