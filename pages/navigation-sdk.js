@@ -4,6 +4,51 @@ import WorkHeader from '../components/work_header'
 import Page from '../layouts/page'
 import Link from 'next/link'
 import { styles } from '../components/styles'
+import Slideshow from '../components/slideshow'
+
+const navigationSlide = [
+  {
+    index: 1,
+    title: '',
+    content: (
+      <div>
+        <img className="" src="../static/img/ns1.png" />
+        <div className={`${styles.txtSbody}  ph4-l ph1`}>
+          Find the neareast restaurant or hotel and get driving directions there.
+        </div>
+      </div>
+    )
+  },
+  {
+    index: 2,
+    title: '',
+    content: (
+      <div>
+        <img className="" src="../static/img/ns2.png" />
+        <div className={`${styles.txtSbody} ph4-l ph1`}>
+          Get walking directions based on a travel itinery with multiple stops.
+        </div>
+      </div>
+    )
+  },
+  {
+    index: 3,
+    title: '',
+    content: (
+      <div>
+        <img className="" src="../static/img/ns3.png" />
+        <div className={`${styles.txtSbody} ph4-l ph1`}>
+          Rerouting based on live traffic and incident reports by other drivers.
+        </div>
+      </div>
+    )
+  }
+
+]
+
+
+
+
 
 const headerInfo = {
   title: 'Navigation SDK',
@@ -184,45 +229,27 @@ export default () => (
 
       <div className="overflow-hidden lh-title">
 
-    <div className={`${styles.limiter}`}>
+    <div className={`${styles.limiter} mb6`}>
 
 
 
-
-      <div className={`${styles.txtH2} f4 mt4 tc`}>
+ <div className="w-30-ns w-100 mr6 pt5 fl">
+      <div className={`${styles.txtH2} f4 mt4`}>
         Example Apps
       </div>
-      <div className={`${styles.txtBody} tc mb2 ph5-l ph0`}>
+      <div className={`${styles.txtBody} mb2 ph0`}>
          The SDK allows developers to take control of user’s experience all the way to their final destination.
          Here are a few scenarios to showcase what the in-app navigation flow looks like and how it can be customized for different use cases.
       </div>
+    </div>
+   <div className="w-40-ns w-100 fl">
 
+       <Slideshow content={navigationSlide} />
 
-
-      <div className="flex-ns mt4 items-end center flex-none pb2">
-
-        <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 nl5-l mb4 fl nl0">
-          <img className="" src="../static/img/ns1.png" />
-          <div className={`${styles.txtSbody}  ph4-l ph1`}>
-            Find the neareast restaurant or hotel and get driving directions there.
-          </div>
-        </div>
-
-         <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 mb4 fl">
-            <img className="" src="../static/img/ns2.png" />
-            <div className={`${styles.txtSbody} ph4-l ph1`}>
-              Get walking directions based on a travel itinery with multiple stops.
-            </div>
-          </div>
-
-          <div style={{flex: '1 1 33.33%'}} className="w-third-ns w-100 mb4 fl nr5-l nr0">
-            <img className="" src="../static/img/ns3.png" />
-            <div className={`${styles.txtSbody} ph4-l ph1`}>
-              Rerouting based on live traffic and incident reports by other drivers.
-            </div>
-          </div>
 
       </div>
+
+
 
 
 
