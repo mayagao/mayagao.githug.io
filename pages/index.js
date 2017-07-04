@@ -3,76 +3,87 @@ import Header from '../components/header'
 import Menu from '../components/menu'
 import WorkFooter from '../components/work_footer'
 import Link from 'next/link'
+import Head from 'next/head'
 import { styles } from '../components/styles'
 const projects = [
   {
     themeColor: '#8a88cd',
+    type: 'UI & UX, development',
     image:
-    (<div className="mt4 ph4 nb4">
+    (<div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
         <img style={{ width: '717px'}} className=""  src="static/img/home_studio.png" />
       </div>),
     title: 'Mapbox Studio',
     link: '/mapbox-studio',
-    description: 'Retaining flexibility that comes with all poweful customization options while designing a UI that feels learnable.'
+    description: 'Retaining flexibility that comes with poweful customization options while designing an interface that feels learnable.'
   },
   {
     themeColor: '#8a88cd',
+    type: 'UI & UX',
     image:
-    (<div className="mt4 ph4 nb4">
-        <img style={{ width: '717px'}} className=""  src="static/img/home_studio.png" />
+    (<div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
+        <img style={{ width: '717px'}} className=""  src="static/img/home_ds.png" />
       </div>),
     title: 'Data-driven Styling',
     link: '/data-driven-styling',
-    description: 'Retaining flexibility that comes with all poweful customization options while designing a UI that feels learnable.'
+    description: 'A fun little experiment of designing for complicated programming expressions.'
   },
   {
     themeColor: '#6b88a6',
+    type: 'UI & UX, development',
     image:
-      (<div className="mt4 ph4 nb4">
+      (<div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
         <img style={{ width: '717px'}}  src="static/img/home_data.png" />
       </div>),
     title: 'Data Editor',
     link: '/data-editor',
-    description: 'Building a simple, fast spatial data editing tool for developers and designers.'
+    description: 'Building a fast, simple spatial data editing tool for developers and designers.'
   },
   {
     themeColor: '#4884ca',
+    type: 'Mobile design',
     image:
-    (<div className="mt4 ph4 nb5">
+    (<div className="mt4-ns mt2 ph4-ns ph0 nb5-ns nb0">
         <img style={{ width: '679px'}} className=""  src="static/img/home_navigation_sdk.png" />
       </div>),
     title: 'Navigation SDK',
     link: '/navigation-sdk',
-    description: 'Creating a design system for the customizable turn-by-turn navigation framework.'
+    description: 'Creating a design guideline for a customizable turn-by-turn navigation framework.'
   }
 ]
 export default () => (
-  <div className="bt b--black bw2 ">
+  <div className="">
+    <Head>
+      <style>{`
+
+      @media screen and (min-width: 30em) {
+        .bg-near-white-ns {
+          background: #f4f4f4 !important;
+        }
+      }
+
+    `}</style>
+    </Head>
     <Header />
       <div className="">
         <div className={`${styles.limiter}`}>
           <Menu />
-          {/*
-          <div className={`${styles.txtH1} mt5`}>Hi 👋 </div>
-          <div className={`f3 w-70 lh-copy o-100 headline mt3`}>
-            I am a product designer living and working in Washington D.C.
-            Currently I design and build tools for developers and designers at Mapbox.
-            Previously I worked at Lonely Planet and Upstatement.
-          </div>
-          */}
         </div>
       </div>
       <div className={`${styles.limiter} nt5`}>
-        <div className="f5  mb5 fl w-100 f4 lh-copy">
+        <div className="f5 mb5 fl w-100 f4 lh-copy">
           {projects.map((p,i) => (
             <div key={i} className="mb3">
              <div className="w-100 mt5 flex-l flex-none mb3">
-              <div style={{flex: '1 1 70%'}} className="tc bg-near-white br3 overflow-hidden">
+              <div style={{flex: '1 1 70%'}} className="tc bg-transparent bg-near-white-ns br3 overflow-hidden">
                 {p.image}
               </div>
-              <div  style={{flex: '1 1 30%'}} className="lh-copy mt3 mt0-l flex f7 pl4-l pl0">
+              <div style={{flex: '1 1 30%'}} className="lh-copy mt3 mt0-l flex f7 pl4-l pl0">
                 <div className="self-end">
-                  <div className={`f6 lh-title tracked o-80 mb1 ttu`}>Case Study</div>
+                  <div
+                    className={`f6 lh-title gray o-50 mb1`}>
+                    {p.type}
+                  </div>
                   <Link prefetch href={p.link}><a className={`txt-xl db link black underline-hover lh-title o-100 headline mb2`} >{p.title}</a></Link>
                   <div className={`${styles.txtBody} o-50`}>{p.description}</div>
                 </div>

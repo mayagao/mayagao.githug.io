@@ -14,12 +14,12 @@ class Slideshow extends Component {
   }
   onClickNext = () => {
     this.setState({
-      activeIndex: (this.state.activeIndex + 1) % 3
+      activeIndex: (this.state.activeIndex === 2) ? 0 : (this.state.activeIndex + 1)
     })
   }
   onClickPrev = () => {
     this.setState({
-      activeIndex: (this.state.activeIndex - 1) % 3
+      activeIndex: (this.state.activeIndex === 0) ? 2 : (this.state.activeIndex - 1)
     })
   }
   goToFirst = () => {
@@ -43,7 +43,7 @@ class Slideshow extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.onClickNext(), 5000);
+    this.interval = setInterval(() => this.onClickNext(), 6000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);

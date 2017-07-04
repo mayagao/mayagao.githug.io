@@ -7,7 +7,7 @@ export default class WorkHeader extends React.Component {
   render () {
     let headerInfo = this.props.headerInfo
     return (
-      <div className="bg-near-white overflow-hidden bt bw2 lh-title">
+      <div className="bg-near-white overflow-hidden lh-title">
         <div className={`${styles.limiter}`}>
           <Menu />
           <div className="mt6-l mt5 center cb cf">

@@ -20,7 +20,7 @@ const formConnector = (
 const functionTypes = [
   {
     title: 'Exponential',
-    description: 'Generate an output by interpolating between stops just less than and just greater than the function input.',
+    description: 'Generate an output by interpolating between stops.',
     code:
 `'circle-color': {
   'property': ‘level’,
@@ -44,7 +44,7 @@ const functionTypes = [
   },
   {
     title: 'Interval',
-    description: 'Generate an output by interpolating between stops just less than and just greater than the function input.',
+    description: 'Return the output value of the stop just less than the function input.',
     code:
 `'circle-color': {
     'property': ‘density’,
@@ -81,7 +81,7 @@ const functionTypes = [
   },
   {
     title: 'Categorical',
-    description: 'functions return the output value of the stop equal to the function input.',
+    description: 'Return the output value of the stop equal to the function input.',
     code:
 `'circle-color': {
     'property': 'type',
@@ -106,7 +106,7 @@ const functionTypes = [
 const propertyOrZoom = [
   {
     title: 'Zoom',
-    description: 'Radius increase as zoom level increases',
+    description: 'Radius increases as zoom level increases',
     code:
 `'circle-radius': {
     stops: [[8, 6], [16, 40]]
@@ -125,7 +125,7 @@ const propertyOrZoom = [
   },
   {
     title: 'Property',
-    description: 'Radius increase as property ‘sqrt’ increases',
+    description: 'Radius increases as property ‘sqrt’ increases',
     code:
 `'circle-radius’: {
     property: 'sqrt',
@@ -151,8 +151,7 @@ const propertyOrZoom = [
   {
     title: 'Zoom and property',
     description:
-      `Radius increase as property ‘sqrt’ increases.
-      Radius becomes proportionally bigger as zoom level increase.`,
+      `Radius increases as property ‘sqrt’ and zoom level increase.`,
     code:
 `'circle-radius': {
   property: 'sqrt',
@@ -182,11 +181,11 @@ const propertyOrZoom = [
 const functionSlide = [
   {
     index: 1,
-    title: 'Exponential',
+    title: 'Categorical',
     content: (
       <SlideColumn content={[
         ['Open up the vaue editor', '../static/img/function_s1_l.png'],
-        ['Select a data field', '../static/img/function_s1_m.png'],
+        ['Select a continuous data field', '../static/img/function_s1_m.png'],
         ['Edit value', '../static/img/function_s1_r.png']
       ]} />
     )
@@ -197,14 +196,14 @@ const functionSlide = [
     content: (
       <SlideColumn content={[
         ['Open up the vaue editor', '../static/img/function_s1_l.png'],
-        ['Select a data field', '../static/img/function_s2_m.png'],
+        ['Select a discrete data field', '../static/img/function_s2_m.png'],
         ['Edit value', '../static/img/function_s2_r.png']
       ]} />
     )
   },
   {
     index: 3,
-    title: 'Categorical',
+    title: 'Exponential',
     content: (
       <SlideColumn content={[
         ['Open up the vaue editor', '../static/img/function_s1_l.png'],
@@ -220,30 +219,30 @@ const functionSlide = [
 const complexSlide = [
   {
     index: 1,
-    title: 'Exponential',
+    title: 'Editing',
     content: (
 
 
       <SlideColumn content={[
-        ['Open up the vaue editor', '../static/img/complex_s1_l.png'],
-        ['Select a data field', '../static/img/complex_s1_m.png'],
-        ['Edit value', '../static/img/complex_s1_r.png']
+        ['A table design with graphs', '../static/img/complex_s1_l.png'],
+        ['Value modifiers for zoom stops', '../static/img/complex_s1_m.png'],
+        ['Code editor for complicated values', '../static/img/complex_s1_r.png']
         ]} />
 
 )
   },
   {
     index: 2,
-    title: 'Interval',
+    title: 'Visualize Values',
     content: (<SlideColumn content={[
-        ['Open up the vaue editor', '../static/img/complex_s2_l.png'],
-        ['Select a data field', '../static/img/complex_s2_m.png'],
-        ['Edit value', '../static/img/complex_s2_r.png']
+        ['One single value', '../static/img/complex_s2_l.png'],
+        ['Graph with property value as x-axis', '../static/img/complex_s2_m.png'],
+        ['Graph with zoom as x-axis', '../static/img/complex_s2_r.png']
         ]} />)
   },
   {
     index: 3,
-    title: 'Categorical',
+    title: 'Color',
     content: (<SlideColumn content={[
         ['Open up the vaue editor', '../static/img/complex_s3_l.png'],
         ['Select a data field', '../static/img/complex_s3_m.png'],
@@ -263,6 +262,11 @@ export default () => (
       .w0 {
         width: 0.5rem !important;
       }
+      @media screen and (min-width: 30em) {
+        .bg-near-white-ns {
+          background: #f4f4f4 !important;
+        }
+      }
       .rotate-neg90 {
 
     -ms-transform: rotate(-90deg); /* IE 9 */
@@ -273,18 +277,21 @@ export default () => (
     </Head>
     <div className={`${styles.limiter}`}>
       <Menu />
-      <div className='cf mt5'>
+      <div className='cf mt5 '>
         <div className="f5 o-50 mb2">Small Project</div>
         <div className={`${styles.txtH1} nl1`}>Data-driven Styling </div>
-        <div className={`f3 w-80 lh-copy o-100 headline mt3`}>
-          Designing a UI for data-driven styling was a small project I did in June 2016,
-          when we first launched this feature in Mapbox GL JS.
-          The goal of this is mostly for exploring possibile options and informing future technical decisions.
+        <div className={`f3-ns f4 lh-copy o-100  w-80-ns w-100 headline mt4`}>
+          Data-driven styling represents the capacity in our map SDKs to change styles based on data properties.
+          For example, change circle layer radius based on population density.
+          When this feature was first introduced in Mapbox GL JS in June 2016,
+          I experimented with some UI concepts to explore design options and inform future technical decisions.
         </div>
+
         <div className='mt5'>
           <div className={`${styles.txtXL} mb2`}>Three types of property functions</div>
           <div className={`${styles.txtBody}`}>
-            Optional enum. One of identity, exponential, interval, categorical.
+            There are three types of functions that comes with data driven styling,
+            exponential, interval, and categorical.
           </div>
         </div>
         <DsTable content={functionTypes} />
@@ -302,10 +309,11 @@ export default () => (
       <div className='cf pv4'>
         <div className='mt4'>
           <div className={`${styles.txtXL} mb2`}>Property and zoom functions</div>
-          <div className={`${styles.txtBody}`}>
-            The value for any layout or paint property may be specified as a function.
-            Functions allow you to make the appearance of a map feature change with the current zoom level and/
-            or the feature's properties.
+          <div className={`${styles.txtBody} w-80`}>
+            In addition to property functions (data-driven styling),
+            Mapbox GL JS also provides the ability to style based on zoom levels.
+            Zoom functions is a feature that's already included in the current Mapbox Studio.
+            The real complexity comes when combining zoom functions with property functions.
           </div>
         </div>
         <DsTable content={propertyOrZoom} />
@@ -314,17 +322,12 @@ export default () => (
 
     <div className='bg-near-white pv4 mt4'>
       <div className={`${styles.limiter} `}>
-         <div className={`${styles.txtXL} mb4 ml2`}>Property function and zoom function UI</div>
-
-
-         <SlideColumn content={[
-        ['Property function only', '../static/img/f_property.png'],
-        ['Zoom fucntion only', '../static/img/f_zoom.png'],
-        ['Zoom and property function', '../static/img/f_zoom_property.png']
-      ]} />
-
-
-
+        <div className={`${styles.txtXL} mb4 ml2`}>Property function and zoom function UI</div>
+          <SlideColumn content={[
+            ['Property function only', '../static/img/f_property.png'],
+            ['Zoom fucntion only', '../static/img/f_zoom.png'],
+            ['Zoom and property function', '../static/img/f_zoom_property.png']
+          ]} />
       </div>
     </div>
 
@@ -332,9 +335,10 @@ export default () => (
       <div className='cf pv4'>
         <div className='mt4 mb4'>
           <div className={`${styles.txtXL} mb2`}>Complex value editing</div>
-          <div className={`${styles.txtBody}`}>
-            The value for any layout or paint property may be specified as a function.
-            Functions allow you to make the appearance of a map feature change with the current zoom level and/or the feature's properties.
+          <div className={`${styles.txtBody} w-80`}>
+            The ability to style based on both zoom and property means maximum control and flexibility when styling base maps with complicated layer structures.
+            It also means some new challenges for a learnable, simple UI.
+            Below is a flow I sketched out to demonstrate the steps a user goes through to create a property and zoom function.
           </div>
         </div>
         <FlowSection />
@@ -350,22 +354,20 @@ export default () => (
 
 
      <div className={`${styles.limiter} mt5 nb5 cf`}>
-
-        <div className={`${styles.txtXL} mb2`}>What I have learned</div>
-        <div className={`${styles.txtBody} w-70`}>
-          Designing a UI for data-driven styling was a small project I did in June 2016,
-          when we first launched this feature in Mapbox GL JS.
-          The goal of this is mostly for exploring possibile options and informing future technical decisions.
+        <div className={`${styles.txtBody} w-80 mt4`}>
+          Designing a UI for something that's essentially a programming expression was an interesting challenge.
+          It is hard to reduce abstraction when there is so much flexibility that comes with code.
+          Another constraint here is we are building this on top of the exisiting interface (primarily for base map design),
+          not designing a visualzation editor from ground up.
         </div>
 
         <div className='flex-l flex-non justify-center '>
           <div className='pt5 mt3'>
-            <img style={{ width: 20, height: 20 }} className='o-90 db mb2' src='../static/icons/play_button.svg' />
+            <img style={{ width: 20, height: 20 }} className='o-90 db mb3' src='../static/icons/play_button.svg' />
             <div className={`${styles.txtH3} mb2`}>Prototypes</div>
             <div className={`${styles.txtSbody} `}>
-              I used prototypes to demonstrate and communicate user flows.
+              I used prototypes to better communicate user flows.
             </div>
-
           </div>
 
           <div className='nr5 dn db-l'>
