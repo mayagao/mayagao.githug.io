@@ -91,12 +91,12 @@ class Slideshow extends Component {
               {content[2].title}
           </a>
         </div>
-        <div className='items-center h4 mt5 absolute absolute--fill flex'>
+        <div className='items-center h-full mt5 absolute absolute--fill flex'>
           <a onClick={this.onClickPrev} className='br-100 left-0 nl5 absolute  shadow shadow-1-on-hover pointer fl dib bg-white h2 items-center flex ph2'>
             <img className='h1 w1 o-50 glow ' src='../../static/icons/prev.svg' />
           </a>
           <a onClick={this.onClickNext} className='br-100 right-0 nr5 absolute shadow shadow-1-on-hover pointer fr dib bg-white h2 items-center flex ph2'>
-            <img className='h1 w1 o-50 glow ' src='../../static/icons/next.svg' />
+            <img className='h1 w1 o-50 glow ' src='../../static/icons/next-b.svg' />
           </a>
         </div>
         <div className={`${this.props.height}`}>
