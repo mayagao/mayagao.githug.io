@@ -8,6 +8,17 @@ import { styles } from '../components/styles'
 const projects = [
   {
     themeColor: '#8a88cd',
+    type: 'UI & UX',
+    image:
+    (<div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
+        <img style={{ width: '717px'}} className=""  src="static/img/home_doc.png" />
+      </div>),
+    title: 'Developer Experience',
+    link: '/developer',
+    description: 'Design a seamless, conhesive developer experience across signup onboarding, help guide, and documentation system.'
+  },
+  {
+    themeColor: '#8a88cd',
     type: 'UI & UX, development',
     image:
     (<div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
@@ -84,8 +95,9 @@ export default () => (
                     className={`f6 lh-title gray o-50 mb1`}>
                     {p.type}
                   </div>
-                  <Link prefetch href={p.link}><a className={`txt-xl db link black underline-hover lh-title o-100 headline mb2`} >{p.title}</a></Link>
+                  <div className={`txt-xl db link black lh-title o-100 headline mb2`} >{p.title}</div>
                   <div className={`${styles.txtBody} o-50`}>{p.description}</div>
+                  <Link prefetch href={p.link}><a className='mt2 db link dim blue f5'> Learn more <img className='v-top mt1 h1 ' src='../static/icons/next.svg' /></a></Link>
                 </div>
               </div>
             </div>
