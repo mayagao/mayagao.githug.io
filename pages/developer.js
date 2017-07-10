@@ -120,7 +120,7 @@ export default () => (
           <div className="fl w-50-l w-100">
             <div className="f6 mt3 o-40">Release</div>
             <div className="f6 pt1 ">March, 2017</div>
-            <a href="" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
+            <a href="https://www.mapbox.com/install/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
           </div>
         </div>
 
@@ -186,7 +186,7 @@ export default () => (
           <div className="fl w-50">
             <div className="f6 mt3 o-40">Release</div>
             <div className="f6 pt1 ">Junly, 2017</div>
-            <a href="" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
+            <a href="https://www.mapbox.com/help/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
           </div>
         </div>
 
@@ -254,7 +254,7 @@ export default () => (
             <div className="fl w-50">
               <div className="f6 mt3 o-40">Release</div>
                 <div className="f6 pt1 ">Work in progress</div>
-             <a href="" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
+             <a href="https://www.mapbox.com/unity-sdk/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
             </div>
           </div>
           <div className={`${styles.txtBody} mb3`}>
