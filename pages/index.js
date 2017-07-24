@@ -15,7 +15,7 @@ const projects = [
       </div>),
     title: 'Developer Experience',
     link: '/developer',
-    description: 'Design a seamless, conhesive developer experience across signup onboarding, help guide, and documentation system.'
+    description: 'Design a seamless, cohesive developer experience across signup onboarding, help guide, and documentation system.'
   },
   {
     themeColor: '#8a88cd',
@@ -26,7 +26,7 @@ const projects = [
       </div>),
     title: 'Mapbox Studio',
     link: '/mapbox-studio',
-    description: 'Retaining flexibility that comes with poweful customization options while designing an interface that feels learnable.'
+    description: 'Retaining flexibility that comes with powerful customization options while designing an interface that feels learnable.'
   },
   {
     themeColor: '#8a88cd',
