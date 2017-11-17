@@ -1,50 +1,58 @@
 @font-face {
-  font-family: 'Clear Sans Regular';
-  src: url('fonts/ClearSans-Regular.woff') format('woff'),
-       url('fonts/ClearSans-Regular.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: 'Aleo Italic';
-  src: url('fonts/aleo-italic.woff') format('woff'),
-       url('fonts/aleo-italic.ttf') format('truetype');
+  font-family: 'Rosario Regular';
+  src: url('fonts/Rosario-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Aleo Light';
-  src: url('fonts/aleo-light.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/aleo-light.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-family: 'Rosario Italic';
+  src: url('fonts/Rosario-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Regular';
+  src: url('fonts/Barlow-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 body {
-  font-family: 'Clear Sans Regular', sans-serif;
-  font-size: 18px;
+  font-family: 'Rosario Regular', sans-serif;
 }
 
 .mw-limiter{
     max-width: 82rem;
 }
-
-
+.f4 {
+  font-size: 1.35rem;
+}
+.f5 {
+  font-size: 1.125rem;
+}
+.f2 {
+  font-size: 2rem;
+}
+.lh-copy {
+  line-height: 1.6em;
+}
+.f6 {
+  font-size: 1rem;
+}
 .f7 {
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 .txt-xl {
   font-size: 1.92rem;
 }
-.headline {
-  font-family: 'Aleo Light', serif;
+
+.heading {
+  font-family: 'Barlow Regular', serif;
 }
 
 .flex-no-shrink {
   flex-shrink: 0;
 }
 .quote {
-  font-family: 'Aleo Italic', serif;
+  font-family: 'Rosario Italic', serif;
 }
-
 .studio-ui-dive {
    counter-reset: section;
 }
@@ -89,7 +97,8 @@ body {
   height: 22px;
   text-align: center;
   border-radius: 50%;
-  font-size: .875em;
+  font-size: .8em;
+  line-height: 1.4em;
   margin-left: -32px;
   margin-right: 10px;
 

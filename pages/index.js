@@ -92,10 +92,10 @@ export default () => (
               <div style={{flex: '1 1 30%'}} className="lh-copy mt3 mt0-l flex f7 pl4-l pl0">
                 <div className="self-end">
                   <div
-                    className={`f6 lh-title gray o-50 mb1`}>
+                    className={`f6 lh-title heading o-50 mb1`}>
                     {p.type}
                   </div>
-                  <div className={`txt-xl db link black lh-title o-100 headline mb2`} >{p.title}</div>
+                  <div className={`txt-xl db link black lh-title o-100 heading mb2`} >{p.title}</div>
                   <div className={`${styles.txtBody} o-50`}>{p.description}</div>
                   <Link prefetch href={p.link}><a className='mt2 db link dim blue f5'> Learn more <img className='v-top mt1 h1 ' src='../static/icons/next.svg' /></a></Link>
                 </div>

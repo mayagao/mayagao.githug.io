@@ -68,6 +68,7 @@ const complexSlide2 = [{
   title: '3',
   content: (<img className="shadow br3" src="../static/img/signup_3.png" />)
 }]
+const projectOverviewHeading = 'mt3 heading o-50';
 
 export default () => (
   <Page>
@@ -79,9 +80,9 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <Menu />
       <div className='cf mt5  w-80-ns w-100 '>
-        <div className="f5 o-50 mb2">Case Study</div>
+        <div className="f5 o-50 mb2 heading">Case Study</div>
         <div className={`${styles.txtH1} nl1`}>Developer Experience</div>
-        <div className={`f3-ns f4 lh-copy o-100 headline mt4 mb4`}>
+        <div className={`f3-ns f4 lh-copy o-100 heading mt4 mb4`}>
           Mapbox enables developers to control the entire experience of their location applications,
           from the visual design of the map style to interactive features like spatial analysis and turn-by-turn navigation.
           Making the entire integration experience seamless is crucial to the success of our products.
@@ -108,19 +109,19 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <div className='cf mt5  w-80-ns w-100 '>
         <div className={`${styles.txtH2} mb4`}>Developer Onboarding</div>
-        <div className='cf mb4'>
+        <div className='cf f6 mb4'>
           <div className="w-50-l w-100 fl">
-            <div className="f6 mt3 o-40">My Role</div>
-            <div className="f6 pt1 ">UI</div>
-            <div className="f6 mt3 o-40">Team</div>
-              <div className="f6 pt1">Tom MacWright <span className="o-40">(UX & engineering)</span></div>
-              <div className="f6 pt1">Saman Bemel-Benrud<span className="o-40"> (UI & engineering)</span></div>
-              <div className="f6 pt1">David Clark <span className="o-40">(engineering)</span></div>
+            <div className={`${projectOverviewHeading}`}>My Role</div>
+            <div className="pt1 ">UI</div>
+            <div className={`${projectOverviewHeading}`}>Team</div>
+              <div className="pt1">Tom MacWright <span className="o-40">(UX & engineering)</span></div>
+              <div className="pt1">Saman Bemel-Benrud <span className="o-40"> (UI & engineering)</span></div>
+              <div className="pt1">David Clark <span className="o-40">(engineering)</span></div>
           </div>
           <div className="fl w-50-l w-100">
-            <div className="f6 mt3 o-40">Release</div>
-            <div className="f6 pt1 ">March, 2017</div>
-            <a href="https://www.mapbox.com/install/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
+            <div className={`${projectOverviewHeading}`}>Release</div>
+            <div className="pt1 ">March, 2017</div>
+            <a href="https://www.mapbox.com/install/" className='mt3 db link dim blue'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
           </div>
         </div>
 
@@ -175,16 +176,16 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <div className='cf mt5  w-80-ns w-100 '>
         <div className={`${styles.txtH2} mb4`}> Help Guide</div>
-         <div className='cf mb4'>
+         <div className='cf f6 mb4'>
           <div className="w-50-l fl">
-            <div className="f6 mt3 o-40">My Role</div>
-            <div className="f6 pt1 ">UI</div>
-            <div className="f6 mt3 o-40">Team</div>
-            <div className="f6 pt1">Katy Deborah<span className="o-40">(engineering)</span></div>
-            <div className="f6 pt1">Colleen Mcginnis<span className="o-40">(UX & engineering)</span></div>
+            <div className={`${projectOverviewHeading}`}>My Role</div>
+            <div className="pt1 ">UI</div>
+            <div className={`${projectOverviewHeading}`}>Team</div>
+            <div className="pt1">Katy Deborah <span className="o-40">(engineering)</span></div>
+            <div className="pt1">Colleen Mcginnis <span className="o-40">(UX & engineering)</span></div>
           </div>
           <div className="fl w-50">
-            <div className="f6 mt3 o-40">Release</div>
+            <div className={`${projectOverviewHeading}`}>Release</div>
             <div className="f6 pt1 ">Junly, 2017</div>
             <a href="https://www.mapbox.com/help/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
           </div>
@@ -243,17 +244,17 @@ export default () => (
         <div className='cf mt5  w-80-ns w-100 '>
           <div className={`${styles.txtH2} mb4`}>Documentation system</div>
           <div className='cf mb4'>
-            <div className="w-50 fl">
-              <div className="f6 mt3 o-40">My Role</div>
-              <div className="f6 pt1 ">UI & UX</div>
-              <div className="f6 mt3 o-40">Team</div>
-              <div className="f6 pt1">Nadia Barbosa <span className="o-40"> (iOS)</span></div>
-              <div className="f6 pt1">Cameron Mace<span className="o-40"> (Android)</span></div>
-              <div className="f6 pt1">Dan Swick<span className="o-40"> (Unity)</span></div>
+            <div className="w-50 f6 fl">
+              <div className={`${projectOverviewHeading}`}>My Role</div>
+              <div className="pt1 ">UI & UX</div>
+              <div className={`${projectOverviewHeading}`}>Team</div>
+              <div className="pt1">Nadia Barbosa <span className="o-40"> (iOS)</span></div>
+              <div className="pt1">Cameron Mace <span className="o-40"> (Android)</span></div>
+              <div className="pt1">Dan Swick <span className="o-40"> (Unity)</span></div>
             </div>
             <div className="fl w-50">
-              <div className="f6 mt3 o-40">Release</div>
-                <div className="f6 pt1 ">Work in progress</div>
+              <div className={`${projectOverviewHeading}`}>Release</div>
+                <div className="f6 pt1">Work in progress</div>
              <a href="https://www.mapbox.com/unity-sdk/" className='mt3 db link dim blue f6'> View this live <img className='v-mid h1' src='../static/icons/next.svg' /></a>
             </div>
           </div>

@@ -280,7 +280,7 @@ export default () => (
       <div className='cf mt5 '>
         <div className="f5 o-50 mb2">Small Project</div>
         <div className={`${styles.txtH1} nl1`}>Data-driven Styling </div>
-        <div className={`f3-ns f4 lh-copy o-100  w-80-ns w-100 headline mt4`}>
+        <div className={`f3-ns f4 lh-copy o-100  w-80-ns w-100 heading mt4`}>
           Data-driven styling represents the capacity in our map SDKs to change styles based on data properties.
           For example, change circle layer radius based on population density.
           When this feature was first introduced in Mapbox GL JS in June 2016,
