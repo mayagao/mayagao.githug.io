@@ -68,7 +68,7 @@ const complexSlide2 = [{
   title: '3',
   content: (<img className="shadow br3" src="../static/img/signup_3.png" />)
 }]
-const projectOverviewHeading = 'mt3 heading o-50';
+const projectOverviewHeading = 'mt3 o-50';
 
 export default () => (
   <Page>
@@ -80,7 +80,7 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <Menu />
       <div className='cf mt5  w-80-ns w-100 '>
-        <div className="f5 o-50 mb2 heading">Case Study</div>
+        <div className="f5 o-50 mb2 ">Case Study</div>
         <div className={`${styles.txtH1} nl1`}>Developer Experience</div>
         <div className={`f3-ns f4 lh-copy o-100 heading mt4 mb4`}>
           Mapbox enables developers to control the entire experience of their location applications,
