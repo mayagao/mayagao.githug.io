@@ -29,9 +29,6 @@ body {
 .f2 {
   font-size: 2rem;
 }
-.lh-copy {
-  line-height: 1.6em;
-}
 .f6 {
   font-size: 1rem;
 }
@@ -39,6 +36,9 @@ body {
   font-size: 0.9rem;
 }
 
+.lh-copy {
+  line-height: 1.6em;
+}
 .txt-xl {
   font-size: 1.92rem;
 }
