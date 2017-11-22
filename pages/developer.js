@@ -50,7 +50,7 @@ export default () => (
       <div className='cf mt5  w-80-ns w-100 '>
         <div className="f5 o-50 mb2 ">Case Study</div>
         <div className={`${styles.txtH1} nl1`}>Developer Experience</div>
-        <div className={`f3-ns f4 lh-copy o-100 heading mt4 `}>
+        <div className={`${styles.txtIntro}`}>
           In December, 2016, we started an overhaul of our entire developer experience,
           from onboarding flow to the documentation system.
           The primary goal is to increase SDK activations and create a more engaging experience for developers across all the platforms.
@@ -62,7 +62,7 @@ export default () => (
     </div>
 
     <div className={`${styles.limiter}`}>
-      <div className='cf mt4 w-80-ns w-100 '>
+      <div className='cf pt5 bt b--black-20 w-80-ns w-100 '>
         <div className={`${styles.txtH2} mb4`}>1. Developer Onboarding</div>
         <div className='cf f6 mb4'>
           <div className="w-50-l w-100 fl">
@@ -114,10 +114,10 @@ export default () => (
           Platform separation also allows us to collect more accurate persona information for targeted marketing campaigns.
           The open/click-through rate of our on-boarding emails increased significanltly with an CTA of 30% for Android developers.
         </div>
-        <div className='mt4 mb5'>
+        <div className='mt4 mb3'>
           <Slideshow content={complexSlide2} height='h7' />
           <div className={`${styles.txtH3}`}>Three different versions of the signup page</div>
-          <div className={`${styles.txtSbody} mt1 mb3`}>
+          <div className={`${styles.txtSbody} mt1`}>
             The signup page was the main entry point to the onboarding flow.
             Each version focuses on a specific selling point of the SDK, such as customization, ease of use, etc.
           </div>
@@ -127,7 +127,7 @@ export default () => (
     
 
     <div className={`${styles.limiter}`}>
-      <div className='cf mt5  w-80-ns w-100 '>
+      <div className='cf pt5 bt b--black-20 w-80-ns w-100 '>
         <div className={`${styles.txtH2} mb4`}>2. Help Redesign</div>
         <div className='cf f6 mb2'>
           <div className="w-50-l fl">
@@ -192,10 +192,10 @@ export default () => (
     </div>
 
     <div className={`${styles.limiter}`}>
-      <div className='cf mt5  w-80-ns w-100 '>
+      <div className='cf pt5 bt b--black-20 w-80-ns w-100 '>
         <div className={`${styles.txtH2} mb4`}>3. Documentation system</div>
         <div className='cf mb2'>
-          <div className="w-50 f6 fl">
+          <div className="w-50-l f6 fl">
             <div className={`${projectOverviewHeading}`}>My Role</div>
             <div className="pt1 ">UI & UX</div>
             <div className={`${projectOverviewHeading}`}>Team</div>
@@ -247,9 +247,9 @@ export default () => (
           <div className='bg-near-white pv4 ph4 br3'>
             <img className="" src="../static/img/doc_sidebar.png" />
           </div>
-          <div className={`${styles.txtH3} mt3`}>Nested navigation</div>
+          <div className={`${styles.txtH3} mt3`}>Nested navigation component</div>
           <div className={`${styles.txtSbody}  mb3`}>
-            A reusable left navigation components that's being used across all SDK pages. 
+            A reusable navigation component that's being used across all SDK pages. 
           </div>
       </div>
     </div>

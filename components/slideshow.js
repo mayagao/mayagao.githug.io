@@ -58,20 +58,20 @@ class Slideshow extends Component {
     }
 `}</style>
       </Head>
-        <div className='mb3'>
+        <div className='mb4'>
           <a
             onClick={this.goToFirst}
-            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 0 ? 'o-90 bg-white' : 'o-40'}`}>
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill ${this.state.activeIndex === 0 ? 'o-90 bg-white' : 'o-40'}`}>
               {content[0].title}
           </a>
           <a
             onClick={this.goToMiddle}
-            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 1 ? 'o-90 bg-white' : 'o-40'}`}>
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill ${this.state.activeIndex === 1 ? 'o-90 bg-white' : 'o-40'}`}>
               {content[1].title}
           </a>
           <a
             onClick={this.goToLast}
-            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3 br-pill ${this.state.activeIndex === 2 ? 'o-90 bg-white' : 'o-40'}`}>
+            className={`f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill ${this.state.activeIndex === 2 ? 'o-90 bg-white' : 'o-40'}`}>
               {content[2].title}
           </a>
         </div>
