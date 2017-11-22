@@ -28,18 +28,18 @@ const onboardingContent = [
    ['../static/img/install_2.png', '2. Set up the dev enviroment'],
    ['../static/img/install_3.png', '3. Select a map style'],
    ['../static/img/install_4.png', '4. Complete and explore more examples'],
-   ['../static/img/install_studio.png', '5. Go to developer dashboard'],
-   ['../static/img/install_1.png', '6. Explore other Mapbox products']
+   ['../static/img/install_studio.png', '5. Analyze API usage from the dashboard'],
+   ['../static/img/install_explore.png', '6. Explore other Mapbox products']
 ]
 const helpContent = [
-  ['../static/img/help_home.png', 'On home page, better search results formatting on clear seperation of sections.'],
-  ['../static/img/help_tutorial.png', 'Create categories and difficulty levels on the tutorial page'],
-  ['../static/img/help_guide.png', 'Create categories and difficulty levels on the tutorial page']
+  ['../static/img/help_home.png', 'On home page, better search results formatting. Clear separation of categories.'],
+  ['../static/img/help_tutorial.png', 'Group tutorials based on language and difficulty levels.'],
+  ['../static/img/help_guide.png', 'Organize step-by-step guides based on three main user groups.']
 ]
 const docContent = [
   ['../static/img/doc_developer.png', 'Developer home page.'],
-  ['../static/img/doc_ios.png', 'iOS SDK home page'],
-  ['../static/img/doc_unity.png', 'Unity SDK home page']
+  ['../static/img/doc_ios.png', 'iOS SDK documentation'],
+  ['../static/img/doc_unity.png', 'Unity SDK documentation']
 ]
 const projectOverviewHeading = 'mt3 o-50';
 const minWidth = { marginRight: 20, marginBottom: 20 };
@@ -54,9 +54,8 @@ export default () => (
           In December, 2016, we started an overhaul of our entire developer experience,
           from onboarding flow to the documentation system.
           The primary goal is to increase SDK activations and create a more engaging experience for developers across all the platforms.
-          I had the opportunity to collaborate with many different teams at Mapbox, from support and
-          business to analytics and mobile.
-          Here is an overview of three individual projects that's part if this endeavor:
+          I had the opportunity to collaborate with many different teams at Mapbox, from support to business.
+          Here is an overview of three individual projects that's part of this endeavor:
          </div>
       </div>
     </div>
@@ -98,16 +97,15 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <div className='cf mt5  w-80-ns w-100 '>
         <div className={`${styles.txtBody} mb3`}>
-          In the early days, the onboarding flow focused heavily on professional GIS users and cartographers,
-          explaining how different pieces of Mapbox fit together.
+          In early days, the onboarding flow focused heavily on professional GIS users and cartographers.
           As the product focus shifts to be more developer-oriented,
           we needed a method to help people start building and tinkering right away.
         </div>
         <div className={`${styles.txtBody} mb3`}>
           For the new on-boarding flow we focused on a very simple task: adding a basic map view.
           After the install flow, we guide users to more complicated examples.
-          We've discovered through user interviews that code examples, not documentations, 
-          are a primary source of how people get started with the tools.
+          A discovery through user interviews is that code examples, not documentations, 
+          are a primary source of how people get started with Mapbox tools.
         </div>
         <div className={`${styles.txtBody} mb3`}>
           After the launch we've seen an increase in new account activations, mobile SDK adoptions, and other metrics.
@@ -116,10 +114,11 @@ export default () => (
         </div>
         <div className='mt4 mb3'>
           <Slideshow content={complexSlide2} height='h7' />
-          <div className={`${styles.txtH3}`}>Three different versions of the signup page</div>
+          <div className={`${styles.txtH3}`}>Three versions of the signup page</div>
           <div className={`${styles.txtSbody} mt1`}>
             The signup page was the main entry point to the onboarding flow.
-            Each version focuses on a specific selling point of the SDK, such as customization, ease of use, etc.
+            Each version focuses on a specific selling point of the SDK, including customization, 
+            ease of use, and search/navigation features.
           </div>
         </div>
       </div>
@@ -161,10 +160,10 @@ export default () => (
           Mapbox has an incredibly complicated product system. It allows people to build powerful things,
           but it can also be a bit daunting to learn it at first.
           Our amazing support team has produced hundreds of narrative guides and step-by-step tutorials.
-          But it can be challenging to organize and navigate those content.
-          Our help home page at some point became an index page for all the articles with just large blocks of links.
-          Two questions we asked ourselves at the beginning of this projects are: How can we help users find the content?
-          How can make the existing content shine?
+          But it can be challenging to navigate those content sometimes.
+          Our help page at some point simply became an index page containing hundreds of links.
+          Two questions we asked ourselves at the beginning of this project are: 
+          How can we help users find the content? How can make the existing content shine?
         </div>
 
         <div className={`${styles.quote}`}>
@@ -184,7 +183,8 @@ export default () => (
 
         <div  className=" pr7-l pr0 br3 mt5 mb4">
           <img src="../static/img/help_illustration.png" />
-          <div className={`${styles.txtSbody} mt3`}>
+          <div className={`${styles.txtH3} mt3`}>Guide oage illustrations</div>
+          <div className={`${styles.txtSbody} `}>
             Illustrations I created to help explain concepts and make the page more friendly.
           </div>
         </div>
@@ -216,7 +216,7 @@ export default () => (
       id='doc-system'
       singleImageWidth = {900}
       title = 'Documentation System'
-      subtitle = 'Initial wireframes of steps users need to go through to install Mapbox SDK.'
+      subtitle = 'Documentation system consists of a main developer page and documentation pages for different SDKs.'
       containerContent = {docContent}
     />
 
@@ -227,10 +227,10 @@ export default () => (
           In the past, the technical documentation is managed separately by individual teams, with very different visual and content styles.
           Sometimes users were confused by the lack of consistency when they try to use more than one building block or develop on multiple platforms.
           We realized that the separation of teams should not be reflected in our documentation system.
-         And the organization structure should not prevent us from providing a cohesive product experience for our users.
+         And the organizational structure should not prevent us from providing a cohesive product experience for our users.
         </div>
         <div className={`${styles.txtBody} mb4`}>
-          Standardization provides us an excellent opportunity to rethink the content architecture and visual design.
+          Standardization offers us a unique opportunity to rethink the content architecture and visual design.
           One unique challenge for Mapbox is it has a complex product structure. 
           There are usually multiple SDKs for each platform and not all platform has the same features. 
           To reduce the complexity, we allow users to pick a platform first before diving deeper into what they can build.
