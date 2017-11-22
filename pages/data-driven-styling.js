@@ -280,7 +280,7 @@ export default () => (
       <div className='cf mt5 '>
         <div className="f5 o-50 mb2">Small Project</div>
         <div className={`${styles.txtH1} nl1`}>Data-driven Styling </div>
-        <div className={`f3-ns f4 lh-copy o-100  w-80-ns w-100 heading mt4`}>
+        <div className={`${styles.txtIntro} w-80-ns w-100 `}>
           Data-driven styling represents the capacity in our map SDKs to change styles based on data properties.
           For example, change circle layer radius based on population density.
           When this feature was first introduced in Mapbox GL JS in June 2016,
@@ -288,7 +288,7 @@ export default () => (
         </div>
 
         <div className='mt5'>
-          <div className={`${styles.txtXL} mb2`}>Three types of property functions</div>
+          <div className={`${styles.txtH2} mb4`}>Three types of property functions</div>
           <div className={`${styles.txtBody}`}>
             There are three types of functions that comes with data driven styling,
             exponential, interval, and categorical.
@@ -300,7 +300,7 @@ export default () => (
 
     <div className='bg-near-white pv4 mt4'>
       <div className={`${styles.limiter} `}>
-        <div className={`${styles.txtXL} mb4 ml2`}>Three types of property functions</div>
+        <div className={`${styles.txtH3} mb4 pt4`}>Three types of property functions</div>
         <Slideshow content={functionSlide} />
       </div>
     </div>
@@ -308,7 +308,7 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <div className='cf pv4'>
         <div className='mt4'>
-          <div className={`${styles.txtXL} mb2`}>Property and zoom functions</div>
+          <div className={`${styles.txtH2} mb4`}>Property and zoom functions</div>
           <div className={`${styles.txtBody} w-80`}>
             In addition to property functions (data-driven styling),
             Mapbox GL JS also provides the ability to style based on zoom levels.
@@ -322,7 +322,7 @@ export default () => (
 
     <div className='bg-near-white pv4 mt4'>
       <div className={`${styles.limiter} `}>
-        <div className={`${styles.txtXL} mb4 ml2`}>Property function and zoom function UI</div>
+        <div className={`${styles.txtH3} mb4 pt4`}>Property function and zoom function UI</div>
           <SlideColumn content={[
             ['Property function only', '../static/img/f_property.png'],
             ['Zoom fucntion only', '../static/img/f_zoom.png'],
@@ -334,7 +334,7 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <div className='cf pv4'>
         <div className='mt4 mb4'>
-          <div className={`${styles.txtXL} mb2`}>Complex value editing</div>
+          <div className={`${styles.txtH2} mb4`}>Complex value editing</div>
           <div className={`${styles.txtBody} w-80`}>
             The ability to style based on both zoom and property means maximum control and flexibility when styling base maps with complicated layer structures.
             It also means some new challenges for a learnable, simple UI.
@@ -347,7 +347,7 @@ export default () => (
 
     <div className='bg-near-white pt4 mt4'>
       <div className={`${styles.limiter}`}>
-        <div className={`${styles.txtXL} mb4 ml2`}>Complex value editing</div>
+        <div className={`${styles.txtH3} mb4`}>Complex value editing</div>
         <Slideshow height='h7-l h-auto' content={complexSlide} />
       </div>
     </div>

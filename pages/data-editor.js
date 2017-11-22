@@ -85,17 +85,17 @@ export default () => (
       </div>
     </div>
 
-    <div className="w-100 bg-mb pv3-l white ph4-l ph2 pb3 pb0-l">
+    <div className="w-100 bg-mb pv3-l white ph4-l ph0 pb3 pb0-l">
       <div className="pt4 tc mb4 f6">
         <span className="o-70 pl1">Dataset Editor Iteration 1</span>
       </div>
-      <div className="flex-ns mw8 center flex-none pb4">
-        <div style={{flex: '1 1 440px'}} className="mr3-ns mr0">
+      <div className="flex mw8 center pb4 overflow-scroll">
+        <div style={{flex: '1 0 434px' }} className="ml4 ml0-l mr4">
           <img className="" src="../static/img/de1_left.png" />
           <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Feature list and property panel</div>
         </div>
-        <div style={{flex: '1 1 542px'}} className="">
-         <img className="" src="../static/img/de1_right.png" />
+        <div style={{flex: '1 0 538px'}} className="">
+         <img className="mr4 mr0-l" src="../static/img/de1_right.png" />
          <div className="pv2 tl relative f6 o-70 mb0-ns">Geometry panel and multi-select</div>
         </div>
       </div>
@@ -136,13 +136,13 @@ export default () => (
       <div className="pt4 tc mb4 f6">
         <span className="o-70 pl1">Dataset Editor Iteration 2</span>
       </div>
-      <div className="flex-ns mw8 center flex-none pb4">
-        <div style={{flex: '1 1 533px'}} className="mr5-ns mr0">
+      <div className="flex mw8 center pb4 overflow-scroll">
+        <div style={{flex: '1 0 533px'}} className="ml4 ml0-l mr4">
           <img className="" src="../static/img/de2_left.png" />
           <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Property panel and code panel</div>
         </div>
-        <div style={{flex: '1 1 359px'}} className="">
-         <img className="" src="../static/img/de2_right.png" />
+        <div style={{flex: '1 0 359px'}} className="">
+         <img className="mr4 mr0-l" src="../static/img/de2_right.png" />
          <div className="pv2 tl relative f6 o-70 mb0-ns">A layout variation: display editor inside a popover.</div>
         </div>
       </div>
@@ -185,15 +185,15 @@ export default () => (
 
     <div className="w-100 bg-mb pv3-l white ph4-l ph2 pb4 pb0-l">
       <div className="pt4 tc mb4 f6">
-        <span className="o-70 pl1">Dataset Editor Iteration 3</span> <span className="o-40">June, 2016</span>
+        <span className="o-70 pl1">Dataset Editor Iteration 3</span>
       </div>
-      <div className="flex-ns mw8 center flex-none pb4">
-        <div style={{flex: '1 1 500px'}} className="mr4-ns mr0">
+      <div className="flex mw8 center pb4 overflow-scroll">
+        <div style={{flex: '1 0 500px'}} className="ml4 ml0-l mr4">
           <img className="" src="../static/img/de3_left.png" />
           <div className="pv2 tl relative f6 o-70 mb4 mb0-ns">Property panel</div>
         </div>
-        <div style={{flex: '1 1 335px'}} className="">
-         <img className="" src="../static/img/de3_right.png" />
+        <div style={{flex: '1 0 335px'}} className="">
+         <img className="mr4 mr0-l" src="../static/img/de3_right.png" />
          <div className="pv2 tl relative f6 o-70 mb0-ns">Location and feature search.</div>
         </div>
       </div>

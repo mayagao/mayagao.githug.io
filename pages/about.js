@@ -10,7 +10,7 @@ export default () => (
       <Menu />
       <div className='cf mt5'>
         <div className={`${styles.txtH2} w-80 fl`}>Hi 👋 </div>
-        <div className={`f3-ns f4 w-80-ns  heading w-100 fl lh-copy o-100 mt3`}>
+        <div className={`f4 w-80-ns w-100 fl lh-copy o-100 mt3`}>
           I am a product designer living and working in San Francisco.
           Currently I am building prototyping tools for developers with the RunKit team at Stripe. Prior to Stripe, 
           I worked on map design and data editing software at Mapbox in Washington, D.C. 

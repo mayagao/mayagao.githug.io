@@ -13,6 +13,7 @@ const styles = {
   txtBody: 'lh-copy f5 o-70',
   txtSbody: 'lh-copy f6 o-60',
   txtNote: 'o-50 mt3 pl1 f7 lh-copy',
+  txtIntro: 'f3-ns f4 lh-copy o-100  heading mt4',
   quote: 'quote b--black-30 lh-copy pl3 bl f4 o-60 mt4 mb4'
 };
 

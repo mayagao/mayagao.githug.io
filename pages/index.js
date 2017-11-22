@@ -92,7 +92,7 @@ export default () => (
               <div style={{flex: '1 1 30%'}} className="lh-copy mt3 mt0-l flex f7 pl4-l pl0">
                 <div className="self-end">
                   <div
-                    className={`f6 lh-title heading o-50 mb1`}>
+                    className={`f6 lh-title o-50 mb1`}>
                     {p.type}
                   </div>
                   <div className={`txt-xl db link black lh-title o-100 heading mb2`} >{p.title}</div>

@@ -28,7 +28,7 @@ const headerInfo = {
     },
     {
       name: 'Matthew Whittemore',
-      title: '(enginnering)'
+      title: '(engineering)'
     },
   ],
   image: (
@@ -52,7 +52,7 @@ const featureDetails = [
   {
     imageSource: '../static/img/ms_1.png',
     title: 'Property categories',
-    description: 'Divid layer properties into four categories to improve visibility.'
+    description: 'Divide layer properties into four categories to improve visibility.'
   },
   {
     imageSource: '../static/img/ms_2.png',
@@ -117,7 +117,7 @@ export default () => (
         The editor provides complete design control over how the map looks. Users can select a map layer,
         edit data sources, and edit properties such as texture, color and fonts.
         Retaining flexibility that comes with all those poweful customization options,
-        while at the same time designing a UI that feels approachable and learnable was definitely a big challenge.
+        while designing a UI that feels approachable and learnable was definitely a big challenge.
       </div>
 
     </div>
@@ -130,7 +130,7 @@ export default () => (
       </div>
   </div>
 
-  <div className="w-100 mt4 bg-mb pv3-l p3 pl4-l pl3 pr2 overflow-hiddden">
+  <div className="w-100 mt4 bg-mb pv3-l p3 pl4-l pl3 pr2 overflow-hidden">
    <div className="pt4 white f6 flex">
      <div style={{width: 1200}} className=" self-center center mb0">
        <div ><span className="o-70">Style Editor Iteration</span></div>
@@ -140,7 +140,7 @@ export default () => (
        </div>
      </div>
     </div>
-    <div className="flex flex-row pb2 overflow-hiddden">
+    <div className="flex flex-row pb2 overflow-scroll">
       <img style={{width: 1200}} className="center  db-ns dn self-center" src="../static/img/ms_editor.png" />
       <img style={{maxWidth: 230+'%'}} className="center  db dn-ns self-center" src="../static/img/ms_editor.png" />
     </div>
@@ -216,9 +216,10 @@ export default () => (
     <div className={`${styles.leftColumn} mb4 mt4`}>
       <div className={`${styles.txtH2}`}>Dashboard</div>
       <div className={`${styles.txtBody}`}>
-        In addition to being a map design tool, Studio also serves as an online platform that connects all the different Mapbox products,
+        In addition to being a map design tool, 
+        Studio also serves as an online platform that connects all the different Mapbox products,
         from the data upload and processing pipeline to the developer APIs and SDKs. Users can design maps,
-        upload and manage custom data, analyze API usage and manage account, all in one place.
+        manage custom data, analyze API usage, and manage account information, all in one place.
       </div>
     </div>
     <div className="w-100 mt5 flex-l flex-none br2 mb3">
@@ -227,7 +228,7 @@ export default () => (
       </div>
       <div  style={{flex: '1 1 240px'}} className="lh-copy flex f7 pl4-l pl0">
         <div className="self-end mb4-l">
-          <div className={`${styles.txtH3}`}>Home page</div>
+          <div className={`${styles.txtH3} mt3`}>Home page</div>
           <div className={`${styles.txtSbody} mt2`}>The goal of the home page is to help user navigate and find what they are looking for. We identified three most common tasks: design, develop and data visualization. </div>
         </div>
       </div>
@@ -238,7 +239,7 @@ export default () => (
       </div>
       <div style={{flex: `1 1 240px`}} className="lh-copy flex pl4-l pl0">
         <div className="self-end f7 mb4-l">
-          <div className={`${styles.txtH3}`}>Listing pages</div>
+          <div className={`${styles.txtH3} mt3`}>Listing pages</div>
           <div className={`${styles.txtSbody} mt2`}>The listing pages consist of a left main view with all styles/tilesets in a user's account, and a right sidebar explaining how to use those resources. The left popover shows current data uploads status. </div>
         </div>
       </div>
