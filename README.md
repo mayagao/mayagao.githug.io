@@ -1,7 +1,3 @@
 # 🍡🍇🍑⭐️
 
-Built in React with [next](https://zeit.co/blog/next) and [tachyons](http://tachyons.io/).
-
-- Develop: `npm run dev`
-- Export static sites `npm run build`
-- Deploy to `gh-pages` branch: `./deploy.sh`
+My portfolio site, built with [next.js](https://github.com/zeit/next.js/) and [tachyons](https://github.com/tachyons-css/tachyons).
