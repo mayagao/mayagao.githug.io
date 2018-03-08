@@ -1,20 +1,31 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 @font-face {
-  font-family: 'Rosario Regular';
-  src: url('fonts/Rosario-Regular.ttf') format('truetype');
+  font-family: 'Karla Regular';
+  src: url('fonts/Karla-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Karla-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Karla-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Karla-Regular.svg#Karla-Regular') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
-  font-family: 'Rosario Italic';
-  src: url('fonts/Rosario-Italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Barlow Regular';
-  src: url('fonts/Barlow-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-family: 'Rubik Medium';
+  src: url('fonts/Rubik-Medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Rubik-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Rubik-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Rubik-Medium.svg#Rubik-Medium') format('svg'); /* Legacy iOS */
 }
 
 body {
-  font-family: 'Rosario Regular', sans-serif;
+  font-family: 'Karla Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+
+pre {
+  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
 
 .mw-limiter{
@@ -24,35 +35,33 @@ body {
   font-size: 1.35rem;
 }
 .f5 {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
 }
 .f2 {
   font-size: 2rem;
 }
 .f6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .f7 {
   font-size: 0.9rem;
 }
 
 .lh-copy {
-  line-height: 1.6em;
+  line-height: 1.60em;
 }
 .txt-xl {
   font-size: 1.92rem;
 }
 
 .heading {
-  font-family: 'Barlow Regular', serif;
+  font-family: 'Rubik Medium', serif;
 }
 
 .flex-no-shrink {
   flex-shrink: 0;
 }
-.quote {
-  font-family: 'Rosario Italic', serif;
-}
+
 .studio-ui-dive {
    counter-reset: section;
 }
@@ -98,7 +107,7 @@ body {
   text-align: center;
   border-radius: 50%;
   font-size: .8em;
-  line-height: 1.4em;
+  line-height: 1.6em;
   margin-left: -32px;
   margin-right: 10px;
 

@@ -12,7 +12,7 @@ export default class WorkHeader extends React.Component {
           <Menu />
           <div className="mt6-l f6 mt5 center cb cf">
             <div className="mb4 mt3 w-40-l fl-l fn">
-              <div className="o-50 f5">Case Study</div>
+              <div className="o-80 f5">Case Study</div>
               <div className={`${styles.txtH1}`}>{headerInfo.title}</div>
               <div className="w-40-m w-100-l fl w-100">
                 <div className="fl">

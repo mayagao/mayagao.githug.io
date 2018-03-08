@@ -278,7 +278,7 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <Menu />
       <div className='cf mt5 '>
-        <div className="f5 o-50 mb2">Small Project</div>
+        <div className="f5 o-80 mb2">Small Project</div>
         <div className={`${styles.txtH1} nl1`}>Data-driven Styling </div>
         <div className={`${styles.txtIntro} w-80-ns w-100 `}>
           Data-driven styling represents the capacity in our map SDKs to change styles based on data properties.

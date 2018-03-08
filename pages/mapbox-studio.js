@@ -95,14 +95,14 @@ export default () => (
       <a href="https://www.wired.com/2015/09/mapbox-studio/" className="db mb4 relative link light-silver hover-moon-gray">
         <div>
           <img style={{width: 100}} className="o-20" src="../static/img/wired.svg" />
-          <div className="quote f4 mt2">A Powerful New Mapmaking Tool Fit for Both Pros and Newbies</div>
+          <div className="f3 mt2">A Powerful New Mapmaking Tool Fit for Both Pros and Newbies</div>
         </div>
       </a>
 
       <a href="https://medium.com/uber-design/crafting-data-driven-maps-b0835b620554" className="db mb4 relative link light-silver hover-moon-gray">
         <div>
           <img style={{width: 80}} className="o-20" src="../static/img/uber.svg" />
-          <div className="quote f4 mt2">Mapbox Studio — Best in Class Map Style Editor</div>
+          <div className="f3 mt2">Mapbox Studio — Best in Class Map Style Editor</div>
         </div>
       </a>
 

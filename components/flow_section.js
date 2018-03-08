@@ -6,7 +6,7 @@ const formConnectorH = (
   </div>
 )
 export default () => (
-        <div className='flex-l pb3 pt5 cf f6 flex-row dn'>
+        <div style={{ lineHeight: 1.3}} className='flex-l pb3 pt5 cf f6 flex-row dn'>
           <div className='w5'>
             <div className='br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2'><img style={{ width: 18, height: 18}} src='../static/icons/icon_function.svg' /></div>
             <div>Function</div>

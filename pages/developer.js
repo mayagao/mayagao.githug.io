@@ -183,7 +183,7 @@ export default () => (
 
         <div  className=" pr7-l pr0 br3 mt5 mb4">
           <img src="../static/img/help_illustration.png" />
-          <div className={`${styles.txtH3} mt3`}>Guide oage illustrations</div>
+          <div className={`${styles.txtH3} mt3`}>Guide page illustrations</div>
           <div className={`${styles.txtSbody} `}>
             Illustrations I created to help explain concepts and make the page more friendly.
           </div>
@@ -241,7 +241,7 @@ export default () => (
           <img className="" src="../static/img/doc_nav.png" />
         </div>
         <div className={`${styles.txtH3} mt3 ` }>Two-level navigation system for documentation</div>
-          <div className={`${styles.txtSbody} mb4`}>
+          <div className={`${styles.txtSbody} mb5`}>
             Allow users to pick a platfrom fisrt before diving into specific building blocks. 
           </div>
           <div className='bg-near-white pv4 ph4 br3'>
