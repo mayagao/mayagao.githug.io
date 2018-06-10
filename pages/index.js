@@ -84,7 +84,8 @@ export default () => (
       <div className={`${styles.limiter} nt5`}>
         <div className="f5 mb5 fl w-100 f4 lh-copy">
           {projects.map((p,i) => (
-            <div key={i} className="mb3">
+              <Link key={i} prefetch href={p.link}>
+              <a className="mb3 hide-child near-black link hover-blue">
              <div className="w-100 mt5 flex-l flex-none mb3">
               <div style={{flex: '1 1 70%'}} className="tc bg-transparent bg-near-white-ns br3 overflow-hidden">
                 {p.image}
@@ -92,13 +93,15 @@ export default () => (
               <div style={{flex: '1 1 30%'}} className="lh-copy mt3 mt0-l flex f7 pl4-l pl0">
                 <div className="self-end">
                  
-                  <div className={`txt-xl db link black lh-title o-100 heading mb2`} >{p.title}</div>
-                  <div className={`${styles.txtBody} o-50`}>{p.description}</div>
-                  <Link prefetch href={p.link}><a className='mt2 db link dim blue f5'> Learn more <img className='v-top mt1 h1 ' src='../static/icons/next.svg' /></a></Link>
+                  <div className={`txt-xl db link lh-title o-100 heading mb2`} >{p.title}</div>
+                  <div className={`${styles.txtBody} o-50 black`}>{p.description}</div>
+                
+                    <div className='mt2 db blue f5'> Learn more <img className='v-top child mt1 h1 ' src='../static/icons/next.svg' /></div>
                 </div>
               </div>
             </div>
-            </div>))}
+            </a>
+            </Link>))}
         </div>
       </div>
       <WorkFooter />
