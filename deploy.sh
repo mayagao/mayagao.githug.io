@@ -2,8 +2,6 @@
 
 STATUS="$(git status)"
 
-git branch -D release
-
 touch out/.nojekyll
 touch out/CNAME
 echo 'mayagao.com' >> out/CNAME
@@ -16,4 +14,5 @@ git reset --soft HEAD~1
 git checkout .gitignore
 git checkout master
 git reset --hard origin/master
+git branch -D release
 echo "💎 Deploy success!"
