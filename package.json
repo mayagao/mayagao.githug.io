@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "css-loader": "^0.28.4",
+    "highlight.js": "^9.12.0",
     "next": "^6.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-lowlight": "^2.0.0",
     "react-transition-group": "^1.2.0"
   },
   "scripts": {

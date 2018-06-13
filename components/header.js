@@ -8,7 +8,9 @@ export default () => (
       <meta name="author" content="Maya Gao" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=.25, user-scalable=yes"/>
       <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+      <link rel="stylesheet" href="../static/reset.css"/>
       <link rel="stylesheet" href="../static/site.css"/>
+      <link rel="stylesheet" href="../static/agate.css"/>
       <meta property="og:title" content="Maya Gao" />
       <meta property="og:image" content="../static/og_image.png"/>
       <script dangerouslySetInnerHTML={{__html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

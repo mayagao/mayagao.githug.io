@@ -1,0 +1,91 @@
+# Get started with css animations
+
+## CSS Basics
+
+The CSS keyframe animation syntax works like this:
+
+```
+.selected-class {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.selected-class {
+  animation: move 2s 1s 10 alternate forwads running;
+}
+```
+
+Animation-timing-function can have keyword values or function values. You can also use ![this tool](https://matthewlein.com/tools/ceaser) to generate a custom easing curve.
+
+```
+animation-timing-funciton: ease/ease-in/ease-out/
+ease-in-out/linear/
+step-start/step-end/
+animation-timing-function: cubic-bezier(0.1, 0.7. 1.0, 0.1);
+animation-timing-funciton: steps(4, start/end);
+animation-timing-function: frames(10)
+```
+
+For keyframes, use either or percentage. Group keyframe with the same properties together and use comma to separate them. 
+
+```
+@keyframes move {
+  from {background: red; left: 0;}
+  30%, 40%
+       {background: red; left: 0;}
+  50% {background: blue; left: 100%;}
+  to  {background: blue; left: 100%;}
+}
+```
+
+Transform is often used in animations to transform and appearance and position of an element. The ![animate.css source code](https://github.com/daneden/animate.css/blob/master/animate.css) demonstrates many ways transform can be used. 
+
+```
+transform: scale3d(x, y, z)
+transform: rotate3d(x, y, z, angle);
+transform: skew(x-angle, y-angle);
+transform: translate3d(x, y, z);
+transform: perspective(n)
+```
+
+The transform origin can also be customized.
+
+```
+transform-origin: center;
+transform-origin: left bottom;
+Transform-origin: left bottom;
+```
+
+## JavaScript basics
+
+
+## Use JavaScript to control animation states 
+
+JavaScript can handle more complex CSS animations with structured sequence and timing functions. 
+
+### Basics
+
+
+
+### Select or generate elements
+*example: a grid of randomly generated squares*
+
+### Web Animation API 
+*example: animate a complex svg image*
+
+### Manage sequence with event listeners
+*example: Userflow prototyping*
+
+## Performance optimization
+
+
+
+## Readings:
+  
+![Web Animation API spec](https://www.w3.org/TR/web-animations-1/): A comprehensive documentation of what's available. 
+![Animation Timing API spec](https://www.w3.org/TR/animation-timing/):
+![Dumb redux](https://macwright.org/2016/08/02/dumb-redux.html): This article explains how to apply some good Redux concepts to simple use cases without actually using Redux. Basically, store data in one object and modify state in one place. This is especially useful when it comes to managing complicated animation sequences. 
