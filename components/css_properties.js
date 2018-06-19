@@ -1,4 +1,6 @@
-export const cssProperties = { animation: {
+export const cssProperties = { 
+
+  animation: {
 
 'animation-name': {
   color: 'red',
@@ -24,13 +26,13 @@ export const cssProperties = { animation: {
     return (<div className='relative ml4 pv3 mb4'>
   <div 
   style={{ marginRight: 7 }}
-  className='absolute right-0 h-100 bl bw1 b--light-gray' />
+  className='absolute right-0 h-100 bl b--dashed b--light-gray' />
   <div 
   style={{ marginRight: 307 }}
-  className='absolute right-0 h-100 bl bw1 b--light-gray ' />
+  className='absolute right-0 h-100 bl b--light-gray b--dashed ' />
   {v.map((tf, i) =>
     <div key={i} className={`w-100 pv2 flex justify-between ${i > 0 && 'bt b--light-gray b--dashed' }`}>
-      <div className='f7'>{tf}</div>
+      <div className='f7 o-50'>{tf}</div>
       <div 
       className='mr3'
       style={{width: 300}}>
@@ -67,6 +69,52 @@ export const cssProperties = { animation: {
   values: ['runing']
 }},
 
+transform : {}, 
+'flex-flow': {
+  'flex-direction': {
+    color: 'purple',
+    value: 'row',
+    values: ['row', 'row-reverse', 'column', 'column-reverse']
+  },
+  'flex-wrap': {
+    color: 'purple',
+    value: 'row',
+    values: ['nowrap', 'wrap', 'wrap-reverse']
+  }
+},
+'justify-content': {'justify-content': {
+  color: 'purple',
+  value: 'row',
+  values: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']
+}},
+'align-items': {'align-items': {
+  color: 'purple',
+  value: 'row',
+  values: ['flex-start', 'flex-end', 'center', 'baseline', 'stretch']
+}},
+'align-self': {'align-self': {
+  color: 'purple',
+  value: 'row',
+  values: ['flex-start', 'flex-end', 'center', 'baseline', 'stretch']
+}},
+'flex': {
+  'flex-grow': {
+    color: 'purple',
+    value: 'row',
+    values: ['0', '1', '2', 'auto']
+  },
+  'flex-shrink': {
+    color: 'purple',
+    value: 'row',
+    values: ['0', '1', '2', 'auto']
+  },
+  'flex-basis': {
+    color: 'purple',
+    value: 'row',
+    values: ['0', '1', '2', 'auto']
+  },
+},
+grid: {
 
-
-transform : {}, grid: {} , column: {} , flexbox: {} }
+}, 
+column: {} , flexbox: {} }

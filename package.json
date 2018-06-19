@@ -17,7 +17,9 @@
   "description": "My portfolio site, built with [next.js](https://github.com/zeit/next.js/) and [tachyons](https://github.com/tachyons-css/tachyons).",
   "version": "1.0.0",
   "main": "next.config.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "1.13.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mayagao/mayagao.com.git"
