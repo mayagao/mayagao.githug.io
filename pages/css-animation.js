@@ -4,56 +4,10 @@ import Header from '../components/header'
 import { styles } from '../components/styles'
 // import Lowlight from 'react-lowlight'
 // import css from 'highlight.js/lib/languages/css'
-
+import { cssProperties } from '../components/css_properties'
 
 // Lowlight.registerLanguage('css', css)
 
-const cssProperties = { animation: {
-
-'animation-name': {
-  color: 'red',
-  value: 'move',
-  values: ['The name of the keyframe']
-},
-'animation-duration': {
-  color: 'green',
-  value: '2s',
-  values: ['In seconds, e.g.: 3s, 5000ms']
-},
-'animation-delay': {
-  color: 'green',
-  value: '1s',
-  values: ['In seconds, e.g. 3s, 5000ms']
-},
-'animation-timing-function': {
-  color: 'purple',
-  value: 'ease-in-out',
-  values: ['ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear', 'step-start', 'step-end', 'cubic-bezier(0.1, 0.7, 1.0, 0.1)', 'steps(6, start)', 'steps(6, end)']
-},
-'animation-iteration-count': {
-  color: 'purple',
-  value: '10',
-  values: ['A number, e.g. 10, or inifinite']
-},
-'animation-direction': {
-  color: 'blue',
-  value: 'alternate',
-  values: ['alternate']
-},
-'animation-fill-mode': {
-  color: 'blue',
-  value: 'forwards',
-  values: ['non(default)', 'forwards', 'backwards', 'both']
-},
-'animation-play-state': {
-  color: 'blue',
-  value: 'running',
-  values: ['runing']
-}},
-
-
-
-transform : {}, grid: {} , column: {} , flexbox: {} }
 
 
 const highlightItemClass = (color) => `bb relative dib mr2 highlighted-item bw2 b--${color} bg-faint-${color} ph1 pv1 ${color} fw5`
@@ -133,6 +87,7 @@ export default () => (
             {Object.keys(cssProperties).map((cp, i) => <li className='pv1 mb1'>{cp}</li>)}
           </ul>
         </aside>
+
          <div className='w-80 f7'>
          <div className='mb5'>
            <pre className='bg-light-2 b--light-2 ba bw1 property-reset ph4 pt4 pb5 br--top br3'>
@@ -149,61 +104,19 @@ export default () => (
             <div className='br2 bg-light-2 f7 o-30 ttu tracked mb4 dib'>values</div>
             <div 
 
-             className='property-reset flex flex-wrap'>{Object.keys(cssProperties['animation']).map((a, i) => {
+             className='property-reset '>{Object.keys(cssProperties['animation']).map((a, i) => {
               const ob = cssProperties['animation'][a]
               return (<div
-                className='mb3 w-50'>
+                className='mb3'>
                   <span className={`in-list highlighted-item mr4 bg-faint-${ob.color} ${ob.color}`}></span>
                   {a}
                   <div style={{ wordBreak: 'break-word', wordWrap: 'break-word', whiteSpace: 'normal' }} className='ml4 lh-title o-50 mt2'>{ob.values.join('/')}</div>
+                   {ob.showDetails && ob.showDetails()} 
                 </div>
               )})
              }</div>
            </pre>
          </div>
-         
-         <div className='ml4'>
-         <div className='code'>
-           <span className='bg-faint-purple circle dib tc br-100 nl4 mr2 mb3'>4</span>
-          animation-timing-function
-         </div>
-
-
-
-        <div className='relative'>
-          <div 
-          style={{ marginRight: 7 }}
-          className='absolute right-0 h-100 bl bw1 b--light-2' />
-          <div 
-          style={{ marginRight: 307 }}
-          className='absolute right-0 h-100 bl bw1 b--light-2' />
-          {cssProperties['animation']['animation-timing-function'].values.map((tf, i) => 
-            <div key={i} className={`w-100 pv2 flex justify-between ${i > 0 && 'bt b--light-gray b--dashed' }`}>
-              <div className='f7'>{tf}</div>
-              <div 
-              className='mr3'
-              style={{width: 300}}>
-               <div 
-                 style={{
-                   animation: `move1 3s ` +  `${tf}`  + ` infinite alternate`,
-                   background: '#DDDAFA'
-                 }}
-                 className='relative h1 w1 br-100 ba3'>
-               </div>
-               </div>
-            </div>
-          )}
-        </div>
-
-
-
-
-
-
-
-        </div>
-
-
 
         </div>
 
@@ -211,8 +124,6 @@ export default () => (
 
         <div>
 
-
-     
 
         </div>
       </div>
