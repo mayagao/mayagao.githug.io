@@ -11,14 +11,23 @@
   "scripts": {
     "dev": "next",
     "build": "next build & next export",
-    "start": "next start"
+    "start": "next start",
+    "precommit": "pretty-quick --staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "name": "mayagao.com",
   "description": "My portfolio site, built with [next.js](https://github.com/zeit/next.js/) and [tachyons](https://github.com/tachyons-css/tachyons).",
   "version": "1.0.0",
   "main": "next.config.js",
   "devDependencies": {
-    "prettier": "1.13.5"
+    "husky": "^0.14.3",
+    "prettier": "1.13.5",
+    "pretty-quick": "^1.6.0"
   },
   "repository": {
     "type": "git",
