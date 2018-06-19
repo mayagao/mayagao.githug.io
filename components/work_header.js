@@ -1,11 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import { styles } from './styles'
-import Link from 'next/link'
-import Menu from './menu'
+import React from 'react';
+import Head from 'next/head';
+import { styles } from './styles';
+import Link from 'next/link';
+import Menu from './menu';
 export default class WorkHeader extends React.Component {
-  render () {
-    let headerInfo = this.props.headerInfo
+  render() {
+    let headerInfo = this.props.headerInfo;
     return (
       <div className="bg-near-white overflow-hidden lh-title">
         <div className={`${styles.limiter}`}>
@@ -24,12 +24,17 @@ export default class WorkHeader extends React.Component {
               </div>
               <div className="w-60-m w-100 fl w-100-l">
                 <div className="mt3 o-50">Team</div>
-                 {headerInfo.team.map((role, i) => (<div key={`role` + i} className=" pt1">{role.name} <span className="o-40">{role.title}</span></div>))}
+                {headerInfo.team.map((role, i) => (
+                  <div key={`role` + i} className=" pt1">
+                    {role.name} <span className="o-40">{role.title}</span>
+                  </div>
+                ))}
               </div>
             </div>
             {headerInfo.image}
           </div>
         </div>
       </div>
-    )
-}}
+    );
+  }
+}
