@@ -20,7 +20,7 @@ const propertyList = {
 class CssAnimation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: "animation" };
+    this.state = { activeItem: "flex" };
   }
 
   setActiveItem(cp) {
@@ -42,6 +42,9 @@ class CssAnimation extends React.Component {
     background: #8e83e1;
     transform: translate(300px, 0);
   }
+}
+.nt-custom {
+  margin-top: -4.5rem;
 }
     `}</style>
         </Head>
@@ -108,7 +111,9 @@ class CssAnimation extends React.Component {
                               {ob.description} <br />{" "}
                               {!ob.showDetails && ob.values.join("/")}
                             </div>
-                            {ob.showDetails && ob.showDetails()}
+                            {ob.showDetails && (
+                              <div className="mt2">{ob.showDetails()}</div>
+                            )}
                           </div>
                         );
                       })}

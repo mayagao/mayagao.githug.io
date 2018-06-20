@@ -151,14 +151,79 @@ export const cssProperties = {
       description:
         "The main-axis. How flex items are placed in the container, either horizontally or vertically stacked. Default value is row. ",
       value: "column",
-      values: ["row", "row-reverse", "column", "column-reverse"]
+      values: ["row", "row-reverse", "column", "column-reverse"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="flex relative h4 mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ flexDirection: `${tf}` }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      className="relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+
+                <div
+                  style={{ marginTop: i > 1 ? "-4.5rem" : "-4.5rem" }}
+                  className={`${
+                    i > 1 ? "rotate-90 w-40" : "nt5 w-80"
+                  } absolute purple self-center tc`}
+                >
+                  <div
+                    className={`${i > 1 &&
+                      "h-100"} bt b--purple absolute w-100 mt1`}
+                  />
+                  <span className="bg-purple white br2 pv1 ph2 relative nt3">
+                    main axis
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      }
     },
     "flex-wrap": {
       color: "blue",
       description:
         "Whether flex items are forced into a single line or can be wrapped onto multiple lines. Defaul nowrap.",
       value: "wrap",
-      values: ["nowrap", "wrap", "wrap-reverse"]
+      values: ["nowrap", "wrap", "wrap-reverse"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="flex relative mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ flexWrap: `${tf}`, width: i > 0 ? "70%" : "100%" }}
+                >
+                  {[1, 2, 3, 4, 5].map((n, i) => (
+                    <div
+                      key={i}
+                      className="relative pv2 mr2 mb2 blue ph1 tc bg-faint-blue br2 w2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      }
     }
   },
   "justify-content": {
@@ -174,7 +239,32 @@ export const cssProperties = {
         "space-between",
         "space-around",
         "space-evenly"
-      ]
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="flex relative mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ justifyContent: `${tf}` }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      className="relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      }
     }
   },
   "align-items": {
@@ -183,7 +273,32 @@ export const cssProperties = {
       description:
         "How to distribute space between items along the cross-axis.",
       value: "center",
-      values: ["flex-start", "flex-end", "center", "baseline", "stretch"]
+      values: ["flex-start", "flex-end", "center", "baseline", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="flex relative mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ height: 80, alignItems: `${tf}` }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      className="relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      }
     }
   },
   "align-self": {
@@ -191,7 +306,37 @@ export const cssProperties = {
       color: "purple",
       description: "Override the align-items value.",
       value: "baseline",
-      values: ["flex-start", "flex-end", "center", "baseline", "stretch"]
+      values: ["flex-start", "flex-end", "center", "baseline", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="flex relative mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ height: 80, alignItems: `center` }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      style={{ alignSelf: `${i === 2 && tf}` }}
+                      className="relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <pre className="w-100 o-50 mt3">
+              Property rule was applied to Item 3.
+            </pre>
+          </div>
+        );
+      }
     }
   },
   flex: {
@@ -200,21 +345,94 @@ export const cssProperties = {
       description:
         "How much the item will grow relative to others when there is extra space. Number type. Default 1.",
       value: "0.4",
-      values: ["0", "1", "2"]
+      values: ["0", "0.3", "0.7"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4 mb4">
+            <pre className="w-100 o-50 pv3">When there is no extra space:</pre>
+            <div className=" w-60 flex">
+              {v.map((tf, i) => (
+                <div
+                  key={i}
+                  style={{ flex: `${tf} 0 auto` }}
+                  className="ph2 relative pv2 mr2 mb2 purple tc bg-faint-purple br2 ba3"
+                >
+                  flex-grow: {tf}
+                </div>
+              ))}
+            </div>
+            <pre className="w-100 o-50 pv3">When there is extra space:</pre>
+            <div className="w-100 flex">
+              {v.map((tf, i) => (
+                <div
+                  key={i}
+                  style={{ flex: `${tf} 0 auto` }}
+                  className="ph2 relative pv2 mr2 mb2 purple tc bg-faint-purple br2 ba3"
+                >
+                  flex-grow: {tf}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
     },
     "flex-shrink": {
       color: "purple",
       description:
-        "How much the item will shrink relative to others when there is extra space. Number type. Default 1.",
+        "How much the item will shrink relative to others when there isn't enough space. Number type. Default 1.",
       value: "12",
-      values: ["0", "1", "2"]
+      values: ["1", "4", "1"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4 mb4">
+            <pre className="w-100 o-50 pv3">
+              Ever item has a basis width of 200px:
+            </pre>
+            <div className="flex">
+              {v.map((tf, i) => (
+                <div
+                  key={i}
+                  style={{ flex: `1 ${tf} 200px` }}
+                  className=" pv2 mr2 ph2 mb2 purple lh-copy tl tc bg-faint-purple br2 ba3"
+                >
+                  flex-shrink:{tf}
+                  <br />
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
     },
+
     "flex-basis": {
       color: "blue",
       description:
         "The initial length of a flexible item. Auto(default), number, or percentage.",
       value: "500px",
-      values: ["0", "1", "2", "auto"]
+      values: ["20", "80"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4 mb4">
+            <pre className="w-100 o-50 pv3">flex-grow: 0</pre>
+            <div className="flex">
+              {v.map((tf, i) => (
+                <div
+                  key={i}
+                  style={{ flex: `0 1 ${Number(tf) * 2 + 100}px` }}
+                  className=" pv2 mr2 ph2 mb2 blue lh-copy tl tc bg-faint-blue br2 ba3"
+                >
+                  flex-basis:{`${Number(tf) * 2 + 100}`}px<br />
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
     }
   },
   grid: {},
