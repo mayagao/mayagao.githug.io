@@ -1,26 +1,26 @@
-import React from 'react';
-import Head from 'next/head';
-import Header from '../components/header';
-import { styles } from '../components/styles';
+import React from "react";
+import Head from "next/head";
+import Header from "../components/header";
+import { styles } from "../components/styles";
 // import Lowlight from 'react-lowlight'
 // import css from 'highlight.js/lib/languages/css'
-import { cssProperties } from '../components/css_properties';
+import { cssProperties } from "../components/css_properties";
 
 // Lowlight.registerLanguage('css', css)
 
 const highlightItemClass = color =>
   `bb relative dib mr2 highlighted-item bw2 b--${color} bg-faint-${color} ph1 pv1 ${color} fw5`;
 const propertyList = {
-  animation: ['animation'],
-  flex: ['flex-flow', 'justify-content', 'align-items', 'align-self', 'flex'],
+  animation: ["animation"],
+  flex: ["flex-flow", "justify-content", "align-items", "align-self", "flex"],
   grid: [],
-  transform: [],
+  transform: []
 };
 
 class CssAnimation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: 'animation' };
+    this.state = { activeItem: "animation" };
   }
 
   setActiveItem(cp) {
@@ -32,22 +32,31 @@ class CssAnimation extends React.Component {
       <div>
         <Head>
           <style>{`
- 
 
+@keyframes move1 {
+  from {
+    background: #dddafa;
+    transform: translate(0, 0);
+  }
+  to {
+    background: #8e83e1;
+    transform: translate(300px, 0);
+  }
+}
     `}</style>
         </Head>
         <Header />
         <div className={`${styles.limiter}`}>
-          <h1 className="f3">CSS properties</h1>
+          <h1 className="f3">CSS cheatsheet</h1>
           <div className="mt4 flex">
-            <aside className="w-20 mr4">
+            <aside className="w4 mr4 f7">
               <ul className="list">
                 {Object.keys(propertyList).map((cp, i) => (
                   <li
                     onClick={() => this.setActiveItem(cp)}
                     className={`
               ${
-                this.state.activeItem === cp ? 'o-100' : 'o-50'
+                this.state.activeItem === cp ? "o-100" : "o-50"
               } glow pointer pv1 mb1`}
                   >
                     {cp}
@@ -56,13 +65,13 @@ class CssAnimation extends React.Component {
               </ul>
             </aside>
 
-            <div className="w-80 f7">
+            <div style={{ flex: "0 0 auto" }} className="w-80 f7">
               {propertyList[this.state.activeItem].map((ai, i) => (
                 <div key={i} className="mb5">
                   <pre className="bg-light-2 property-reset ph4 pt4 pb5 br--top br3">
                     {/* <div className='br2 bg-light-2 mb3 f7 o-30 ttu tracked dib'>shorthand</div>*/}
                     <div>
-                      {ai}:{' '}
+                      {ai}:{" "}
                       {Object.keys(cssProperties[ai]).map((a, i) => {
                         const ob = cssProperties[ai][a];
                         return (
@@ -70,13 +79,13 @@ class CssAnimation extends React.Component {
                             {ob.value}
                           </span>
                         );
-                      })}
+                      })};
                     </div>
                   </pre>
                   <pre className="bg-light-1 ph4 pb4 pt4 br3 br--bottom">
-                    <div className="br2 bg-light-2 f7 o-30 ttu tracked mb4 dib">
+                    {/* <div className="br2 bg-light-2 f7 o-30 ttu tracked mb4 dib">
                       values
-                    </div>
+                    </div>*/}
                     <div className="property-reset ">
                       {Object.keys(cssProperties[ai]).map((a, i) => {
                         const ob = cssProperties[ai][a];
@@ -90,13 +99,14 @@ class CssAnimation extends React.Component {
                             {a}
                             <div
                               style={{
-                                wordBreak: 'break-word',
-                                wordWrap: 'break-word',
-                                whiteSpace: 'normal',
+                                wordBreak: "break-word",
+                                wordWrap: "break-word",
+                                whiteSpace: "normal"
                               }}
-                              className="ml4 lh-title o-50 mt2"
+                              className="ml4 lh-copy o-50 mt2"
                             >
-                              {ob.values.join('/')}
+                              {ob.description} <br />{" "}
+                              {!ob.showDetails && ob.values.join("/")}
                             </div>
                             {ob.showDetails && ob.showDetails()}
                           </div>

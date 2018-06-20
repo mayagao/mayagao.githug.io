@@ -55,6 +55,9 @@ pre,
 .f7 {
   font-size: 0.9rem;
 }
+pre {
+  font-size: 0.8rem;
+}
 
 .lh-copy {
   line-height: 1.6em;
@@ -182,16 +185,7 @@ pre,
 .bg-light-2 {
   background: #f1f0fb;
 }
-@keyframes move1 {
-  from {
-    background: #dddafa;
-    transform: translate(0, 0);
-  }
-  to {
-    background: #8e83e1;
-    transform: translate(300px, 0);
-  }
-}
+
 .property-reset {
   counter-reset: hi;
 }
@@ -217,5 +211,5 @@ pre,
 }
 
 .highlighted-item.in-list::before {
-  margin: -4px 0px;
+  margin: -7px 0px;
 }
