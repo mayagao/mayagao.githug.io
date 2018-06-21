@@ -73,7 +73,7 @@ export const cssProperties = {
       description:
         "Whether an animation should be played forwards, backwards or in alternate cycles.",
       value: "alternate",
-      values: ["normal(default)", "reverse", "alternate", "alternate-reverse"],
+      values: ["normal", "reverse", "alternate", "alternate-reverse"],
       showDetails: function() {
         const v = this.values;
         return (
@@ -138,7 +138,7 @@ export const cssProperties = {
     "animation-play-state": {
       color: "blue",
       description:
-        "Whether the animation is running or paused. The value can be runing(default) or paused.",
+        "Whether the animation is running or paused. Values: runing(default) or paused.",
       value: "running",
       values: ["runing(default)", "paused"]
     }
@@ -149,7 +149,7 @@ export const cssProperties = {
     "flex-direction": {
       color: "purple",
       description:
-        "The main-axis. How flex items are placed in the container, either horizontally or vertically stacked. Default value is row. ",
+        "The main-axis. How flex items are placed in the container, either horizontally or vertically stacked. Default value: row.",
       value: "column",
       values: ["row", "row-reverse", "column", "column-reverse"],
       showDetails: function() {
@@ -196,7 +196,7 @@ export const cssProperties = {
     "flex-wrap": {
       color: "blue",
       description:
-        "Whether flex items are forced into a single line or can be wrapped onto multiple lines. Defaul nowrap.",
+        "Whether flex items are forced into a single line or can be wrapped onto multiple lines. Default value: nowrap.",
       value: "wrap",
       values: ["nowrap", "wrap", "wrap-reverse"],
       showDetails: function() {
@@ -435,7 +435,199 @@ export const cssProperties = {
       }
     }
   },
-  grid: {},
+  grid1: {
+    "grid-template-rows": {
+      color: "red",
+      value: "repeat(auto-fit, 1fr) /",
+      description: "Line names and track sizing functions of the grid's rows.",
+      values: [
+        "auto",
+        "30% 70%",
+        "repeat(auto-fit, minmax(22px, 1fr))",
+        "repeat(auto-fill, minmax(22px, 1fr))",
+        "1fr 2fr"
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4 mb4">
+            <div className="flex">
+              {v.map((tf, i) => (
+                <div className="">
+                  <div className="o-50 tc">{i + 1}</div>
+                  <div
+                    key={i}
+                    style={{ gridTemplateRows: `${tf}`, height: 100 }}
+                    className="dg tc "
+                  >
+                    {[1, 2].map((n, i) => (
+                      <div
+                        key={i}
+                        className="relative bw1 pa1 ba b--light-2 purple ph1 tc bg-faint-purple br2 w2 ba3"
+                      >
+                        <br />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              <div className="ml2 o-60">
+                {v.map((tf, i) => (
+                  <div className="mb1">
+                    {i + 1}.{tf}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      }
+    },
+    "grid-template-columns": {
+      color: "blue",
+      value: "minmax(max-content, 2fr)",
+      description: "The size of an implicitly-created grid column track..",
+      values: [
+        "max-content",
+        "min-content",
+        "minmax(100px, auto) fit-content(300px)"
+      ]
+    }
+  },
+  grid2: {
+    "grid-template-rows": {
+      color: "red",
+      value: "repeat(auto-fit, 1fr) /",
+      description: "Line names and track sizing functions of the grid's rows.",
+      values: [
+        "20% auto",
+        "repeat(auto-fit, 1fr)",
+        "repeat(auto-fill, 1fr)",
+        "minmax(100px, 1fr)",
+        "fit-content(40%)"
+      ]
+    },
+    "grid-auto-flow": {
+      color: "blue",
+      value: "dense",
+      description: "How auto-placed items get flowed into the grid.",
+      values: ["row", "column", "dense", "row dense", "column dense"]
+    },
+    "grid-auto-columns": {
+      color: "blue",
+      value: "minmax(max-content, 2fr)",
+      description: "The size of an implicitly-created grid column track..",
+      values: [
+        "max-content",
+        "min-content",
+        "minmax(100px, auto) fit-content(300px)"
+      ]
+    }
+  },
+  grid3: {
+    "grid-auto-flow": {
+      color: "blue",
+      value: "2s",
+      description: "The size of an implicitly-created grid row track.",
+      values: ["3fr 1fr", "minmax(100px, auto) fit-content(300px)"]
+    },
+    "grid-auto-rows": {
+      color: "green",
+      value: "100px /",
+      description: "In seconds, e.g.: 3s, 5000ms.",
+      values: []
+    },
+    "grid-template-columns": {
+      color: "purple",
+      value: "minmax(100px, 1fr)",
+      description: "Line names and track sizing functions of the grid columns.",
+      values: [
+        "20% auto",
+        "repeat(auto-fit, 1fr)",
+        "repeat(auto-fill, 1fr)",
+        "minmax(100px, 1fr)",
+        "fit-content(40%)"
+      ]
+    }
+  },
+
+  "grid-gap": {
+    "grid-row-gap": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "grid-column-gap": {
+      color: "green",
+      value: "2s",
+      description: "In seconds, e.g.: 3s, 5000ms.",
+      values: []
+    }
+  },
+  "place-items": {
+    "align-items": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "justify-items": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    }
+  },
+  "place-content": {
+    "align-content": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "justify-content": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    }
+  },
+  "grid-area": {
+    "grid-column-start": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "grid-column-end": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "grid-row-start": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    },
+    "grid-row-end": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: []
+    }
+  },
+
+  "justify-self": {
+    "justify-self": {
+      color: "red",
+      value: "move",
+      description: "The name of the keyframe.",
+      values: ["start", "end", "center", "stretch"]
+    }
+  },
   column: {},
   flexbox: {}
 };

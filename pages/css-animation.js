@@ -13,14 +13,23 @@ const highlightItemClass = color =>
 const propertyList = {
   animation: ["animation"],
   flex: ["flex-flow", "justify-content", "align-items", "align-self", "flex"],
-  grid: [],
+  grid: [
+    "grid1",
+    "grid2",
+    "grid3",
+    "grid-gap",
+    "place-items",
+    "place-content",
+    "grid-area",
+    "justify-self"
+  ],
   transform: []
 };
 
 class CssAnimation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: "flex" };
+    this.state = { activeItem: "grid" };
   }
 
   setActiveItem(cp) {

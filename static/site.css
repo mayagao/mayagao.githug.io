@@ -211,5 +211,9 @@ pre {
 }
 
 .highlighted-item.in-list::before {
-  margin: -7px 0px;
+  margin: -5px 0px;
+}
+
+.dg {
+  display: grid;
 }
