@@ -219,3 +219,7 @@ pre,
 .dg {
   display: grid;
 }
+
+.cheatsheet-container {
+  max-width: 75rem;
+}

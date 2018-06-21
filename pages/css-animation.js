@@ -9,14 +9,13 @@ import { cssProperties } from "../components/css_properties";
 // Lowlight.registerLanguage('css', css)
 
 const highlightItemClass = color =>
-  `bb relative dib mr2 highlighted-item bw2 b--${color} bg-faint-${color} ph1 pv1 ${color} fw5`;
+  `bb relative dib ml2 highlighted-item bw2 b--${color} bg-faint-${color} ph1 pv1 ${color} fw5`;
 const propertyList = {
   animation: ["animation"],
   flex: ["flex-flow", "justify-content", "align-items"],
   "flex children": ["flex", "align-self"],
   grid: ["grid", "grid-auto-flow", "grid-gap", "place-items", "place-content"],
-  "grid children": ["grid-area", "justify-self"],
-  transform: []
+  "grid children": ["grid-area", "place-self"]
 };
 
 class CssAnimation extends React.Component {
@@ -34,6 +33,7 @@ class CssAnimation extends React.Component {
       <div>
         <Head>
           <style>{`
+
 
 @keyframes move1 {
   from {
@@ -53,8 +53,8 @@ class CssAnimation extends React.Component {
     `}</style>
         </Head>
         <Header />
-        <div className={`${styles.limiter} `}>
-          <h1 className="f3">CSS Cheat Sheet</h1>
+        <div className={`${styles.limiter} cheatsheet-container`}>
+          <h1 className="f3">CSS Quick Reference</h1>
           <div id="cheatsheet-container" className="mt4 dg">
             <aside className="sidebar mr4 f7">
               <ul className="list">
@@ -80,7 +80,7 @@ class CssAnimation extends React.Component {
                     {/* <div className='br2 bg-light-2 mb3 f7 o-30 ttu tracked dib'>shorthand</div>*/}
 
                     <div>
-                      {ai}:{" "}
+                      {ai}:
                       {Object.keys(cssProperties[ai]).map((a, i) => {
                         const ob = cssProperties[ai][a];
                         return (

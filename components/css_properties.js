@@ -9,13 +9,14 @@ export const cssProperties = {
     "animation-duration": {
       color: "green",
       value: "2s",
-      description: "In seconds, e.g.: 3s, 5000ms.",
+      description:
+        "How long an animation should take to complete, e.g.: 3s, 5000ms.",
       values: []
     },
     "animation-delay": {
       color: "green",
       value: "1s",
-      description: "In seconds, e.g. 3s, 5000ms.",
+      description: "A delay for the start of an animation, e.g. 3s, 5000ms.",
       values: []
     },
     "animation-timing-function": {
@@ -772,38 +773,124 @@ export const cssProperties = {
     }
   },
   "grid-area": {
-    "grid-column-start": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
-    },
-    "grid-column-end": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
-    },
     "grid-row-start": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "auto /",
+      description: "A grid item’s start position within the grid row.",
+      values: ["span 2/auto/auto/auto", "3/auto/auto/auto", "-1/auto/1/auto"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4">
+            {generateGridArea(v, 0)}
+            <div className="gray lh-copy">
+              <br />Item marked in <span className="red bg-faint-red">red</span>{" "}
+              uses the specified grid-area rule, Other items in{" "}
+              <span className="purple bg-faint-purple">purple</span> are
+              auto-placed.
+            </div>
+          </div>
+        );
+      }
+    },
+    "grid-column-start": {
+      color: "purple",
+      value: "1 /",
+      description: "A grid item’s start position within the grid column.",
+      values: ["auto/span 2/auto/auto", "auto/3/auto/auto", "auto/-1/auto/1"],
+      showDetails: function() {
+        const v = this.values;
+        return <div className="ml4 mr4">{generateGridArea(v, 1)}</div>;
+      }
     },
     "grid-row-end": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "span 3 /",
+      description: "A grid item’s end position within the grid row.",
+      values: ["auto/-2/auto/1", "auto/1/auto/2", "auto/auto/span 2/auto"],
+      showDetails: function() {
+        const v = this.values;
+        return <div className="ml4 mr4">{generateGridArea(v, 2)}</div>;
+      }
+    },
+    "grid-column-end": {
+      color: "purple",
+      value: "span 2",
+      description: "A grid item’s end position within the grid column.",
+      values: ["auto/auto/auto/-1", "auto/2/auto/3", "auto/auto/auto/span 3"],
+      showDetails: function() {
+        const v = this.values;
+        return <div className="ml4 mr4">{generateGridArea(v, 3)}</div>;
+      }
     }
   },
 
-  "justify-self": {
+  "place-self": {
+    "align-self": {
+      color: "purple",
+      value: "center",
+      description: "Align a grid item inside a cell along the column axis.",
+      values: ["start", "end", "center", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative mt2 bt h4 b--dashed bb b--black-10 pv2"
+                  style={{ grid: "auto/repeat(3, 1fr)", alignItems: "center" }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      style={{ alignSelf: `${i === 2 ? tf : "unset"}` }}
+                      className="relative pv2 mr2 purple ph2 tc bg-faint-purple br2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+                {makeAxis("column")}
+              </div>
+            ))}
+          </div>
+        );
+      }
+    },
     "justify-self": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: ["start", "end", "center", "stretch"]
+      color: "purple",
+      value: "center",
+      description: "Align a grid item inside a cell along the row axis.",
+      values: ["start", "end", "center", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative mt2 bt h4 b--dashed bb b--black-10 pv2"
+                  style={{ grid: "repeat(3, 1fr)/1fr", justifyItems: "center" }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      style={{ justifySelf: `${i === 2 ? tf : "unset"}` }}
+                      className="relative pv2 mr2 mb2 purple ph2 tc bg-faint-purple br2 ba3"
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+                {makeAxis("row")}
+              </div>
+            ))}
+          </div>
+        );
+      }
     }
   },
   column: {},
@@ -820,6 +907,48 @@ const lines = () => {
         style={{ marginRight: 307 }}
         className="absolute right-0 h-100 bl b--light-gray b--dashed "
       />
+    </div>
+  );
+};
+
+const generateGridArea = (v, hi) => {
+  return (
+    <div className="flex flex-wrap mt3">
+      {v.map((tf, i) => (
+        <div key={i} className="w-33 mb2 pr3">
+          <div className="tc mb1">
+            {tf.split("/").map((t, i) => (
+              <span className={`${i === hi ? "purple" : "o-40"}`}>
+                {t}
+                {i < 3 && "/"}
+              </span>
+            ))}
+          </div>
+          <div
+            key={i}
+            style={{
+              grid: `repeat(3, 1fr) / repeat(3, 1fr)`
+            }}
+            className="dg tc h-auto"
+          >
+            {[1, 2, 3, 4, 5, 6, 7].map((n, index) => (
+              <div
+                key={index}
+                style={{
+                  gridArea: `${index === 0 ? `${tf}` : "unset"}`,
+                  gridAutoFlow: "column dense"
+                }}
+                className={`${
+                  index !== 0 ? "bg-faint-purple purple" : "bg-faint-red red"
+                }
+                        relative bw1 pa2 ba b--light-2 ph1 tc br2 ba3`}
+              >
+                {index}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
