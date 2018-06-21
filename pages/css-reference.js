@@ -15,13 +15,14 @@ const propertyList = {
   flex: ["flex-flow", "justify-content", "align-items"],
   "flex children": ["flex", "align-self"],
   grid: ["grid", "grid-auto-flow", "grid-gap", "place-items", "place-content"],
-  "grid children": ["grid-area", "place-self"]
+  "grid children": ["grid-area", "place-self"],
+  transform: ["transform"]
 };
 
 class CssReference extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: "grid" };
+    this.state = { activeItem: "transform" };
   }
 
   setActiveItem(cp) {
@@ -55,6 +56,7 @@ class CssReference extends React.Component {
         <Header />
         <div className={`${styles.limiter} cheatsheet-container`}>
           <h1 className="f3">CSS Quick Reference</h1>
+
           <div id="cheatsheet-container" className="mt4 dg">
             <aside className="sidebar mr4 f7">
               <ul className="list">
@@ -125,6 +127,11 @@ class CssReference extends React.Component {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt3 f7 tc gray lh-copy">
+            Explanations for CSS properties that's a bit complicated and
+            confusing. <br /> <span className="f5"> 🐙</span>
           </div>
         </div>
       </div>

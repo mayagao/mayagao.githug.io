@@ -145,7 +145,53 @@ export const cssProperties = {
     }
   },
 
-  transform: {},
+  transform: {
+    transform: {
+      color: "purple",
+      value: "scaleY(1.5) scaleX(0.6)",
+      description: "Translate, rotate, scale, and skew elements.",
+      values: [
+        "none",
+        "skew(20deg, 20deg)",
+        "translate(20px, 30px)",
+        "perspective(600px) translate3d(20px, 30px, 100px)",
+        "rotate(40deg)",
+        "rotate3D(1, 0.4, 0.7, 40deg)",
+        "scale(2)",
+        "scale3D(1, 1.2, 0.7)",
+        "perspective(50px) rotateX(45deg)",
+        "matrix(1, 2, -1, 1, 30, 10)"
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="relative flex flex-wrap ml4 pv3">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-50 pv2 relative`}>
+                <div className="mr3 relative h4 b--dashed b--light-gray ba br3 flex items-center justify-center">
+                  <div
+                    style={{
+                      transform: `${tf}`,
+                      background: "#DDDAFA"
+                    }}
+                    className="relative h2 w2 br1 ba3"
+                  />
+
+                  <div className="relative ba b--purple absolute h2 w2 br1 ba3" />
+
+                  <div className="w-100 bt b--purple o-30 tc absolute " />
+
+                  <div className="h-100 bl b--purple o-30 absolute" />
+                  <div className="dib bg-purple pa1 br-100 z-1 absolute" />
+                </div>
+                <pre className="o-50 mt2 mb2">{tf}</pre>
+              </div>
+            ))}
+          </div>
+        );
+      }
+    }
+  },
   "flex-flow": {
     "flex-direction": {
       color: "purple",
@@ -754,7 +800,7 @@ export const cssProperties = {
                     <div
                       key={i}
                       style={{}}
-                      className={`relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3`}
+                      className={`relative pv2 mr2 mb2 purple ph2 tc bg-faint-purple br2 ba3`}
                     >
                       {n}
                     </div>
@@ -892,9 +938,7 @@ export const cssProperties = {
         );
       }
     }
-  },
-  column: {},
-  flexbox: {}
+  }
 };
 const lines = () => {
   return (
