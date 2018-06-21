@@ -22,7 +22,7 @@ const propertyList = {
 class CssReference extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: "transform" };
+    this.state = { activeItem: "grid" };
   }
 
   setActiveItem(cp) {
