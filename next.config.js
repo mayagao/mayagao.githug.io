@@ -1,6 +1,6 @@
 // next.config.js
 module.exports = {
-  exportPathMap: function () {
+  exportPathMap: function() {
     return {
       "/": { page: "/" },
       "/developer": { page: "/developer" },
@@ -9,7 +9,7 @@ module.exports = {
       "/navigation-sdk": { page: "/navigation-sdk" },
       "/data-driven-styling": { page: "/data-driven-styling" },
       "/about": { page: "/about" },
-      "/css-animations": { page: "/css-animations"}
-    }
-  },
-}
+      "/css-reference": { page: "/css-reference" }
+    };
+  }
+};

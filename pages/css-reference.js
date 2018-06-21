@@ -18,7 +18,7 @@ const propertyList = {
   "grid children": ["grid-area", "place-self"]
 };
 
-class CssAnimation extends React.Component {
+class CssReference extends React.Component {
   constructor(props) {
     super(props);
     this.state = { activeItem: "grid" };
@@ -132,4 +132,4 @@ class CssAnimation extends React.Component {
   }
 }
 
-export default CssAnimation;
+export default CssReference;
