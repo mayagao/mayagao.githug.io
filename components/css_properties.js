@@ -37,7 +37,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="relative ml4 pv3 mb4">
+          <div className="relative ml4 pv3">
             {lines()}
             {v.map((tf, i) => (
               <div
@@ -77,7 +77,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="relative ml4 pv3 mb4">
+          <div className="relative ml4 pv3">
             {lines()}
             {v.map((tf, i) => (
               <div
@@ -110,7 +110,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="relative ml4 pv3 mb4">
+          <div className="relative ml4 pv3">
             {lines()}
             {v.map((tf, i) => (
               <div
@@ -161,7 +161,7 @@ export const cssProperties = {
                 <pre className="o-80">{tf}</pre>
                 <div
                   className="flex relative h4 mt2 bt b--dashed bb b--black-10 pv2"
-                  style={{ flexDirection: `${tf}` }}
+                  style={{ flexDirection: `${tf}`, minHeight: 134 }}
                 >
                   {[1, 2, 3].map((n, i) => (
                     <div
@@ -176,7 +176,7 @@ export const cssProperties = {
                 <div
                   style={{ marginTop: i > 1 ? "-4.5rem" : "-4.5rem" }}
                   className={`${
-                    i > 1 ? "rotate-90 w-40" : "nt5 w-80"
+                    i > 1 ? "rotate-90 w-40" : "nt5 w-90"
                   } absolute purple self-center tc`}
                 >
                   <div
@@ -210,7 +210,7 @@ export const cssProperties = {
                   className="flex relative mt2 bt b--dashed bb b--black-10 pv2"
                   style={{ flexWrap: `${tf}`, width: i > 0 ? "70%" : "100%" }}
                 >
-                  {[1, 2, 3, 4, 5].map((n, i) => (
+                  {[1, 2, 3, 4, 5, 6, 7].map((n, i) => (
                     <div
                       key={i}
                       className="relative pv2 mr2 mb2 blue ph1 tc bg-faint-blue br2 w2 ba3"
@@ -349,7 +349,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="ml4 mr4 mb4">
+          <div className="ml4 mr4">
             <pre className="w-100 o-50 pv3">When there is no extra space:</pre>
             <div className=" w-60 flex">
               {v.map((tf, i) => (
@@ -387,7 +387,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="ml4 mr4 mb4">
+          <div className="ml4 mr4">
             <pre className="w-100 o-50 pv3">
               Ever item has a basis width of 200px:
             </pre>
@@ -417,7 +417,7 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="ml4 mr4 mb4">
+          <div className="ml4 mr4">
             <pre className="w-100 o-50 pv3">flex-grow: 0</pre>
             <div className="flex">
               {v.map((tf, i) => (
@@ -435,13 +435,13 @@ export const cssProperties = {
       }
     }
   },
-  grid1: {
+  grid: {
     "grid-template-rows": {
-      color: "red",
+      color: "purple",
       value: "repeat(auto-fit, 1fr) /",
       description: "Line names and track sizing functions of the grid's rows.",
       values: [
-        "auto",
+        "auto auto",
         "30% 70%",
         "repeat(auto-fit, minmax(22px, 1fr))",
         "repeat(auto-fill, minmax(22px, 1fr))",
@@ -450,30 +450,28 @@ export const cssProperties = {
       showDetails: function() {
         const v = this.values;
         return (
-          <div className="ml4 mr4 mb4">
+          <div className="ml4 mr4">
             <div className="flex">
               {v.map((tf, i) => (
                 <div className="">
-                  <div className="o-50 tc">{i + 1}</div>
+                  <div className="purple tc mb1">{i + 1}</div>
                   <div
                     key={i}
                     style={{ gridTemplateRows: `${tf}`, height: 100 }}
                     className="dg tc "
                   >
-                    {[1, 2].map((n, i) => (
+                    {[1, 2].map((n, index) => (
                       <div
-                        key={i}
+                        key={index}
                         className="relative bw1 pa1 ba b--light-2 purple ph1 tc bg-faint-purple br2 w2 ba3"
-                      >
-                        <br />
-                      </div>
+                      />
                     ))}
                   </div>
                 </div>
               ))}
-              <div className="ml2 o-60">
+              <div className="ml2 purple mt3">
                 {v.map((tf, i) => (
-                  <div className="mb1">
+                  <div className="mb1 pb1">
                     {i + 1}.{tf}
                   </div>
                 ))}
@@ -484,113 +482,293 @@ export const cssProperties = {
       }
     },
     "grid-template-columns": {
-      color: "blue",
+      color: "purple",
       value: "minmax(max-content, 2fr)",
-      description: "The size of an implicitly-created grid column track..",
+      description:
+        "Line names and track sizing functions of the grid's columns.",
       values: [
-        "max-content",
-        "min-content",
-        "minmax(100px, auto) fit-content(300px)"
-      ]
+        "repeat(2, 1fr)",
+        "30% 70%",
+        "auto minmax(22px, 80%)",
+        "auto minmax(22px, 80%)",
+        "auto fit-content(130px)",
+        "auto fit-content(130px)"
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4 mb4">
+            <div className="flex flex-wrap">
+              {v.map((tf, i) => (
+                <div className="w-50 mb2 pr3">
+                  <div className="purple tc mb1">{tf}</div>
+                  <div
+                    key={i}
+                    style={{ gridTemplateColumns: `${tf}` }}
+                    className="dg tc h2 "
+                  >
+                    {[1, 2].map((n, index) => (
+                      <div
+                        key={index}
+                        className="relative bw1 pa2 ph3 ba b--light-2 purple ph1 tc bg-faint-purple br2 ba3"
+                      >
+                        {index === 1 && i == 2 && "placeholder text"}
+                        {index === 1 && i == 4 && "placeholder text"}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
     }
   },
-  grid2: {
-    "grid-template-rows": {
-      color: "red",
-      value: "repeat(auto-fit, 1fr) /",
-      description: "Line names and track sizing functions of the grid's rows.",
-      values: [
-        "20% auto",
-        "repeat(auto-fit, 1fr)",
-        "repeat(auto-fill, 1fr)",
-        "minmax(100px, 1fr)",
-        "fit-content(40%)"
-      ]
-    },
+  "grid-auto-flow": {
     "grid-auto-flow": {
-      color: "blue",
+      color: "purple",
       value: "dense",
       description: "How auto-placed items get flowed into the grid.",
-      values: ["row", "column", "dense", "row dense", "column dense"]
-    },
-    "grid-auto-columns": {
-      color: "blue",
-      value: "minmax(max-content, 2fr)",
-      description: "The size of an implicitly-created grid column track..",
-      values: [
-        "max-content",
-        "min-content",
-        "minmax(100px, auto) fit-content(300px)"
-      ]
-    }
-  },
-  grid3: {
-    "grid-auto-flow": {
-      color: "blue",
-      value: "2s",
-      description: "The size of an implicitly-created grid row track.",
-      values: ["3fr 1fr", "minmax(100px, auto) fit-content(300px)"]
-    },
-    "grid-auto-rows": {
-      color: "green",
-      value: "100px /",
-      description: "In seconds, e.g.: 3s, 5000ms.",
-      values: []
-    },
-    "grid-template-columns": {
-      color: "purple",
-      value: "minmax(100px, 1fr)",
-      description: "Line names and track sizing functions of the grid columns.",
-      values: [
-        "20% auto",
-        "repeat(auto-fit, 1fr)",
-        "repeat(auto-fill, 1fr)",
-        "minmax(100px, 1fr)",
-        "fit-content(40%)"
-      ]
+      values: ["row", "column", "dense"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 mr4">
+            <div className="flex flex-wrap">
+              {v.map((tf, i) => (
+                <div className="w-33 mb2 pr3">
+                  <div className="purple tc mb1">{tf}</div>
+                  <div
+                    key={i}
+                    style={{
+                      grid: `repeat(4, 1fr) / repeat(4, 1fr)`,
+                      gridAutoFlow: `${tf}`
+                    }}
+                    className="dg tc h4 "
+                  >
+                    {[1, 2, 3, 4, 5, 6, 7].map((n, index) => (
+                      <div
+                        key={index}
+                        style={{
+                          gridArea: `${
+                            index === 0
+                              ? "auto/span 2"
+                              : index === 2
+                                ? "auto/span 2"
+                                : "unset"
+                          }`
+                        }}
+                        className={`${
+                          index === 0 || index === 2
+                            ? "bg-faint-purple purple"
+                            : "bg-faint-red red"
+                        }
+                        relative bw1 pa2 ba b--light-2 ph1 tc br2 ba3`}
+                      >
+                        {index}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="gray mt2 lh-copy">
+              Auto-placed items are marked in{" "}
+              <span className="red bg-faint-red">red</span>.
+              <br />Items marked in{" "}
+              <span className="purple bg-faint-purple">purple</span> uses
+              'grid-area: auto/span 2'.
+            </div>
+          </div>
+        );
+      }
     }
   },
 
   "grid-gap": {
     "grid-row-gap": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
+      color: "purple",
+      value: "10px",
+      description: "The gaps between rows.",
       values: []
     },
     "grid-column-gap": {
-      color: "green",
-      value: "2s",
-      description: "In seconds, e.g.: 3s, 5000ms.",
+      color: "purple",
+      value: "calc(20px + 10%)",
+      description: "The gaps between columns.",
       values: []
     }
   },
   "place-items": {
     "align-items": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "center",
+      description: "Aligns grid items along the column axis.",
+      values: ["start", "end", "center", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative h4 mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{ grid: "1fr / repeat(3, 1fr)", alignItems: `${tf}` }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      className={`relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3`}
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+
+                {makeAxis("column", "column axis")}
+              </div>
+            ))}
+          </div>
+        );
+      }
     },
     "justify-items": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "center",
+      description: "Aligns grid items along the inline (row) axis .",
+      values: ["start", "end", "center", "stretch"],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative h4 mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{
+                    grid: "repeat(3, 1fr) / 1fr",
+                    justifyItems: `${tf}`
+                  }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      className={`relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3`}
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+
+                {makeAxis("row", "row axis")}
+              </div>
+            ))}
+          </div>
+        );
+      }
     }
   },
   "place-content": {
     "align-content": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "space-around",
+      description:
+        "Align the grid along the column axis when grid items can't fill in the entire vertical space of the container.",
+      values: [
+        "start",
+        "end",
+        "center",
+        "stretch",
+        "space-around",
+        "space-between",
+        "space-evenly"
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative h4 mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{
+                    grid: "repeat(2, 30%) / 1fr 2fr",
+                    alignContent: `${tf}`
+                  }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      style={{}}
+                      className={`relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3`}
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+
+                {makeAxis("column", "column axis")}
+              </div>
+            ))}
+            <div className="gray mt2 lh-copy">
+              Preant conatainer uses 'grid: repeat(2, 30%) / 1fr 2fr'.
+            </div>
+          </div>
+        );
+      }
     },
     "justify-content": {
-      color: "red",
-      value: "move",
-      description: "The name of the keyframe.",
-      values: []
+      color: "purple",
+      value: "space-evenly",
+      description:
+        "Align the grid along the row axis when grid items cant't fill in the entire horizontal space of the container.",
+      values: [
+        "start",
+        "end",
+        "center",
+        "stretch",
+        "space-around",
+        "space-between",
+        "space-evenly"
+      ],
+      showDetails: function() {
+        const v = this.values;
+        return (
+          <div className="ml4 flex flex-wrap">
+            {v.map((tf, i) => (
+              <div key={i} className={`w-25 relative pv2 pr4 ${i > 0 && ""}`}>
+                <pre className="o-80">{tf}</pre>
+                <div
+                  className="dg relative h4 mt2 bt b--dashed bb b--black-10 pv2"
+                  style={{
+                    grid: "repeat(3, 30%) / auto",
+                    justifyContent: `${tf}`
+                  }}
+                >
+                  {[1, 2, 3].map((n, i) => (
+                    <div
+                      key={i}
+                      style={{}}
+                      className={`relative pv2 mr2 mb2 purple ph1 tc bg-faint-purple br2 w2 ba3`}
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+
+                {makeAxis("row", "row axis")}
+              </div>
+            ))}
+            <div className="gray mt2 lh-copy">
+              Preant conatainer uses 'grid: repeat(3, 30%) / auto'.
+            </div>
+          </div>
+        );
+      }
     }
   },
   "grid-area": {
@@ -642,6 +820,25 @@ const lines = () => {
         style={{ marginRight: 307 }}
         className="absolute right-0 h-100 bl b--light-gray b--dashed "
       />
+    </div>
+  );
+};
+const makeAxis = (type, text) => {
+  return (
+    <div
+      style={{ marginTop: `${type === "column" ? "-4.5rem" : "-4.5rem"}` }}
+      className={`
+          ${type === "column" ? "rotate-90" : "nt5 w-80"}
+        absolute purple self-center tc `}
+    >
+      <div
+        className={`${
+          type === "column" ? "nl2 w4" : "w-100"
+        } bt b--purple absolute mt1`}
+      />
+      <span className="bg-purple ml1 white br2 pv1 ph2 relative nt3">
+        {text}
+      </span>
     </div>
   );
 };

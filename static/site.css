@@ -35,6 +35,8 @@ pre,
 .code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
     monospace;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .mw-limiter {
@@ -55,7 +57,7 @@ pre,
 .f7 {
   font-size: 0.9rem;
 }
-pre {
+.code.f7 {
   font-size: 0.8rem;
 }
 
