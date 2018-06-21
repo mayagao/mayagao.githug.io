@@ -48,7 +48,7 @@ class CssAnimation extends React.Component {
 .nt-custom {
   margin-top: -4.5rem;
 }
-#cheatsheet-container.dg { grid-template-columns: 1fr minmax(680px, 760px);}
+#cheatsheet-container.dg { grid-template-columns: minmax(120px, auto) minmax(680px, 760px);}
 
     `}</style>
         </Head>
@@ -60,6 +60,7 @@ class CssAnimation extends React.Component {
               <ul className="list">
                 {Object.keys(propertyList).map((cp, i) => (
                   <li
+                    key={i}
                     onClick={() => this.setActiveItem(cp)}
                     className={`
               ${
@@ -83,7 +84,10 @@ class CssAnimation extends React.Component {
                       {Object.keys(cssProperties[ai]).map((a, i) => {
                         const ob = cssProperties[ai][a];
                         return (
-                          <span className={highlightItemClass(ob.color)}>
+                          <span
+                            key={i}
+                            className={highlightItemClass(ob.color)}
+                          >
                             {ob.value}
                           </span>
                         );
@@ -99,7 +103,7 @@ class CssAnimation extends React.Component {
                       {Object.keys(cssProperties[ai]).map((a, i) => {
                         const ob = cssProperties[ai][a];
                         return (
-                          <div className={`${i > 0 && "mt4"}`}>
+                          <div key={i} className={`${i > 0 && "mt4"}`}>
                             <span
                               className={`in-list highlighted-item mr4 bg-faint-${
                                 ob.color

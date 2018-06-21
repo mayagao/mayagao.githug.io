@@ -453,7 +453,7 @@ export const cssProperties = {
           <div className="ml4 mr4">
             <div className="flex">
               {v.map((tf, i) => (
-                <div className="">
+                <div key={i} className="">
                   <div className="purple tc mb1">{i + 1}</div>
                   <div
                     key={i}
@@ -471,7 +471,7 @@ export const cssProperties = {
               ))}
               <div className="ml2 purple mt3">
                 {v.map((tf, i) => (
-                  <div className="mb1 pb1">
+                  <div key={i} className="mb1 pb1">
                     {i + 1}.{tf}
                   </div>
                 ))}
@@ -500,7 +500,7 @@ export const cssProperties = {
           <div className="ml4 mr4 mb4">
             <div className="flex flex-wrap">
               {v.map((tf, i) => (
-                <div className="w-50 mb2 pr3">
+                <div key={i} className="w-50 mb2 pr3">
                   <div className="purple tc mb1">{tf}</div>
                   <div
                     key={i}
@@ -537,7 +537,7 @@ export const cssProperties = {
           <div className="ml4 mr4">
             <div className="flex flex-wrap">
               {v.map((tf, i) => (
-                <div className="w-33 mb2 pr3">
+                <div key={i} className="w-33 mb2 pr3">
                   <div className="purple tc mb1">{tf}</div>
                   <div
                     key={i}
@@ -826,19 +826,21 @@ const lines = () => {
 const makeAxis = (type, text) => {
   return (
     <div
-      style={{ marginTop: `${type === "column" ? "-4.5rem" : "-4.5rem"}` }}
+      style={{}}
       className={`
-          ${type === "column" ? "rotate-90" : "nt5 w-80"}
+          ${type === "column" ? "w-100 top-1 pv2" : "nt5 w-80"}
         absolute purple self-center tc `}
     >
       <div
         className={`${
-          type === "column" ? "nl2 w4" : "w-100"
-        } bt b--purple absolute mt1`}
+          type === "column" ? "nl2 w-50 br h4" : "bt w-100"
+        } b--purple  absolute mt1`}
       />
-      <span className="bg-purple ml1 white br2 pv1 ph2 relative nt3">
-        {text}
-      </span>
+      <div
+        className={`${
+          type === "column" ? "mt5 nl3 rotate-90" : "nt1"
+        } bg-purple w1 h1 br-100 dib`}
+      />
     </div>
   );
 };
