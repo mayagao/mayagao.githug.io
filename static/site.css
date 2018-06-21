@@ -3,33 +3,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'Karla Regular';
-  src: url('fonts/Karla-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Karla-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Karla-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Karla-Regular.svg#Karla-Regular') format('svg'); /* Legacy iOS */
+  font-family: "Karla Regular";
+  src: url("fonts/Karla-Regular.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Karla-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/Karla-Regular.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/Karla-Regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("fonts/Karla-Regular.svg#Karla-Regular")
+      format("svg"); /* Legacy iOS */
 }
 
 @font-face {
-  font-family: 'Rubik Medium';
-  src: url('fonts/Rubik-Medium.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Rubik-Medium.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Rubik-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Rubik-Medium.svg#Rubik-Medium') format('svg'); /* Legacy iOS */
+  font-family: "Rubik Medium";
+  src: url("fonts/Rubik-Medium.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Rubik-Medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/Rubik-Medium.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/Rubik-Medium.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("fonts/Rubik-Medium.svg#Rubik-Medium")
+      format("svg"); /* Legacy iOS */
 }
 
 body {
-  font-family: 'Karla Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  font-family: "Karla Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: #2e2a4f;
 }
 
-pre {
-  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+pre,
+.code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  word-break: break-word;
+  white-space: normal;
 }
 
-.mw-limiter{
-    max-width: 82rem;
+.mw-limiter {
+  max-width: 82rem;
 }
 .f4 {
   font-size: 1.35rem;
@@ -46,16 +57,19 @@ pre {
 .f7 {
   font-size: 0.9rem;
 }
+.code.f7 {
+  font-size: 0.8rem;
+}
 
 .lh-copy {
-  line-height: 1.60em;
+  line-height: 1.6em;
 }
 .txt-xl {
   font-size: 1.92rem;
 }
 
 .heading {
-  font-family: 'Rubik Medium', serif;
+  font-family: "Rubik Medium", serif;
 }
 
 .flex-no-shrink {
@@ -63,10 +77,10 @@ pre {
 }
 
 .studio-ui-dive {
-   counter-reset: section;
+  counter-reset: section;
 }
 .shadow {
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 }
 .studio-ui-dive article::before {
   counter-increment: section;
@@ -78,7 +92,7 @@ pre {
   height: 22px;
   text-align: center;
   border-radius: 50%;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 .mb-list {
   list-style: none;
@@ -106,9 +120,102 @@ pre {
   height: 22px;
   text-align: center;
   border-radius: 50%;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.6em;
   margin-left: -32px;
   margin-right: 10px;
+}
 
+.red {
+  color: #da654d;
+}
+.green {
+  color: #3db27a;
+}
+.purple {
+  color: #8e83e1;
+}
+.blue {
+  color: #5192df;
+}
+
+.b--red {
+  border-color: #da654d;
+}
+.b--green {
+  border-color: #3db27a;
+}
+.b--purple {
+  border-color: #8e83e1;
+}
+.b--blue {
+  border-color: #5192df;
+}
+.b--light-2 {
+  border-color: #f9f8fe;
+}
+
+.bg-red {
+  background: #da654d;
+}
+.bg-green {
+  background: #3db27a;
+}
+.bg-purple {
+  background: #8e83e1;
+}
+.bg-blue {
+  background: #5192df;
+}
+
+.bg-faint-red {
+  background: #f6e1df;
+}
+.bg-faint-green {
+  background: #d1ecde;
+}
+.bg-faint-purple {
+  background: #dbd7f5;
+}
+.bg-faint-blue {
+  background: #dce7f7;
+}
+
+.bg-light-1 {
+  background: #f9f8fe;
+}
+.bg-light-2 {
+  background: #f1f0fb;
+}
+
+.property-reset {
+  counter-reset: hi;
+}
+
+.circle {
+  padding: 6px;
+  height: 12px;
+  width: 12px;
+}
+.highlighted-item::before {
+  counter-increment: hi;
+  content: counter(hi);
+  background: inherit;
+  border-radius: 32px;
+  position: absolute;
+  padding: 6px;
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 30px;
+  margin: 30px -4px 0px;
+}
+
+.highlighted-item.in-list::before {
+  margin: -5px 0px;
+}
+
+.dg {
+  display: grid;
 }

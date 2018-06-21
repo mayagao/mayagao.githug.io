@@ -1,21 +1,34 @@
 {
   "dependencies": {
     "css-loader": "^0.28.4",
+    "highlight.js": "^9.12.0",
     "next": "^6.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-lowlight": "^2.0.0",
     "react-transition-group": "^1.2.0"
   },
   "scripts": {
     "dev": "next",
     "build": "next build & next export",
-    "start": "next start"
+    "start": "next start",
+    "precommit": "pretty-quick --staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "name": "mayagao.com",
   "description": "My portfolio site, built with [next.js](https://github.com/zeit/next.js/) and [tachyons](https://github.com/tachyons-css/tachyons).",
   "version": "1.0.0",
   "main": "next.config.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "prettier": "1.13.5",
+    "pretty-quick": "^1.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mayagao/mayagao.com.git"
