@@ -8,8 +8,7 @@ module.exports = {
       "/data-editor": { page: "/data-editor" },
       "/navigation-sdk": { page: "/navigation-sdk" },
       "/data-driven-styling": { page: "/data-driven-styling" },
-      "/about": { page: "/about" },
-      "/css-reference": { page: "/css-reference" }
+      "/about": { page: "/about" }
     };
   }
 };
