@@ -23,7 +23,7 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <Menu />
       <div className="cf mt5">
-        <div className={`${styles.txtH2} w-80 fl`}>Hello! 👋 </div>
+        <div className={`${styles.txtH2} w-100 fl`}>Hello! 👋 </div>
         <div className={`f4 w-80-ns w-100 lh-copy o-70 mt3`}>
           I'm Maya. I am a product designer living and working in San Francisco.
           Currently I help build prototyping tools for developers with the
