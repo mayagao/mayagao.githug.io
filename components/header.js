@@ -18,11 +18,11 @@ export default () => (
 
     <meta
       property="og:image"
-      content="hhttps://github.com/mayagao/mayagao.com/raw/master/static/img/og_image.png"
+      content="http://mayagao.com/static/img/og_image.png"
     />
     <meta
       name="twitter:image"
-      content="https://github.com/mayagao/mayagao.com/raw/master/static/img/og_image.png"
+      content="http://mayagao.com/static/img/og_image.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
 
