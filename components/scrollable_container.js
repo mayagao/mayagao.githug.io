@@ -20,16 +20,20 @@ class ScrollableContainer extends Component {
         <Head>
           <style>{`
             .${id}-scroll-container { 
-              width: ${scrollContainerWidth * 0.5}px;
+              scroll-snap-type: x mandatory;
+            }
+            .scroll-item {
+                min-width: 100%;
+
             }
             @media screen and (min-width: 30em){
-              .${id}-scroll-container {
-                width: ${scrollContainerWidth * 0.7}px;
+              .scroll-item {
+                min-width: 86%;
               }
             }
             @media screen and (min-width: 60em){
-              .${id}-scroll-container {
-                width: ${scrollContainerWidth}px;
+              .scroll-item {
+                min-width: 800px;
               }
             }
           `}</style>
@@ -41,10 +45,12 @@ class ScrollableContainer extends Component {
               {this.props.subtitle}
             </div>
           </div>
-          <div className="w-100 overflow-x-scroll">
-            <div className={`flex mw-none ${id}-scroll-container pl6-l ph4`}>
+          <div className="w-100">
+            <div className={`flex overflow-y-hidden overflow-x items-top ${id}-scroll-container pl6-l ph4`}>
               {this.props.containerContent.map((c, i) => (
-                <div className="mr4 mb3" key={this.props.id + i}>
+                <div 
+                  style={{ scrollSnapAlign: 'center' }}
+                  className="pr4 mb3 scroll-item" key={this.props.id + i}>
                   <img className="w-100 " src={c[0]} />
                   <div className={`${styles.txtSbody} mt2`}>{c[1]}</div>
                 </div>
