@@ -24,29 +24,43 @@ export default () => (
       <Menu />
       <div className="cf mt5">
         <div className={`${styles.txtH2} w-100 fl`}>Hello! 👋 </div>
-        <div className={`f4 w-80-ns w-100 lh-copy o-70 mt3`}>
-          I'm Maya. I am a product designer living and working in San Francisco.
-          Currently I help build prototyping tools for developers with the
-          Runkit team at Stripe. Prior to Stripe, I worked on map design and
-          data editing software at Mapbox in Washington, D.C. As a lead product
-          designer there, I was involved in a variety of projects from Mapbox
-          Studio and navigation SDK, to their marketing sites and developer
-          documentation. Previously I also worked as a UI designer at Lonely
-          Planet and interned at Upstatement, a design agency in Boston.
+        <div className={`f4 w-80-ns w-100 lh-copy mt3`}>
+          I'm Maya. I am currently a product designer at Stripe building
+          developer tools with the Runkit team.
         </div>
-
-        <div className={`${styles.txtH3} mt5 mb4`}>Projects </div>
-
-        {sideProjects.map((sp, i) => (
-          <a href={sp.link} key={i} className="mb4 hide-child link ">
-            <div className={`f5 db mt3 blue link dim lh-title o-100 heading`}>
-              {sp.title}
-            </div>
-            <div className={`${styles.txtBody} o-60 black`}>
-              {sp.description}
-            </div>
-          </a>
-        ))}
+        <div className={`f5 w-80-ns w-100 lh-copy mt3`}>
+          Prior to Stripe, I worked on map design and data editing software at
+          Mapbox in Washington, D.C. As a lead product designer there, I was
+          involved in a variety of projects from Mapbox Studio and navigation
+          SDK, to their marketing sites and developer documentation. Previously
+          I also worked as a UI designer at Lonely Planet and interned at
+          Upstatement, a design agency in Boston.
+        </div>
+        <div className={`f5 w-80-ns w-100 lh-copy mt3`}>
+          When not designing, I like creating small, simple tools to help people
+          learn or build new things. Recently I made{" "}
+          <a
+            href="https://mayagao.github.io/css-quick-reference/"
+            className="blue link dim fancy"
+          >
+            a website
+          </a>{" "}
+          to explain some confusing CSS properties and{" "}
+          <a
+            href="https://mayagao.github.io/accessible-code-theme/"
+            className="blue link dim"
+          >
+            a prototyping tool
+          </a>{" "}
+          to test contrast ratios in code themes more easily. If you are
+          interested in what I am reading, I post some of my notes{" "}
+          <a
+            href="https://www.notion.so/mayag/What-I-am-reading-c24e74ca141e4a05965f3046276a796f"
+            className="blue link dim"
+          >
+            here
+          </a>.
+        </div>
 
         <div className="mt5">
           <a
