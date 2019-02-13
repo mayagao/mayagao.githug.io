@@ -11,10 +11,10 @@ const styles = {
   txtH2: "f2 heading mb3",
   txtH3: "f5 mb1 heading",
   txtH4: "f6 mb1 heading",
-  txtBody: "lh-copy f5 o-70",
-  txtSbody: "lh-copy f6 o-70",
+  txtBody: "lh-copy f5 gray",
+  txtSbody: "lh-copy f6 gray",
   txtNote: "o-50 mt3 pl1 f7 lh-copy",
-  txtIntro: "f3-ns f4 lh-copy o-100 mt4",
+  txtIntro: "f3-ns f4 lh-copy gray mt4",
   quote: "b--black-30 lh-copy pl3 bl f3 o-80 mt4 mb4"
 };
 
