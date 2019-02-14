@@ -13,15 +13,20 @@ const colorExplorationContent = [
   [],
   []
 ];
+const typeExplorationContent = ["Source Sans Pro", "Karla", "Work Sans", ""];
 export default () => (
   <Page>
     <Head>
       <style>{`
-            pl7-xl {
-
-            }
             @media screen and (min-width: 1570px){
               .pl7-xl {padding-left: 16rem}
+            }
+            .type-scale-grid {
+              display: grid;
+              grid: '2 auto';
+            }
+            @media screen and (max-width: 640px){
+               .type-scale-grid { display: inherit; }
             }
          
             
@@ -80,7 +85,7 @@ export default () => (
 
     <div className="pb5 overflow-hidden ">
       <div
-        className={`flex overflow-y-hidden overflow-x  pl7-xl pl6-l pl4 items-top`}
+        className={`flex overflow-y-hidden overflow-x pl7-xl pl6-l pl4 items-top`}
         style={{ scrollSnapType: `x mandatory` }}
       >
         {colorExplorationContent.map((c, i) => (
@@ -116,14 +121,14 @@ export default () => (
         developer brands.
       </div>
 
-      <div className="flex-l justify-start mb6 items-start">
+      <div className="flex-l mw7 justify-between mb5 items-start">
         <img
-          style={{ width: 334 }}
+          style={{ width: 330 }}
           className="mr5-l mr4 mb4"
           src={`../static/img/rb/primaryColor-l.png`}
         />
         <img
-          style={{ width: 476 }}
+          style={{ width: 440 }}
           src={`../static/img/rb/primaryColor-r.png`}
         />
       </div>
@@ -133,14 +138,14 @@ export default () => (
         work in illustrations and other UI elements.
       </div>
 
-      <div className="flex-l justify-start mb5 items-start">
+      <div className="flex-l mw7 justify-between mb5 items-start">
         <img
-          style={{ width: 329 }}
+          style={{ width: 330 }}
           className="mr5-l mr4 mb4"
           src={`../static/img/rb/secondaryColor-l.png`}
         />
         <img
-          style={{ width: 449.5 }}
+          style={{ width: 440 }}
           src={`../static/img/rb/secondaryColor-r.png`}
         />
       </div>
@@ -162,6 +167,78 @@ export default () => (
           src={`../static/img/rb/logo-l.png`}
         />
         <img style={{ maxWidth: 499 }} src={`../static/img/rb/logo-r.png`} />
+      </div>
+
+      <div className={`${styles.txtH2} mb5 mt6`}>Typography</div>
+      <div className={`${styles.txtBody} w-70 mt`}>
+        I explored several different options for the body text typeface. We want
+        to find one that has some personality but also is highly legible at
+        smaller sizes.
+      </div>
+    </div>
+
+    <div className="pb5 overflow-hidden ">
+      <div
+        className={`flex overflow-y-hidden overflow-x  pl7-xl pl6-l pl4 items-top`}
+        style={{ scrollSnapType: `x mandatory` }}
+      >
+        {typeExplorationContent.map((c, i) => (
+          <div
+            style={{ scrollSnapAlign: "center", minWidth: 501 }}
+            className=" mr3 mb3"
+            key={i}
+          >
+            <img
+              style={{ width: 501 }}
+              src={`../static/img/rb/type-explore-${i + 1}.png`}
+            />
+            <div className={`mb2 o-70 mt3`}>{c}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className={`${styles.limiter}`}>
+      <div className={`${styles.txtSbody} w-70 mb4`}>
+        The heading typeface, Radnika, is also used in the logo wordmark, which
+        creates better visual consistency. The body typeface Source Sans Pro is
+        friendly and also works well as a UI font in the editor.
+      </div>
+
+      <div className="flex-l mw7 justify-between mb5 items-start">
+        <img
+          style={{ width: 502 }}
+          className="mr5-l mr4 mb4"
+          src={`../static/img/rb/type-l.png`}
+        />
+        <img style={{ width: 502 }} src={`../static/img/rb/type-r.png`} />
+      </div>
+
+      <div className={`${styles.txtSbody} w-70 mb4`}>
+        I work on creating a type scale system to establish clear hierarchy and
+        added additional usage rules such as leading and praragraph spacing.
+      </div>
+
+      <div className="flex-l mw7 justify-between items-start">
+        <img
+          style={{ width: 478 }}
+          className="mr5-l mr4 mb4"
+          src={`../static/img/rb/scale-1.png`}
+        />
+        <img
+          style={{ width: 567 }}
+          className="mb4"
+          src={`../static/img/rb/scale-2.png`}
+        />
+      </div>
+
+      <div className="flex-l mw7 justify-between mb5 items-start">
+        <img
+          style={{ width: 478 }}
+          className="mr5-l mr4 mb4"
+          src={`../static/img/rb/scale-3.png`}
+        />
+        <img style={{ width: 567 }} src={`../static/img/rb/scale-4.png`} />
       </div>
     </div>
 
