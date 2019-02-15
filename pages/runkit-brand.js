@@ -28,7 +28,19 @@ export default () => (
             @media screen and (max-width: 640px){
                .type-scale-grid { display: inherit; }
             }
-         
+            .explore-grid {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              grid-column-gap: 20px;
+              grid-auto-flow: column dense;
+
+            }
+            .bg-runkit {
+              background: #f9f7f9;
+            }
+            .b--runkit {
+              border-color: #eee8f0;
+            }
             
           `}</style>
     </Head>
@@ -76,7 +88,7 @@ export default () => (
         </div>
       </div>
 
-      <div className={`${styles.txtH2} mb5 mt4`}>Color</div>
+      <div className={`${styles.txtH2} mb4 mt4`}>Color</div>
       <div className={`${styles.txtBody} w-70 mt`}>
         I experimented with several color palettes and applied them to a rough
         home page mockup to demonstrate what the brand could look like.
@@ -169,7 +181,7 @@ export default () => (
         <img style={{ maxWidth: 499 }} src={`../static/img/rb/logo-r.png`} />
       </div>
 
-      <div className={`${styles.txtH2} mb5 mt6`}>Typography</div>
+      <div className={`${styles.txtH2} mb4 mt6`}>Typography</div>
       <div className={`${styles.txtBody} w-70 mt`}>
         I explored several different options for the body text typeface. We want
         to find one that has some personality but also is highly legible at
@@ -242,6 +254,63 @@ export default () => (
       </div>
     </div>
 
+    <div className="pt6 pb5 bg-runkit overflow-hidden ">
+      <div style={{ maxWidth: 1388 }} className="ph4 center mb4">
+        <div className={`${styles.txtH3} mb2`}>Experiment in Context</div>
+        <div className={`${styles.txtSbody} w-80`}>
+          I redesigned some markeitng and editor pages to ensure the new design
+          system can adapt to different scenarios. This is the first time I got
+          to define a brand from the ground up and it's been really challenging
+          and fun to really push myself on my visual design skills
+        </div>
+      </div>
+
+      <div style={{ maxWidth: 1388 }} className="explore-grid center ph4">
+        <div>
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3 db mr4 mb3"
+            src={`../static/img/rb/grid-1.png`}
+          />
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3 db mr4 mb3"
+            src={`../static/img/rb/grid-2.png`}
+          />
+        </div>
+        <div>
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3  db mr4 mb3"
+            src={`../static/img/rb/grid-3.png`}
+          />
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3  db mr4 mb3"
+            src={`../static/img/rb/grid-4.png`}
+          />
+        </div>
+        <div>
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3 db mr4 mb3"
+            src={`../static/img/rb/grid-5.png`}
+          />
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3  db mr4 mb3"
+            src={`../static/img/rb/grid-6.png`}
+          />
+        </div>
+        <div>
+          <img
+            style={{ width: 322 }}
+            className="mr5-l b--runkit ba br3 db mb4"
+            src={`../static/img/rb/grid-7.png`}
+          />
+        </div>
+      </div>
+    </div>
     <WorkFooter />
   </Page>
 );

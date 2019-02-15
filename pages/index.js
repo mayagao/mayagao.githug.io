@@ -12,6 +12,23 @@ const projects = [
     image: (
       <div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
         <img
+          style={{ width: "644px" }}
+          className="br3 "
+          src="static/img/home-rk.png"
+        />
+      </div>
+    ),
+    title: "Runkit Rebrand",
+    link: "/runkit-brand",
+    description:
+      "A unique, approachable, and cohesive visual identity for a highly technical product."
+  },
+  {
+    themeColor: "#8a88cd",
+    type: "UI & UX",
+    image: (
+      <div className="mt4-ns mt2 ph4-ns ph0 nb4-ns nb0">
+        <img
           style={{ width: "717px" }}
           className="br3 shadow"
           src="static/img/signup_3.png"
@@ -129,7 +146,7 @@ export default () => (
                     >
                       {p.title}
                     </div>
-                    <div className={`${styles.txtBody} o-50 black`}>
+                    <div className={`${styles.txtBody} black`}>
                       {p.description}
                     </div>
 
