@@ -69,21 +69,21 @@ export default () => (
             <div className="mb4">
               <div className={`f5 mb2`}>Unique and recognizable</div>
               <div className={`lh-copy f6 o-70`}>
-                Differentiate the brand from other typical developers tools.
+                Differentiate the brand more from other developers tools.
               </div>
             </div>
             <div className="mb4">
               <div className={`f5 mb2`}>Approachable and trustworthy</div>
               <div className={`lh-copy f6  o-70`}>
                 Convey a deeper level of maturity and reliability, being
-                approachable but not childish.{" "}
+                approachable but not childish.
               </div>
             </div>
             <div className="">
               <div className={`f5 mb2`}>Flexible and Scalable</div>
               <div className={`lh-copy f6 o-70`}>
-                Be cohesive and consistent everywhere and work well for both the
-                marketing pages and the interface.
+                Be cohesive and consistent across the marketing pages and the
+                user interface.
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default () => (
       <div className={`${styles.txtH2} mb4 pt5 bt b--black-10`}>Color</div>
       <div className={`${styles.txtBody} w-70 mt`}>
         I experimented with several color palettes and applied them to a rough
-        home page mockup to demonstrate what the brand could look like.
+        home page wireframe to demonstrate what the brand could look like.
       </div>
     </div>
 
@@ -148,8 +148,8 @@ export default () => (
       </div>
 
       <div className={`${styles.txtSbody} w-70 mb4`}>
-        I further expanded the color pallete by adding secondary colors that can
-        work in illustrations and other UI elements.
+        I further expanded the color palette by adding secondary colors for
+        illustrations and other UI elements.
       </div>
 
       <div className="flex-l mw7 justify-between mb5 items-start">
@@ -170,7 +170,7 @@ export default () => (
           Tyler Thompson
         </a>{" "}
         designed a new logo for Runkit inspired by old mechanical keyboard. To
-        ensure the the logo is used correctly everywhere, I created a brand
+        ensure the logo is used correctly everywhere, I created a brand
         guideline. Some of the usage rules:
       </div>
 
@@ -187,9 +187,9 @@ export default () => (
         Typography
       </div>
       <div className={`${styles.txtBody} w-70 mt`}>
-        I explored several different options for the body text typeface. We want
-        to find one that has some personality but also is highly legible at
-        smaller sizes.
+        I explored several options for the body typeface. We want to find a
+        typeface that has some personality but also is highly legible at smaller
+        sizes.
       </div>
     </div>
 
@@ -216,9 +216,9 @@ export default () => (
 
     <div className={`${styles.limiter}`}>
       <div className={`${styles.txtSbody} w-70 mb4`}>
-        The heading typeface, Radnika, is also used in the logo wordmark, which
+        The heading typeface, Radnika, is also used in the logo word mark, which
         creates better visual consistency. The body typeface Source Sans Pro is
-        friendly and also works well as a UI font in the editor.
+        friendly and works well as a UI font.
       </div>
 
       <div className="flex-l mw7 justify-between mb5 items-start">
@@ -231,8 +231,9 @@ export default () => (
       </div>
 
       <div className={`${styles.txtSbody} w-70 mb4`}>
-        I work on creating a type scale system to establish clear hierarchy and
-        added additional usage rules such as leading and praragraph spacing.
+        I worked on creating a type scale system to establish a clear
+        typographical hierarchy. I also added additional usage rules for leading
+        and paragraph spacing.
       </div>
 
       <div className="flex-l mw7 justify-between items-start">
@@ -263,10 +264,9 @@ export default () => (
         <div className={`${styles.txtH3} mb2`}>Experiment in context</div>
         <div className={`${styles.txtSbody} w-80`}>
           Halfway through the process, I realized the need to create more pages
-          to test out these new visual elements like colors and icons. So I
-          mocked up some marketing pages and pages inside the user interface.
-          The goal here is to ensure the design system works in different
-          scenarios.
+          to test out new visual elements like colors and icons. So I mocked up
+          some marketing pages and pages inside the user interface. The goal
+          here is to ensure the visual system can adapt to different scenarios.
         </div>
       </div>
 
@@ -361,12 +361,13 @@ export default () => (
         Basic interactions
       </div>
       <div className={`${styles.txtBody} w-70 mb4`}>
-        After a new design system with new colors, typography, and grid system
-        was estalibshed, we realized the need to define rules for basic
-        interactions like pressing a button or clicking on a dropdown menu.
+        After a new visual system with colors, typography, and grid was
+        established, we realized the need to define rules for basic
+        interactions. This enables engineers at Runkit to work on building the
+        application interfaces more efficiently.
       </div>
 
-      <div>
+      <div className="cf">
         {[0, 1, 2, 3, 4, 5].map((c, i) => (
           <img
             style={{ width: 317 }}
@@ -375,6 +376,12 @@ export default () => (
           />
         ))}
       </div>
+      {/*
+       <div className={`${styles.txtH2} mb4 mt5 bt pt5 b--black-10`}>
+        New identity in use
+      </div>
+
+*/}
     </div>
     <WorkFooter />
   </Page>
