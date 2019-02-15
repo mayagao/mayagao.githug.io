@@ -18,16 +18,12 @@ export default () => (
   <Page>
     <Head>
       <style>{`
-            @media screen and (min-width: 1570px){
-              .pl7-xl {padding-left: 16rem}
-            }
+          
             .type-scale-grid {
               display: grid;
               grid: '2 auto';
             }
-            @media screen and (max-width: 640px){
-               .type-scale-grid { display: inherit; }
-            }
+          
             .explore-grid {
               display: grid;
               grid-template-columns: repeat(4, 1fr);
@@ -41,7 +37,13 @@ export default () => (
             .b--runkit {
               border-color: #eee8f0;
             }
-            
+              @media screen and (min-width: 1570px){
+              .pl7-xl {padding-left: 16rem}
+            }
+            @media screen and (max-width: 640px){
+               .type-scale-grid,
+               .explore-grid { display: inherit; }
+            }
           `}</style>
     </Head>
     <div className={`${styles.limiter}`}>
@@ -88,7 +90,7 @@ export default () => (
         </div>
       </div>
 
-      <div className={`${styles.txtH2} mb4 mt4`}>Color</div>
+      <div className={`${styles.txtH2} mb4 pt5 bt b--black-10`}>Color</div>
       <div className={`${styles.txtBody} w-70 mt`}>
         I experimented with several color palettes and applied them to a rough
         home page mockup to demonstrate what the brand could look like.
@@ -181,7 +183,9 @@ export default () => (
         <img style={{ maxWidth: 499 }} src={`../static/img/rb/logo-r.png`} />
       </div>
 
-      <div className={`${styles.txtH2} mb4 mt6`}>Typography</div>
+      <div className={`${styles.txtH2} mb4 mt5 pt5 bt b--black-10`}>
+        Typography
+      </div>
       <div className={`${styles.txtBody} w-70 mt`}>
         I explored several different options for the body text typeface. We want
         to find one that has some personality but also is highly legible at
@@ -256,12 +260,13 @@ export default () => (
 
     <div className="pt6 pb5 bg-runkit overflow-hidden ">
       <div style={{ maxWidth: 1388 }} className="ph4 center mb4">
-        <div className={`${styles.txtH3} mb2`}>Experiment in Context</div>
+        <div className={`${styles.txtH3} mb2`}>Experiment in context</div>
         <div className={`${styles.txtSbody} w-80`}>
-          I redesigned some markeitng and editor pages to ensure the new design
-          system can adapt to different scenarios. This is the first time I got
-          to define a brand from the ground up and it's been really challenging
-          and fun to really push myself on my visual design skills
+          Halfway through the process, I realized the need to create more pages
+          to test out these new visual elements like colors and icons. So I
+          mocked up some marketing pages and pages inside the user interface.
+          The goal here is to ensure the design system works in different
+          scenarios.
         </div>
       </div>
 
@@ -309,6 +314,66 @@ export default () => (
             src={`../static/img/rb/grid-7.png`}
           />
         </div>
+      </div>
+    </div>
+
+    <div className={`${styles.limiter}`}>
+      <div className={`${styles.txtH2} mb4 mt5 `}>Grid system</div>
+      <div className={`${styles.txtBody} w-70 mb5`}>
+        Most measurements, such as spacings and sizes, align to an 4px grid.
+        This applies to the typography, icons, and UI elements and ensures
+        consistency across the board
+      </div>
+
+      <div className="cf">
+        {[0, 1, 2, 3].map((c, i) => (
+          <img
+            style={{ width: 482 }}
+            className="mb3 fl mr3"
+            src={`../static/img/rb/g-${i + 1}.png`}
+          />
+        ))}
+      </div>
+
+      <div className={`${styles.txtH2} mb4 mt5 bt pt5 b--black-10`}>
+        Icongraphy
+      </div>
+      <div className={`${styles.txtBody} w-70 mb4`}>
+        Icons should be simple, recognizable, and legible at smaller sizes. This
+        icon set below is for common interactions in the code editor. They were
+        drawn on 20px * 20px squares and works well with the 4px grid system.
+      </div>
+
+      <div className="cf">
+        <img
+          style={{ width: 500 }}
+          className="mr3 mb4 fl"
+          src={`../static/img/rb/icon-l.png`}
+        />
+        <img
+          style={{ width: 500 }}
+          className="mb4 fl"
+          src={`../static/img/rb/icon-r.png`}
+        />
+      </div>
+
+      <div className={`${styles.txtH2} mb4 mt5 bt pt5 b--black-10`}>
+        Basic interactions
+      </div>
+      <div className={`${styles.txtBody} w-70 mb4`}>
+        After a new design system with new colors, typography, and grid system
+        was estalibshed, we realized the need to define rules for basic
+        interactions like pressing a button or clicking on a dropdown menu.
+      </div>
+
+      <div>
+        {[0, 1, 2, 3, 4, 5].map((c, i) => (
+          <img
+            style={{ width: 317 }}
+            className="mb3 fl mr3"
+            src={`../static/img/rb/ui-${i + 1}.png`}
+          />
+        ))}
       </div>
     </div>
     <WorkFooter />
