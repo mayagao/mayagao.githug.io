@@ -43,6 +43,7 @@ export default () => (
             @media screen and (max-width: 640px){
                .type-scale-grid,
                .explore-grid { display: inherit; }
+               .scroll-item {min-width: 80% !important;}
             }
           `}</style>
     </Head>
@@ -105,7 +106,7 @@ export default () => (
         {colorExplorationContent.map((c, i) => (
           <div
             style={{ scrollSnapAlign: "center", minWidth: 340 }}
-            className=" mr3 mb3"
+            className=" mr3 mb3 scroll-item"
             key={i}
           >
             <img
@@ -176,11 +177,11 @@ export default () => (
 
       <div className="flex-l justify-start items-start">
         <img
-          style={{ maxWidth: 495 }}
+          style={{ width: 495 }}
           className="mb4"
           src={`../static/img/rb/logo-l.png`}
         />
-        <img style={{ maxWidth: 499 }} src={`../static/img/rb/logo-r.png`} />
+        <img style={{ width: 499 }} src={`../static/img/rb/logo-r.png`} />
       </div>
 
       <div className={`${styles.txtH2} mb4 mt5 pt5 bt b--black-10`}>
@@ -201,7 +202,7 @@ export default () => (
         {typeExplorationContent.map((c, i) => (
           <div
             style={{ scrollSnapAlign: "center", minWidth: 501 }}
-            className=" mr3 mb3"
+            className=" mr3 mb3 scroll-item"
             key={i}
           >
             <img
