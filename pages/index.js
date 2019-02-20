@@ -21,7 +21,7 @@ const projects = [
     title: "Runkit Rebrand",
     link: "/runkit-brand",
     description:
-      "A unique, approachable, and fresh brand system for a highly technical product."
+      "A unique, approachable, and recognizable brand system for a developer facing product."
   },
   {
     themeColor: "#8a88cd",

@@ -66,23 +66,23 @@ export default () => (
             defining three key goals for the rebrand:
           </div>
 
-          <div className={`w-40-l pl5-l w-100 fl mt4`}>
+          <div className={`w-40-l f5 pl5-l w-100 fl mt4`}>
             <div className="mb4">
-              <div className={`f5 mb2`}>Unique and recognizable</div>
-              <div className={`lh-copy f6 o-70`}>
+              <div className={`mb2`}>Unique and recognizable</div>
+              <div className={`lh-copy o-70`}>
                 Differentiate the brand more from other developers tools.
               </div>
             </div>
             <div className="mb4">
-              <div className={`f5 mb2`}>Approachable and trustworthy</div>
-              <div className={`lh-copy f6  o-70`}>
+              <div className={`mb2`}>Approachable and trustworthy</div>
+              <div className={`lh-copy o-70`}>
                 Convey a deeper level of maturity and reliability, being
                 approachable but not childish.
               </div>
             </div>
             <div className="">
-              <div className={`f5 mb2`}>Flexible and Scalable</div>
-              <div className={`lh-copy f6 o-70`}>
+              <div className={`mb2`}>Flexible and Scalable</div>
+              <div className={`lh-copy o-70`}>
                 Be cohesive and consistent across the marketing pages and the
                 user interface.
               </div>
@@ -149,8 +149,8 @@ export default () => (
       </div>
 
       <div className={`${styles.txtSbody} w-70 mb4`}>
-        I further expanded the color palette by adding secondary colors for
-        illustrations and other UI elements.
+        I further expanded the color palette by adding secondary colors to use in
+        illustrations and other visual elements.
       </div>
 
       <div className="flex-l mw7 justify-between mb5 items-start">
