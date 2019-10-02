@@ -23,44 +23,29 @@ export default () => (
     <div className={`${styles.limiter}`}>
       <Menu />
       <div className="cf mt5">
-        <div className={`${styles.txtH2} w-100 fl`}>Hello! 👋 </div>
+        <div className={`${styles.txtH2} w-100 fl`}>👋 </div>
         <div className={`f4 w-80-ns w-100 lh-copy mt3`}>
-          I'm Maya. I am currently a product designer at Stripe building
-          developer tools with the Runkit team.
+          Maya Gao is a Product Designer based in San Francisco.
         </div>
         <div className={`f5 w-80-ns w-100 lh-copy mt3`}>
-          Prior to Stripe, I worked on map design and data editing software at
-          Mapbox in Washington, D.C. As a lead product designer there, I was
-          involved in a variety of projects from Mapbox Studio and navigation
-          SDK, to their marketing sites and developer documentation. Previously
-          I also worked as a UI designer at Lonely Planet and interned at
-          Upstatement, a design agency in Boston.
-        </div>
-        <div className={`f5 w-80-ns w-100 lh-copy mt3`}>
-          When not designing, I like creating small, simple tools to help people
-          learn or build new things. Recently I made{" "}
+          She's currently working on creating more accessible and{" "}
           <a
-            href="https://mayagao.github.io/css-quick-reference/"
-            className="blue link dim fancy"
+            className="link blue hover-dark-blue"
+            href="https://observablehq.com/@observablehq/changelog-2019-08-29?collection=@observablehq/changelog"
           >
-            a website
+            collaborative
           </a>{" "}
-          to explain some confusing CSS properties and{" "}
-          <a
-            href="https://mayagao.github.io/accessible-code-theme/"
-            className="blue link dim"
-          >
-            a prototyping tool
-          </a>{" "}
-          to test contrast ratios in code themes more easily. If you are
-          interested in what I am reading, I post some of my notes{" "}
-          <a
-            href="https://www.notion.so/mayag/What-I-am-reading-c24e74ca141e4a05965f3046276a796f"
-            className="blue link dim"
-          >
-            here
-          </a>.
+          data science tools at Observable. Previously Maya helped build code
+          editors for fast prototyping at{" "}
+          <a className="link blue hover-dark-blue" href="https://stripe.com/">
+            Stripe
+          </a>, and mapping software for GIS professionals at{" "}
+          <a className="link blue hover-dark-blue" href="https://mapbox.com/">
+            Mapbox
+          </a>. She strives to create elegant and practical solutions for
+          complicated problems.
         </div>
+        <div className={`f5 w-80-ns w-100 lh-copy mt3`} />
 
         <div className="mt5">
           <a
