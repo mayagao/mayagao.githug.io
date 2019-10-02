@@ -27,7 +27,7 @@ export default () => (
         <div className={`f4 w-80-ns w-100 lh-copy mt3`}>
           Maya Gao is a Product Designer based in San Francisco.
         </div>
-        <div className={`f5 w-80-ns w-100 lh-copy mt3`}>
+        <div className={`f5 w-70-ns w-100 lh-copy mt3`}>
           She's currently working on creating more accessible and{" "}
           <a
             className="link blue hover-dark-blue"
@@ -42,10 +42,9 @@ export default () => (
           </a>, and mapping software for GIS professionals at{" "}
           <a className="link blue hover-dark-blue" href="https://mapbox.com/">
             Mapbox
-          </a>. She strives to create elegant and practical solutions for
-          complicated problems.
+          </a>. She strives to create simple practical solutions for complicated
+          problems.
         </div>
-        <div className={`f5 w-80-ns w-100 lh-copy mt3`} />
 
         <div className="mt5">
           <a
