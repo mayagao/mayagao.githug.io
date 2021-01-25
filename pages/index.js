@@ -35,18 +35,18 @@ export default () => (
       <div id="grid-container">
         <div id="first" className="column">
           <div>
-            <div className="subheader">Hi I’m Maya Gao,</div>
+            <div className="subheader highlight-text">❤️ Hi I’m Maya Gao,</div>
             <div className="header">
-              I design tools to help people <span className="">think, create, and collaborate</span>
+              I design tools to help people <span className="highlight-text">think, create, and collaborate</span>
             </div>
           </div>
           {InternetLinks()}
         </div>
         <section id="second" className="column">
           <p className="empahsis">
-            I'm passionate about making professional tools for technical audiences. The most exciting part about design
-            for me is to approach a project by learning a brand new subject, understanding its intricacies, and finding
-            a balance between data and intuition.
+            I'm passionate about making professional tools for technical audiences. I love to approach a project by
+            learning a brand new subject, understanding its intricacies, and finding a balance between data and
+            intuition.
           </p>
           <p>
             In 2015, I joined{' '}
