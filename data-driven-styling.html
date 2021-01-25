@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Maya Gao</title>
+    <meta
+      name="description"
+      content="Product Designer building developer tools at Stripe. Previously Mapbox, Lonely Planet."
+    />
+    <meta name="author" content="Maya Gao" />
+    <meta property="og:title" content="Maya Gao" />
+    <meta
+      property="og:description"
+      content="Product Designer building developer tools at Stripe. Previously Mapbox, Lonely Planet."
+    />
+    <meta property="og:image" content="http://mayagao.com/static/img/og_image.png" />
+    <meta name="twitter:image" content="http://mayagao.com/static/img/og_image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=.25, user-scalable=yes"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css" />
+    <link rel="stylesheet" href="../static/reset.css" />
+    <link rel="stylesheet" href="../static/site.css" />
+    <link rel="stylesheet" href="../static/agate.css" />
+    <link rel="stylesheet" href="../static/home.css" />
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+      ga('create', 'UA-48675207-1', 'auto')
+      ga('send', 'pageview')
+    </script>
+    <style>
+      .h0 {
+        height: 0.5rem !important;
+      }
+      .w0 {
+        width: 0.5rem !important;
+      }
+      @media screen and (min-width: 30em) {
+        .bg-near-white-ns {
+          background: #f4f4f4 !important;
+        }
+      }
+      .rotate-neg90 {
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+      }
+    </style>
+    <style>
+      @media screen and (min-width: 60em) {
+        .h7-l {
+          height: 32rem;
+        }
+      }
+      .example-enter {
+        opacity: 0.04;
+      }
+      .example-enter.example-enter-active {
+        opacity: 1;
+        transition: opacity 600ms ease-in;
+      }
+    </style>
+    <style>
+      @media screen and (min-width: 60em) {
+        .h7-l {
+          height: 32rem;
+        }
+      }
+      .example-enter {
+        opacity: 0.04;
+      }
+      .example-enter.example-enter-active {
+        opacity: 1;
+        transition: opacity 600ms ease-in;
+      }
+    </style>
+    <meta name="next-head-count" content="19" />
+    <link rel="preload" href="/_next/static/K7gljfLiD4TMMPRy8EjLO/pages/data-driven-styling.js" as="script" />
+    <link rel="preload" href="/_next/static/K7gljfLiD4TMMPRy8EjLO/pages/_app.js" as="script" />
+    <link rel="preload" href="/_next/static/runtime/webpack-035ac2b14bde147cb4a8.js" as="script" />
+    <link rel="preload" href="/_next/static/chunks/commons.0b404adbd869440fca44.js" as="script" />
+    <link rel="preload" href="/_next/static/runtime/main-43397032db2e3be6d877.js" as="script" />
+  </head>
+  <body>
+    <div id="__next">
+      <div>
+        <div class="mw-limiter pv4 ph6-l center ph4 cf">
+          <div class="tr cf mt3">
+            <a href="/" class="f4 fl black no-underline dib">Maya Gao</a
+            ><a href="/" class="f5 mr3 dim black link">Works</a><a class="f5 dim black link" href="/about">About</a>
+          </div>
+          <div class="cf mt5">
+            <div class="f5 o-80 mb2">Small Project</div>
+            <div class="f1 heading mb2 nl1">Data-driven Styling</div>
+            <div class="f3-ns f4 lh-copy gray mt4 w-80-ns w-100">
+              Data-driven styling represents the capacity in our map SDKs to change styles based on data properties. For
+              example, change circle layer radius based on population density. When this feature was first introduced in
+              Mapbox GL JS in June 2016, I experimented with some UI concepts to explore design options and inform
+              future technical decisions.
+            </div>
+            <div class="mt5">
+              <div class="f2 heading mb3 mb4">Three types of property functions</div>
+              <div class="lh-copy f5 gray">
+                There are three types of functions that comes with data driven styling, exponential, interval, and
+                categorical.
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Exponential</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">
+                      Generate an output by interpolating between stops.
+                    </div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-color&#x27;: {
+  &#x27;property&#x27;: ‘level’,
+  &#x27;type&#x27;: ‘exponential’,
+  &#x27;stops&#x27;: [
+    [1, &#x27;#009900&#x27;],
+    [100, &#x27;#1666ff&#x27;]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div>
+                    <div class="flex w-100 mb2 justify-between">
+                      <div style="background: #61aafe" class="bg-dark-blue br-pill pv2 ph2"></div>
+                      <div style="background: #89a6f6" class="bg-blue br-pill pv2 ph2"></div>
+                      <div style="background: #aca3f0" class="bg-light-blue br-pill pv2 ph2"></div>
+                      <div style="background: #d79de7" class="bg-lightest-blue br-pill pv2 ph2"></div>
+                    </div>
+                    <div class="">
+                      <div class="bl bw1 dib h0 center b--black-10"></div>
+                      <div class="h0 ml2 mr2 br2 nt1 tc br--top bt bl br bw1 b--black-10"></div>
+                    </div>
+                    <div class="o-40 pt1 cf mb2"><span class="fl">1</span><span class="fr">99</span></div>
+                    <div
+                      class="h1 br2 br-pill"
+                      style="background: linear-gradient(to right, #61aafe 0%, #d79de7 100%)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Interval</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">
+                      Return the output value of the stop just less than the function input.
+                    </div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-color&#x27;: {
+    &#x27;property&#x27;: ‘density’,
+    &#x27;type&#x27;: ‘interval’,
+    &#x27;stops&#x27;: [
+      [25, &#x27;#009900&#x27;],
+      [75, &#x27;#cc00ff&#x27;],
+      [100, &#x27;#1666ff&#x27;]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div>
+                    <div class="flex w-100 mb2 justify-around">
+                      <div style="background: #61aafe" class="bg-dark-blue br-pill pv2 ph2"></div>
+                      <div style="background: #aca3f0" class="bg-light-blue br-pill pv2 ph2"></div>
+                      <div style="background: #d79de7" class="bg-lightest-blue br-pill pv2 ph2"></div>
+                    </div>
+                    <div class="flex-justify-between flex">
+                      <div class="w-third">
+                        <div class="">
+                          <div class="bl bw1 dib h0 center b--black-10"></div>
+                          <div class="h0 ml2 mr2 br2 nt1 tc br--top bt bl br bw1 b--black-10"></div>
+                        </div>
+                      </div>
+                      <div class="w-third">
+                        <div class="">
+                          <div class="bl bw1 dib h0 center b--black-10"></div>
+                          <div class="h0 ml2 mr2 br2 nt1 tc br--top bt bl br bw1 b--black-10"></div>
+                        </div>
+                      </div>
+                      <div class="w-third">
+                        <div class="">
+                          <div class="bl bw1 dib h0 center b--black-10"></div>
+                          <div class="h0 ml2 mr2 br2 nt1 tc br--top bt bl br bw1 b--black-10"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex w-100 justify-between">
+                      <div class="o-40 pt1 cf mb2">0</div>
+                      <div class="o-40 pt1 cf mb2">25</div>
+                      <div class="o-40 pt1 cf mb2">75</div>
+                      <div class="o-40 pt1 cf mb2">100</div>
+                    </div>
+                    <div class="flex w-100 mb2 justify-between">
+                      <div class="h1 w-third br-pill br--left" style="background: #61aafe"></div>
+                      <div class="h1 w-third ml1" style="background: #aca3f0"></div>
+                      <div class="h1 w-third br-pill ml1 br--right" style="background: #d79de7"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Categorical</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">
+                      Return the output value of the stop equal to the function input.
+                    </div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-color&#x27;: {
+    &#x27;property&#x27;: &#x27;type&#x27;,
+    &#x27;type&#x27;: &#x27;categorical&#x27;,
+    &#x27;stops&#x27;: [
+      [‘low’, &#x27;#009900&#x27;],
+      [‘medium’, &#x27;#cc00ff&#x27;],
+      [‘high’, &#x27;#1666ff&#x27;]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div>
+                    <div class="flex w-100 mb2 flex-column">
+                      <div class="pt1 cf mb2">
+                        <span class="o-40 fl">Low</span>
+                        <div style="background: #61aafe" class="dib fr bg-dark-blue br-pill pv2 ph2"></div>
+                      </div>
+                      <div class="pt1 cf mb2">
+                        <span class="fl o-40">Meidum</span>
+                        <div style="background: #aca3f0" class="dib fr bg-dark-blue br-pill pv2 ph2"></div>
+                      </div>
+                      <div class="pt1 cf mb2">
+                        <span class="fl o-40">High</span>
+                        <div style="background: #d79de7" class="dib fr bg-dark-blue br-pill pv2 ph2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-near-white pv4 mt4">
+          <div class="mw-limiter pv4 ph6-l center ph4 cf">
+            <div class="f5 mb1 heading mb4 pt4">Three types of property functions</div>
+            <div class="relative">
+              <div class="mb4">
+                <a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-90 bg-white">Categorical</a
+                ><a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-40">Interval</a
+                ><a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-40">Exponential</a>
+              </div>
+              <div class="items-center h-full mt5 absolute absolute--fill flex">
+                <a
+                  class="br-100 left-0 nl5 absolute shadow shadow-1-on-hover pointer fl dib-l dn bg-white h2 items-center flex-l ph2"
+                  ><img class="h1 w1 o-50 glow" src="../../static/icons/prev.svg" /></a
+                ><a
+                  class="br-100 right-0 nr5 absolute shadow shadow-1-on-hover pointer fr dib-l dn bg-white h2 items-center flex-l ph2"
+                  ><img class="h1 w1 o-50 glow" src="../../static/icons/next-b.svg"
+                /></a>
+              </div>
+              <div class="h7-l h-auto mb4">
+                <div class="flex flex-row-l flex-column justify-between">
+                  <div class="mr3 mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">Open up the vaue editor</div>
+                    <img style="width: 286px" src="../static/img/function_s1_l.png" />
+                  </div>
+                  <div class="mr3 mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">Select a continuous data field</div>
+                    <img style="width: 286px" src="../static/img/function_s1_m.png" />
+                  </div>
+                  <div class="mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">Edit value</div>
+                    <img style="width: 286px" src="../static/img/function_s1_r.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mw-limiter pv4 ph6-l center ph4 cf">
+          <div class="cf pv4">
+            <div class="mt4">
+              <div class="f2 heading mb3 mb4">Property and zoom functions</div>
+              <div class="lh-copy f5 gray w-80">
+                In addition to property functions (data-driven styling), Mapbox GL JS also provides the ability to style
+                based on zoom levels. Zoom functions is a feature that&#x27;s already included in the current Mapbox
+                Studio. The real complexity comes when combining zoom functions with property functions.
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Zoom</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">Radius increases as zoom level increases</div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-radius&#x27;: {
+    stops: [[8, 6], [16, 40]]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div class="flex flex-row">
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div style="background: #bddbff; width: 24px; height: 24px" class="blue self-center br-100">
+                        6
+                      </div>
+                      <div class="o-40 self-center">z8</div>
+                    </div>
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div
+                        style="background: #bddbff; width: 60px; height: 60px"
+                        class="blue self-center justify-center flex br-100"
+                      >
+                        <span class="self-center">40</span>
+                      </div>
+                      <div class="o-40 self-center">z16</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Property</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">Radius increases as property ‘sqrt’ increases</div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-radius’: {
+    property: &#x27;sqrt&#x27;,
+    stops: [
+        [0, 6],
+        [250, 40]
+    ]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div class="flex flex-row">
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div style="background: #bddbff; width: 24px; height: 24px" class="blue mb2 self-center br-100">
+                        6
+                      </div>
+                      <div
+                        style="background: #bddbff; width: 60px; height: 60px"
+                        class="blue mb2 self-center justify-center flex br-100"
+                      >
+                        <span class="self-center">40</span>
+                      </div>
+                      <div class="o-40 self-center">z8</div>
+                    </div>
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div style="background: #bddbff; width: 24px; height: 24px" class="blue mb2 self-center br-100">
+                        6
+                      </div>
+                      <div
+                        style="background: #bddbff; width: 60px; height: 60px"
+                        class="blue mb2 self-center justify-center flex br-100"
+                      >
+                        <span class="self-center">40</span>
+                      </div>
+                      <div class="o-40 self-center">z16</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex lh-copy bt b--black-10 pt4 items-end-m content-stretch items-start items-start-l f6 flex-row-ns flex-column mt4"
+              >
+                <div class="flex flex-row-l w-100 flex-column">
+                  <div class="dib mr2 mb2 w4 f5">Zoom and property</div>
+                  <div class="flex flex-row-ns w-100 flex-column">
+                    <div class="o-70 w-80 mb3 mw5-l mw-auto mr4">
+                      Radius increases as property ‘sqrt’ and zoom level increase.
+                    </div>
+                    <div class="f7 br3 o-70 w-100 ph3 mr4 mb0-ns mb4 pv1 bg-near-white round">
+                      <pre>
+&#x27;circle-radius&#x27;: {
+  property: &#x27;sqrt&#x27;,
+  stops: [
+    [{zoom: 8,  value: 0}, 3],
+    [{zoom: 8,  value: 250}, 20],
+    [{zoom: 16, value: 0}, 6],
+    [{zoom: 16, value: 250}, 40]
+  ]
+}</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w5-l w4 tc flex-column">
+                  <div class="flex flex-row">
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div style="background: #bddbff; width: 22px; height: 22px" class="blue mb2 self-center br-100">
+                        3
+                      </div>
+                      <div
+                        style="background: #bddbff; width: 40px; height: 40px"
+                        class="blue mb2 self-center justify-center flex br-100"
+                      >
+                        <span class="self-center">20</span>
+                      </div>
+                      <div class="o-40 self-center">z8</div>
+                    </div>
+                    <div class="flex flex-column justify-end items-start w-100 mb2">
+                      <div
+                        style="background: #bddbff; width: 30px; height: 30px"
+                        class="blue mb2 pt1 self-center br-100"
+                      >
+                        6
+                      </div>
+                      <div
+                        style="background: #bddbff; width: 60px; height: 60px"
+                        class="blue mb2 self-center justify-center flex br-100"
+                      >
+                        <span class="self-center">40</span>
+                      </div>
+                      <div class="o-40 self-center">z16</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-near-white pv4 mt4">
+          <div class="mw-limiter pv4 ph6-l center ph4 cf">
+            <div class="f5 mb1 heading mb4 pt4">Property function and zoom function UI</div>
+            <div class="flex flex-row-l flex-column justify-between">
+              <div class="mr3 mb0-l mb4">
+                <div class="f6 o-60 ml2 mb3">Property function only</div>
+                <img style="width: 286px" src="../static/img/f_property.png" />
+              </div>
+              <div class="mr3 mb0-l mb4">
+                <div class="f6 o-60 ml2 mb3">Zoom fucntion only</div>
+                <img style="width: 286px" src="../static/img/f_zoom.png" />
+              </div>
+              <div class="mb0-l mb4">
+                <div class="f6 o-60 ml2 mb3">Zoom and property function</div>
+                <img style="width: 286px" src="../static/img/f_zoom_property.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mw-limiter pv4 ph6-l center ph4 cf">
+          <div class="cf pv4">
+            <div class="mt4 mb4">
+              <div class="f2 heading mb3 mb4">Complex value editing</div>
+              <div class="lh-copy f5 gray w-80">
+                The ability to style based on both zoom and property means maximum control and flexibility when styling
+                base maps with complicated layer structures. It also means some new challenges for a learnable, simple
+                UI. Below is a flow I sketched out to demonstrate the steps a user goes through to create a property and
+                zoom function.
+              </div>
+            </div>
+            <div style="line-height: 1.3" class="flex-l pb3 pt5 cf f6 flex-row dn">
+              <div class="w5">
+                <div class="br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2">
+                  <img style="width: 18px; height: 18px" src="../static/icons/icon_function.svg" />
+                </div>
+                <div>Function</div>
+                <div class="o-60 mt1">What is the funciton type?</div>
+              </div>
+              <div class="flex mr2">
+                <div class="w4 pt5 tc">
+                  <div class="flex items-center justify-center">
+                    <div class="bt bw1 dib w0 b--black-10"></div>
+                    <div class="h4 w0 br2 tc br--left bt bl bb bw1 b--black-10"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w5">
+                <div class="">
+                  <div class="mb4">
+                    <div class="br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2">
+                      <img style="width: 18px; height: 12px" src="../static/icons/icon_zoom.svg" />
+                    </div>
+                    <div>Zoom function</div>
+                    <div class="o-60 mt1">Adjust based on zoom level</div>
+                  </div>
+                  <div>
+                    <div class="br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2">
+                      <img style="width: 16px; height: 12px" src="../static/icons/icon_property.svg" />
+                    </div>
+                    <div>Property function</div>
+                    <div class="o-60 mt1">What is the value type of the property?<!-- --></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex mr2">
+                <div class="w4 pt5 tc">
+                  <div class="flex items-center justify-center">
+                    <div class="bt bw1 dib w0 b--black-10"></div>
+                    <div class="h4 w0 br2 tc br--left bt bl bb bw1 b--black-10"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-80 flex-column mt6">
+                <div class="mr4 flex flex-row w-100">
+                  <div class="w-40 mr4">
+                    <div class="br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2">
+                      <img style="width: 12px; height: 12px" src="../static/icons/icon_string.svg" />
+                    </div>
+                    <div>String</div>
+                    <div class="o-60 mt1">String value allows for categorical functions</div>
+                  </div>
+                  <div class="flex items-center nl4 mr4 justify-center">
+                    <div class="bt bw1 dib w1 b--black-10"></div>
+                  </div>
+                  <div class="mb4 w-40">
+                    <div class="cf">
+                      <div class="br-100 fl flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 12px; height: 12px" src="../static/icons/icon_categorical.svg" />
+                      </div>
+                      <div class="fl ml3 mr3 f7 mt2 o-50">+</div>
+                      <div class="br-100 fl flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 18px; height: 12px" src="../static/icons/icon_zoom.svg" />
+                      </div>
+                    </div>
+                    <div>Categorical only</div>
+                    <div class="o-60 mt1">Simple value or add zoom function</div>
+                  </div>
+                </div>
+                <div class="flex flex-row w-100">
+                  <div class="w-40 mr4">
+                    <div class="br-100 dib flex items-center justify-center bg-near-white mb3 h2 w2">
+                      <img style="width: 12px; height: 12px" src="../static/icons/icon_number.svg" />
+                    </div>
+                    <div>Number</div>
+                    <div class="o-60 mt1">What type of property function?</div>
+                  </div>
+                  <div class="flex items-center nl4 mr4 justify-center">
+                    <div class="bt bw1 dib w1 b--black-10"></div>
+                  </div>
+                  <div class="w-50">
+                    <div class="cf">
+                      <div class="br-100 fl mr2 flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 12px; height: 12px" src="../static/icons/icon_categorical.svg" />
+                      </div>
+                      <div class="br-100 fl mr2 flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 12px; height: 12px" src="../static/icons/icon_exponential.svg" />
+                      </div>
+                      <div class="br-100 fl flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 12px; height: 12px" src="../static/icons/icon_interval.svg" />
+                      </div>
+                      <div class="fl ml3 mr3 f7 mt2 o-50">+</div>
+                      <div class="br-100 fl flex items-center justify-center bg-near-white mb3 h2 w2">
+                        <img style="width: 18px; height: 12px" src="../static/icons/icon_zoom.svg" />
+                      </div>
+                    </div>
+                    <div>Exponential, categorical, or interval</div>
+                    <div class="o-60 mt1">Simple value or add zoom function</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-near-white pt4 mt4">
+          <div class="mw-limiter pv4 ph6-l center ph4 cf">
+            <div class="f5 mb1 heading mb4">Complex value editing</div>
+            <div class="relative">
+              <div class="mb4">
+                <a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-90 bg-white">Editing</a
+                ><a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-40">Visualize Values</a
+                ><a class="f6 dib mr3 pointer nl2 pv2 hover-black ph3-ns ph2 br-pill o-40">Color</a>
+              </div>
+              <div class="items-center h-full mt5 absolute absolute--fill flex">
+                <a
+                  class="br-100 left-0 nl5 absolute shadow shadow-1-on-hover pointer fl dib-l dn bg-white h2 items-center flex-l ph2"
+                  ><img class="h1 w1 o-50 glow" src="../../static/icons/prev.svg" /></a
+                ><a
+                  class="br-100 right-0 nr5 absolute shadow shadow-1-on-hover pointer fr dib-l dn bg-white h2 items-center flex-l ph2"
+                  ><img class="h1 w1 o-50 glow" src="../../static/icons/next-b.svg"
+                /></a>
+              </div>
+              <div class="h7-l h-auto mb4">
+                <div class="flex flex-row-l flex-column justify-between">
+                  <div class="mr3 mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">A table design with graphs</div>
+                    <img style="width: 286px" src="../static/img/complex_s1_l.png" />
+                  </div>
+                  <div class="mr3 mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">Value modifiers for zoom stops</div>
+                    <img style="width: 286px" src="../static/img/complex_s1_m.png" />
+                  </div>
+                  <div class="mb0-l mb4">
+                    <div class="f6 o-60 ml2 mb3">Code editor for complicated values</div>
+                    <img style="width: 286px" src="../static/img/complex_s1_r.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mw-limiter pv4 ph6-l center ph4 cf mt5 nb5 cf">
+          <div class="lh-copy f5 gray w-80 mt4">
+            Designing a UI for something that&#x27;s essentially a programming expression was an interesting challenge.
+            It is hard to reduce abstraction when there is so much flexibility that comes with code. Another constraint
+            here is we are building this on top of the exisiting interface (primarily for base map design), not
+            designing a visualzation editor from ground up.
+          </div>
+          <div class="flex-l flex-non justify-center">
+            <div class="pt5 mt3">
+              <img style="width: 20px; height: 20px" class="o-90 db mb3" src="../static/icons/play_button.svg" />
+              <div class="f5 mb1 heading mb2">Prototypes</div>
+              <div class="lh-copy f6 gray">I used prototypes to better communicate user flows.</div>
+            </div>
+            <div class="nr5 dn db-l">
+              <video style="width: 800px" loop="" autoplay="" poster="../static/img/ds_animate.png">
+                <source src="../static/img/ds_animate.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="db dn-l">
+              <video class="w-100" controls="" loop="" autoplay="" poster="../static/img/ds_animate.png">
+                <source src="../static/img/ds_animate.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="center mb0 pb5 pt5 black">
+          <div class="mw-limiter tc center cf ph6-l ph4">
+            <div class="pt5 b--black-10 bt">
+              <a class="mr2 o-30 link glow" href="https://github.com/mayagao" title="GitHub"
+                ><svg
+                  style="width: 18px; height: 18px"
+                  class="dib"
+                  fill="#000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  stroke-miterlimit="1.414"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"
+                  ></path></svg></a
+              ><a class="mr2 o-30 link glow" href="https://twitter.com/mayaqgao" title="Twitter"
+                ><svg
+                  style="width: 18px; height: 18px"
+                  class="dib"
+                  fill="#000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  stroke-miterlimit="1.414"
+                >
+                  <path
+                    d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z"
+                  ></path></svg></a
+              ><a class="mr2 o-30 link glow" href="https://www.linkedin.com/in/mayagq" title="LinkedIn"
+                ><svg
+                  style="width: 18px; height: 18px"
+                  class="dib"
+                  fill="#000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  stroke-miterlimit="1.414"
+                >
+                  <path
+                    d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51V7.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"
+                  ></path></svg></a
+              ><a class="mr2 o-30 link glow" href="https://dribbble.com/mayagao" title="Dribbble"
+                ><svg
+                  style="width: 18px; height: 18px"
+                  class="dib"
+                  fill="#000"
+                  data-icon="dribbble"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M16 0 A16 16 0 0 0 0 16 A16 16 0 0 0 16 32 A16 16 0 0 0 32 16 A16 16 0 0 0 16 0 M5 11.5 A12 12 0 0 1 11 5 A46 46 0 0 1 13.5 9.25 A46 46 0 0 1 5 11.5 M15 4 A12 12 0 0 1 21.5 5.25 A46 46 0 0 1 17 7.75 A50 50 0 0 0 15 4 M4 16 A50 50 0 0 0 15 13 A46 46 0 0 1 16 15.5 A26 26 0 0 0 6 22.5 A12 12 0 0 1 4 16 M18.5 11.5 A50 50 0 0 0 25 8 A12 12 0 0 1 28 13.75 A26 26 0 0 0 19.75 14.5 A50 50 0 0 0 18.5 11.5 M17 19.5 A46 46 0 0 1 18 28 A12 12 0 0 1 8.75 25.5 A22 22 0 0 1 17 19.5 M20.75 18.25 A22 22 0 0 1 28 17.75 A12 12 0 0 1 22 26.5 A50 50 0 0 0 20.75 18.25"
+                  ></path></svg
+              ></a>
+            </div>
+            <div class="mt3 silver f7">
+              Built with<!-- -->
+              <a href="https://facebook.github.io/react/" class="link blue dim">React</a>,<!-- -->
+              <a href="https://github.com/zeit/next.js/" class="link blue dim">Next</a>, and<!-- -->
+              <a href="https://github.com/tachyons-css/tachyons" class="link blue dim">Tachyons</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "dataManager": "[]",
+        "props": { "pageProps": {} },
+        "page": "/data-driven-styling",
+        "query": {},
+        "buildId": "K7gljfLiD4TMMPRy8EjLO",
+        "nextExport": true,
+        "autoExport": true
+      }
+    </script>
+    <script
+      async=""
+      data-next-page="/data-driven-styling"
+      src="/_next/static/K7gljfLiD4TMMPRy8EjLO/pages/data-driven-styling.js"
+    ></script>
+    <script async="" data-next-page="/_app" src="/_next/static/K7gljfLiD4TMMPRy8EjLO/pages/_app.js"></script>
+    <script src="/_next/static/runtime/webpack-035ac2b14bde147cb4a8.js" async=""></script>
+    <script src="/_next/static/chunks/commons.0b404adbd869440fca44.js" async=""></script>
+    <script src="/_next/static/runtime/main-43397032db2e3be6d877.js" async=""></script>
+  </body>
+</html>
